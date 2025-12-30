@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+/* 共通部分 
+------------------------------------ */
+html {
+    font-size: 100%;
+}
+body{
+    /* font-family: ; */
+    line-height: 1.7;
+    /* color: ; */
+    /* background: #fff url(images/ユンボ.JPG) no-repeat 30px 400px; */
+}
+/* トップページの背景画像エリア */
+.image-section {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 55vh;
+}
+/* ページごとの画像 */
+.image-yumbo {
+  background-image: url("images/ユンボ.JPG");
+}
+a {
+    text-decoration: none;
+}
+/* レイアウト */
+.wrapper {
+    max-width: 1120px;
+    /* margin: auto; */
+    padding: 0 1.5rem;
+}
+.align-center {
+    margin-left: 10px;
+}
+
+/* 見出し */
+.page-title,
+.heading-large {
+    font-size: 3rem;
+    text-align: center;
+}
+.page-title {
+    margin-top: 2rem;
+    line-height: 1.4;
+}
+.heading-large {
+    margin-bottom: 1rem;
+}
+
+/* ボタン */
+.btn {
+    display: inline-block;
+    font-size: 1.5rem;
+    background-color: #0db;
+    color: #fff;
+    border-radius: 8px;
+    padding: .75rem 1.5rem;
+    transition: .5s;
+}
+.btn:hover {
+    background-color: #0090aa;
+}
+
+/* デスクトップ版 
+------------------------------------ */ 
+@media (min-width: 800px) {
+    /* 見出し */
+    .page-title {
+        font-size: 5rem;
+    }
+    .heading-large {
+        font-size: 4rem;
+    }
+    /* ヘッダー */
+    .page-header {
+        display: flex;
+        justify-content: space-around;
+    }
+    .main-nav {
+        font-size: 2rem;
+    }
+}
+/* --- ナビゲーション --- */
+/* .main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-toggle {
+    display: none; PCでは非表示
+    background: none;
+    border: none;
+    font-size: 2rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    cursor: pointer;
+} */
+
+/* スマホ表示 */
+/* @media (max-width: 768px) {
+    .main-nav {
+        display: none; /* 初期状態で非表示 */
+        /* flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        background-color: #fff;
+        padding: 1rem;
+        border-top: 1px solid #ccc;
+    }
+
+    .main-nav.active {
+        display: flex; /* ボタンで表示切替 */
+    /* }
+
+    .nav-toggle {
+        display: block; /* スマホでは表示 
+    }
+} */
+
+/* ヘッダー 
+------------------------------------ */
+.page-header {
+    padding-top: .5rem;
+}
+.logo {
+    width: 210px;
+}
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 1.1em;
+    list-style: none;
+}
+/* .cover {
+    background-size: cover;
+    background-position: center bottom;
+    height: 800px;
+}
+.cover-home {
+    background-image: url(images/ユンボ.JPG);
+} */
+.about {
+    max-width: 736px;
+    padding: 0 1.5rem;
+    margin: 3rem auto 0;
+}
+.about p {
+    margin-bottom: 3rem;
+}
+/* フッター 
+------------------------------------ */
+.info {
+    width: 100%;
+    max-width: 544px;
+    margin: auto;
+    padding: 0 1.5rem;
+    border-spacing: 0;
+    font-size: 0.95rem; /* ← 表内の文字をさらに見やすく */
+}
+.info th,
+.info td {
+    border-bottom: 1px solid #c9c2bc;
+}
+.info th {
+    text-align: left;
+    font-weight: normal;
+    padding: 1rem;
+}
+.info td {
+    padding: 1rem 0;
+}
+/* コピーライト */
+.copyright {
+    background-color: #432;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 6rem;
+    color: #fff;
+}
