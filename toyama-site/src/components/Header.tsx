@@ -1,9 +1,24 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { COMPANY } from "@/constants/company";
 
 export default function Header() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setVisible(window.scrollY > 100);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-navy/20 bg-navy/95 backdrop-blur">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 border-b border-navy/20 bg-navy/95 backdrop-blur transition-transform duration-300 ${
+        visible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
         <a href="#top" className="flex items-center gap-3">
           <Image
