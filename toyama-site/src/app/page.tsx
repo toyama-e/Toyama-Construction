@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Whyus from "@/components/Whyus";
 import Services from "@/components/Services";
 import License from "@/components/License";
 import About from "@/components/About";
@@ -13,6 +14,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Whyus />
         <Services />
         <License />
         <About />
