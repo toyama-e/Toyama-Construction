@@ -11,13 +11,14 @@ export default function Hero() {
         </span>
 
         <h1 className="mt-6 text-2xl font-bold leading-snug tracking-tight md:text-4xl">
-          「建設の仕事って、無理だと思ってた。」
+          「手を動かす人間が、いちばん強い時代がくる。」
         </h1>
 
         <p className="mt-6 leading-relaxed text-white/80 md:text-lg">
-          でも、うちで働いているスタッフの多くは、未経験からスタートしています。<br />
-          特別なスキルも、体力自慢も、最初はいりません。<br />
-          丁寧に教えます。資格も一緒に取ります。手に職をつけてください。
+          AIがどれだけ進化しても、現場に立つのは人間です。<br />
+          うちで働いているスタッフの多くは、未経験からスタートしています。<br />
+          丁寧に教えます。資格も一緒に取ります。<br />
+          手を動かすことが、これからいちばんの強みになります。
         </p>
 
         <div className="mt-6 flex flex-wrap gap-2">
