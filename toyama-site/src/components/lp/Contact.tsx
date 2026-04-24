@@ -11,12 +11,12 @@ export default function Contact() {
           お問い合わせ
         </h2>
         <p className="mt-3 text-white/70">
-          相談・見積り・採用応募など、お気軽にご連絡ください。
+          相談・見積りなど、お気軽にご連絡ください。
         </p>
 
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           <div className="rounded-2xl border border-white/15 bg-white/10 p-6">
-            <h3 className="font-bold text-gold">お電話・メール</h3>
+            <h3 className="font-bold text-gold">お電話</h3>
             <div className="mt-4 space-y-3 text-sm">
               <p>
                 <span className="text-white/60">TEL</span>
@@ -28,16 +28,6 @@ export default function Contact() {
                   {COMPANY.tel}
                 </a>
               </p>
-              <p>
-                <span className="text-white/60">Mail</span>
-                <br />
-                <a
-                  href={`mailto:${COMPANY.email}`}
-                  className="mt-1 inline-block text-white underline hover:text-gold transition-colors"
-                >
-                  {COMPANY.email}
-                </a>
-              </p>
               <p className="text-xs text-white/50">
                 受付時間：平日 {COMPANY.hours}
               </p>
@@ -45,19 +35,17 @@ export default function Contact() {
           </div>
 
           <div className="rounded-2xl border border-white/15 bg-white/10 p-6">
-            <h3 className="font-bold text-gold">フォームで送る</h3>
+            <h3 className="font-bold text-gold">メールで問い合わせ</h3>
             <p className="mt-3 text-sm leading-relaxed text-white/70">
-              Googleフォームからお問い合わせいただけます。
+              メールでのお問い合わせも受け付けています。<br />
               内容を確認次第、担当者よりご連絡いたします。
             </p>
             <div className="mt-5">
               <a
-                href="GOOGLE_FORM_URL"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`mailto:${COMPANY.email}`}
                 className="inline-flex items-center justify-center rounded-xl bg-gold px-5 py-3 text-sm font-medium text-navy hover:opacity-90 transition-opacity"
               >
-                フォームを開く
+                メールを送る
               </a>
             </div>
           </div>

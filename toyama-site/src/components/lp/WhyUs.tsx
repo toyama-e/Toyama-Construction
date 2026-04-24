@@ -16,7 +16,7 @@ const reasons = [
   },
 ];
 
-export default function Whyus() {
+export default function WhyUs() {
   return (
     <section className="border-t border-navy/10">
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">

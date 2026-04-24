@@ -1,0 +1,45 @@
+const SCHEDULE = [
+  { time: "07:30", task: "集合・朝礼（現場または事務所）" },
+  { time: "08:00", task: "作業開始（掘削・舗装・外構など）" },
+  { time: "12:00", task: "昼休憩（1時間　作業内容によっては前後することがあります）" },
+  { time: "13:00", task: "午後作業" },
+  { time: "17:00", task: "片付け・日報記録" },
+  { time: "17:30", task: "終業" },
+];
+
+export default function DailySchedule() {
+  return (
+    <section className="border-t border-navy/10 scroll-mt-16">
+      <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
+        <p className="text-sm font-medium tracking-widest text-gold uppercase">A Day&apos;s Work</p>
+        <h2 className="mt-2 text-2xl font-bold tracking-tight text-navy md:text-3xl">
+          1日の流れ
+        </h2>
+
+        <div className="mt-10 rounded-2xl border border-navy/15 bg-white p-6 shadow-sm">
+          <ol>
+            {SCHEDULE.map((s, i) => (
+              <li key={s.time} className="flex gap-4">
+                <div className="flex flex-col items-center">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold text-[10px] font-bold text-navy">
+                    {i + 1}
+                  </span>
+                  {i < SCHEDULE.length - 1 && (
+                    <div className="mt-1 w-px flex-1 min-h-6 bg-navy/10" />
+                  )}
+                </div>
+                <div className="pb-4">
+                  <span className="text-xs font-bold text-gold">{s.time}</span>
+                  <p className="mt-0.5 text-sm text-navy">{s.task}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-2 text-xs text-sub border-t border-navy/10 pt-4">
+            残業は月10時間以内がほとんど。仕事終わりの時間をしっかり確保できます。
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
