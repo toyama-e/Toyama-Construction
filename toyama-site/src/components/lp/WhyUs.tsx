@@ -1,16 +1,16 @@
 const reasons = [
   {
-    icon: "💰",
+    num: "01",
     title: "他社より安く、柔軟に対応",
     desc: "小さな工事・急な依頼もOK。無駄な中間マージンを省き、適正価格でお応えします。",
   },
   {
-    icon: "🔧",
+    num: "02",
     title: "土木から外構まで一式対応",
     desc: "道路・水路・外構・改修を一手に引き受け。窓口がひとつで完結するので手間がかかりません。",
   },
   {
-    icon: "📍",
+    num: "03",
     title: "新潟県央エリア密着",
     desc: "地元をよく知るスタッフが現地確認から施工まで担当。スピーディな対応が自慢です。",
   },
@@ -36,7 +36,7 @@ export default function WhyUs() {
               key={r.title}
               className="rounded-2xl border border-navy/15 bg-white p-6 shadow-sm"
             >
-              <span className="text-3xl">{r.icon}</span>
+              <span className="text-3xl font-black text-gold/50">{r.num}</span>
               <h3 className="mt-3 text-lg font-bold text-navy">{r.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-sub">{r.desc}</p>
             </div>
