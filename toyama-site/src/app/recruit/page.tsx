@@ -2,7 +2,6 @@ import Header from "@/components/common/Header";
 import Hero from "@/components/recruit/Hero";
 import Promise from "@/components/recruit/Promise";
 import DailySchedule from "@/components/recruit/DailySchedule";
-import CareerPath from "@/components/recruit/CareerPath";
 import Message from "@/components/recruit/Message";
 import JobSpec from "@/components/recruit/JobSpec";
 import Faq from "@/components/recruit/Faq";
@@ -15,11 +14,10 @@ export default function RecruitPage() {
       <Header page="recruit" />
       <main>
         <Hero />
+        <JobSpec />
         <Promise />
         <DailySchedule />
-        <CareerPath />
         <Message />
-        <JobSpec />
         <Faq />
         <Apply />
       </main>
