@@ -4,14 +4,12 @@ const NAV_ITEMS = [
   { label: "事業内容", href: "#services" },
   { label: "許可・資格", href: "#license" },
   { label: "会社概要", href: "#about" },
-  { label: "採用情報", href: "#recruit" },
   { label: "お問い合わせ", href: "#contact" },
 ];
 
 export default function Hero() {
   return (
     <section id="top" className="relative isolate overflow-hidden scroll-mt-4">
-      {/* 背景 */}
       <div className="absolute inset-0 -z-10">
         <div
           className="hero-bg-a absolute inset-0 bg-cover bg-center"
@@ -24,7 +22,6 @@ export default function Hero() {
         <div className="absolute inset-0 bg-navy/50" />
       </div>
 
-      {/* Hero内ナビバー */}
       <div className="absolute inset-x-0 top-0 z-20 border-b border-white/10">
         <div className="mx-auto grid max-w-5xl grid-cols-3 items-center px-4 py-3">
           <div />
@@ -47,7 +44,7 @@ export default function Hero() {
               電話：{COMPANY.tel}
             </a>
             <a
-              href="#recruit"
+              href="/recruit"
               className="rounded-full bg-gold px-3 py-2 text-sm font-medium text-navy hover:opacity-90 transition-opacity"
             >
               正社員募集中！
@@ -56,7 +53,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* メインコンテンツ */}
       <div className="relative z-10 mx-auto max-w-5xl px-4 pt-32 pb-20 md:pt-44 md:pb-36">
         <div className="mb-10">
           <p className="text-3xl font-bold text-white md:text-5xl">{COMPANY.name}</p>

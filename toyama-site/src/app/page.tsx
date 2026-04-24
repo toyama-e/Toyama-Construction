@@ -1,27 +1,25 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Whyus from "@/components/Whyus";
-import Services from "@/components/Services";
-import License from "@/components/License";
-import About from "@/components/About";
-import Recruit from "@/components/Recruit";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import Header from "@/components/common/Header";
+import Hero from "@/components/lp/Hero";
+import Services from "@/components/lp/Services";
+import WhyUs from "@/components/lp/WhyUs";
+import License from "@/components/lp/License";
+import About from "@/components/lp/About";
+import Contact from "@/components/lp/Contact";
+import Footer from "@/components/common/Footer";
 
 export default function Home() {
   return (
     <div className="min-h-dvh bg-offwhite text-ink">
-      <Header />
+      <Header page="lp" />
       <main>
         <Hero />
-        <Whyus />
         <Services />
+        <WhyUs />
         <License />
         <About />
-        <Recruit />
         <Contact />
       </main>
-      <Footer />
+      <Footer page="lp" />
     </div>
   );
 }
