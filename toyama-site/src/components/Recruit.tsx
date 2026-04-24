@@ -22,12 +22,28 @@ export default function Recruit() {
         <p className="text-sm font-medium tracking-widest text-gold uppercase">
           Recruit
         </p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-navy md:text-3xl">
-          採用情報
-        </h2>
+        <div className="mt-2 flex flex-wrap items-center gap-3">
+          <h2 className="text-2xl font-bold tracking-tight text-navy md:text-3xl">
+            正社員募集中
+          </h2>
+          <span className="rounded-full bg-gold px-3 py-1 text-sm font-medium text-navy">
+            未経験歓迎
+          </span>
+        </div>
         <p className="mt-3 text-sub">
-          少人数だからこそ、丁寧に教えます。未経験の方もお気軽にご相談ください。
+          少人数だからこそ、丁寧に教えます。資格取得支援あり・経験不問でご応募いただけます。
         </p>
+
+        <div className="mt-6 flex flex-wrap gap-3">
+          {["未経験OK", "資格取得支援あり", "月給22万円〜", "正社員雇用"].map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-navy/20 bg-white px-4 py-1 text-sm font-medium text-navy"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
 
         <div className="mt-10 space-y-5">
           {jobs.map((j) => (
@@ -48,9 +64,9 @@ export default function Recruit() {
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <a
                   href={`tel:${COMPANY.tel}`}
-                  className="inline-flex items-center justify-center rounded-xl bg-navy px-5 py-3 text-sm font-medium text-white hover:opacity-90 transition-opacity"
+                  className="inline-flex items-center justify-center rounded-xl bg-gold px-5 py-3 text-sm font-bold text-navy hover:opacity-90 transition-opacity"
                 >
-                  電話で応募する　{COMPANY.tel}
+                  今すぐ電話で応募する　{COMPANY.tel}
                 </a>
                 <a
                   href="#contact"
