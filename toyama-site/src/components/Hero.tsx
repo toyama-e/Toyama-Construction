@@ -44,13 +44,13 @@ export default function Hero() {
               href={`tel:${COMPANY.tel}`}
               className="rounded-full border border-white/40 px-3 py-2 text-sm font-medium text-white hover:bg-white/10 transition-colors"
             >
-              {COMPANY.tel}
+              電話：{COMPANY.tel}
             </a>
             <a
               href="#recruit"
               className="rounded-full bg-gold px-3 py-2 text-sm font-medium text-navy hover:opacity-90 transition-opacity"
             >
-              採用応募
+              正社員募集中！
             </a>
           </div>
         </div>
@@ -59,30 +59,22 @@ export default function Hero() {
       {/* メインコンテンツ */}
       <div className="relative z-10 mx-auto max-w-5xl px-4 pt-32 pb-20 md:pt-44 md:pb-36">
         <div className="mb-10">
-          <p className="text-xs font-medium tracking-[0.3em] text-gold/70 mb-1">
-            株式会社
-          </p>
-          <p className="text-5xl font-bold tracking-wider text-white md:text-7xl">
-            外山建設
-          </p>
-          <p className="mt-2 text-xs tracking-[0.25em] text-white/50">
-            TOYAMA CONSTRUCTION
-          </p>
+          <p className="text-3xl font-bold text-white md:text-5xl">{COMPANY.name}</p>
         </div>
 
+        <p className="mb-2 text-sm font-medium tracking-widest text-gold/80">
+          TOYAMA CONSTRUCTION
+        </p>
+
         <h1 className="text-2xl font-bold leading-snug tracking-tight text-white md:text-4xl">
-          新潟県央の土木・外構工事を、
-          <br />
-          丁寧に。
+          新潟県 県央地域の土木・外構工事
         </h1>
 
-        <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-          <a
-            href="#recruit"
-            className="inline-flex items-center justify-center rounded-xl bg-gold px-8 py-3 font-medium text-navy hover:opacity-90 transition-opacity"
-          >
-            採用情報を見る
-          </a>
+        <p className="mt-4 text-base leading-relaxed text-white/85 md:text-lg">
+          ご自宅の駐車場・お庭の整備や工事など、お任せください。
+        </p>
+
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <a
             href="#contact"
             className="inline-flex items-center justify-center rounded-xl border border-white/50 px-8 py-3 font-medium text-white hover:bg-white/10 transition-colors"
