@@ -8,11 +8,13 @@ export default function Footer({ page }: Props) {
       <div className="mx-auto max-w-5xl px-4 py-10">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div>
-            <p className="font-bold text-white">{COMPANY.name}</p>
+            <a href={page === "recruit" ? "/" : "#top"} className="font-bold text-white hover:text-gold transition-colors">
+              {COMPANY.name}
+            </a>
             <p className="mt-1 text-sm text-white/60">{COMPANY.address}</p>
             <p className="mt-1 text-sm text-white/60">TEL：{COMPANY.tel}</p>
           </div>
-          {page === "lp" ? (
+          {page === "lp" && (
             <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
               {[
                 { label: "事業内容", href: "#services" },
@@ -25,13 +27,7 @@ export default function Footer({ page }: Props) {
                 </a>
               ))}
               <a href="/recruit" className="text-white/60 hover:text-gold transition-colors">
-                採用情報はこちら →
-              </a>
-            </nav>
-          ) : (
-            <nav>
-              <a href="/" className="text-sm text-white/60 hover:text-gold transition-colors">
-                ← 会社サイトへ戻る
+                採用情報
               </a>
             </nav>
           )}

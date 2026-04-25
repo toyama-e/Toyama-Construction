@@ -32,19 +32,13 @@ export default function Header({ page }: Props) {
           {COMPANY.name}
         </a>
 
-        {page === "lp" ? (
+        {page === "lp" && (
           <nav className="hidden items-center gap-5 text-sm md:flex">
             {LP_NAV.map(({ label, href }) => (
               <a key={href} href={href} className="text-white/80 hover:text-gold transition-colors">
                 {label}
               </a>
             ))}
-          </nav>
-        ) : (
-          <nav className="hidden md:flex">
-            <a href="/" className="text-sm text-white/80 hover:text-gold transition-colors">
-              ← 会社サイトへ戻る
-            </a>
           </nav>
         )}
 
