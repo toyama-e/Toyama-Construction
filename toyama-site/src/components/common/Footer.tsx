@@ -12,7 +12,12 @@ export default function Footer({ page }: Props) {
               {COMPANY.name}
             </a>
             <p className="mt-1 text-sm text-white/60">{COMPANY.address}</p>
-            <p className="mt-1 text-sm text-white/60">TEL：{COMPANY.tel}</p>
+            <p className="mt-1 text-sm text-white/60">
+              TEL：<a href={`tel:${COMPANY.tel}`} className="hover:text-gold transition-colors">{COMPANY.tel}</a>
+            </p>
+            <p className="mt-1 text-sm text-white/60">
+              MAIL：<a href={`mailto:${COMPANY.email}`} className="hover:text-gold transition-colors">{COMPANY.email}</a>
+            </p>
           </div>
           {page === "lp" && (
             <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
