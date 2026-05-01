@@ -11,7 +11,7 @@ import Footer from "@/components/common/Footer";
 export default function RecruitPage() {
   return (
     <div className="min-h-dvh bg-offwhite text-ink">
-      <Header page="recruit" />
+      <Header page="recruit" alwaysVisible />
       <main>
         <Hero />
         <JobSpec />

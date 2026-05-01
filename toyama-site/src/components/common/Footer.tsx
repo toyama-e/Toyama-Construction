@@ -13,7 +13,10 @@ export default function Footer({ page }: Props) {
             </a>
             <p className="mt-1 text-sm text-white/60">{COMPANY.address}</p>
             <p className="mt-1 text-sm text-white/60">
-              TEL：<a href={`tel:${COMPANY.tel}`} className="hover:text-gold transition-colors">{COMPANY.tel}</a>
+              <a href={COMPANY.lineUrl} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">電話：LINE通話をかける（受付時間：平日 8:00〜17:30）</a>
+            </p>
+            <p className="mt-1 text-sm text-white/60">
+              FAX：{COMPANY.fax}
             </p>
             <p className="mt-1 text-sm text-white/60">
               MAIL：<a href={`mailto:${COMPANY.email}`} className="hover:text-gold transition-colors">{COMPANY.email}</a>

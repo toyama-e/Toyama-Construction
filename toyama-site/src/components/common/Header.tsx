@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { COMPANY } from "@/constants/company";
 
-type Props = { page: "lp" | "recruit" };
+type Props = { page: "lp" | "recruit"; alwaysVisible?: boolean };
 
 const LP_NAV = [
   { label: "事業内容", href: "#services" },
@@ -12,14 +12,16 @@ const LP_NAV = [
   { label: "お問い合わせ", href: "#contact" },
 ];
 
-export default function Header({ page }: Props) {
-  const [visible, setVisible] = useState(false);
+export default function Header({ page, alwaysVisible = false }: Props) {
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 100);
+    const onScroll = () => setScrolled(window.scrollY > 100);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const visible = alwaysVisible || scrolled;
 
   return (
     <header
@@ -43,12 +45,6 @@ export default function Header({ page }: Props) {
         )}
 
         <div className="flex items-center gap-2">
-          <a
-            href={`tel:${COMPANY.tel}`}
-            className="rounded-full border border-white/40 px-3 py-2 text-sm font-medium text-white hover:bg-white/10 transition-colors"
-          >
-            電話：{COMPANY.tel}
-          </a>
           {page === "lp" ? (
             <a
               href="/recruit"
