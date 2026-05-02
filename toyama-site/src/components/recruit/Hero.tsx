@@ -3,7 +3,7 @@ const TAGS = ["未経験OK", "資格取得支援あり", "月給22万円〜", "�
 export default function Hero() {
   return (
     <section id="top" className="bg-navy text-white scroll-mt-4">
-      <div className="mx-auto max-w-5xl px-4 pt-4 pb-20 md:pt-8 md:pb-32">
+      <div className="mx-auto max-w-5xl px-4 pt-20 pb-20 md:pt-24 md:pb-32">
         <div className="flex flex-col items-start gap-10">
           <div className="flex items-center gap-4">
           <span className="inline-block rounded-full bg-gold px-4 py-1 text-sm font-medium text-navy">
