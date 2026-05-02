@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { COMPANY } from "@/constants/company";
 
 const rows = [
@@ -22,18 +23,30 @@ export default function About() {
           会社概要
         </h2>
 
-        <div className="mt-10 overflow-hidden rounded-2xl border border-navy/15 bg-white">
-          <dl className="divide-y divide-navy/10">
-            {rows.map((r) => (
-              <div
-                key={r.k}
-                className="grid gap-1 px-5 py-4 md:grid-cols-[160px_1fr] md:gap-4 md:px-8"
-              >
-                <dt className="text-sm font-medium text-sub">{r.k}</dt>
-                <dd className="text-sm text-ink">{r.v}</dd>
-              </div>
-            ))}
-          </dl>
+        <div className="mt-10 flex flex-col gap-6 md:flex-row md:items-start">
+          <div className="overflow-hidden rounded-2xl border border-navy/15 md:w-2/5 md:shrink-0">
+            <Image
+              src="/images/office1-1.jpeg"
+              alt="株式会社 外山建設 事務所"
+              width={3024}
+              height={3024}
+              className="w-full object-cover"
+            />
+          </div>
+
+          <div className="overflow-hidden rounded-2xl border border-navy/15 bg-white md:flex-1">
+            <dl className="divide-y divide-navy/10">
+              {rows.map((r) => (
+                <div
+                  key={r.k}
+                  className="grid gap-1 px-5 py-4 sm:grid-cols-[140px_1fr] sm:gap-4 sm:px-6"
+                >
+                  <dt className="text-sm font-medium text-sub">{r.k}</dt>
+                  <dd className="text-sm text-ink">{r.v}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
 
         <div className="mt-8 overflow-hidden rounded-2xl border border-navy/15">
