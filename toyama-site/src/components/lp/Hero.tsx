@@ -23,8 +23,8 @@ export default function Hero() {
       </div>
 
       <div className="absolute inset-x-0 top-0 z-20 border-b border-white/10">
-        <div className="mx-auto grid max-w-5xl grid-cols-3 items-center px-4 py-3">
-          <div />
+        <div className="mx-auto flex max-w-5xl items-center justify-end px-4 py-3 md:grid md:grid-cols-3">
+          <div className="hidden md:block" />
           <nav className="hidden items-center justify-center gap-4 text-sm md:flex whitespace-nowrap">
             {NAV_ITEMS.map(({ label, href }) => (
               <a
