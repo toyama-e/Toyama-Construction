@@ -20,15 +20,15 @@ const items = [
 
 export default function License() {
   return (
-    <section id="license" className="border-t border-navy/10 scroll-mt-16 bg-navy">
+    <section id="license" className="border-t border-gray-200 scroll-mt-16 bg-white">
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
         <p className="text-sm font-medium tracking-widest text-gold uppercase">
           License &amp; Qualification
         </p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-white md:text-3xl">
+        <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
           許可・資格・保険
         </h2>
-        <p className="mt-3 text-white/70">
+        <p className="mt-3 text-gray-600">
           適切な許可と資格のもと、安全・確実に施工を行います。
         </p>
 
@@ -36,12 +36,12 @@ export default function License() {
           {items.map((item) => (
             <div
               key={item.category}
-              className="rounded-2xl border border-white/15 bg-white/10 p-6"
+              className="rounded-2xl border border-gray-200 bg-gray-50 p-6"
             >
               <h3 className="text-base font-bold text-gold">{item.category}</h3>
               <ul className="mt-3 space-y-2">
                 {item.entries.map((e) => (
-                  <li key={e} className="text-sm text-white/80">
+                  <li key={e} className="text-sm text-gray-700">
                     {e}
                   </li>
                 ))}

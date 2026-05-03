@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { COMPANY } from "@/constants/company";
 
 type Props = { page: "lp" | "recruit"; alwaysVisible?: boolean };
@@ -25,19 +26,25 @@ export default function Header({ page, alwaysVisible = false }: Props) {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b border-navy/20 bg-navy/95 backdrop-blur transition-transform duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 border-b border-gray-200 bg-white backdrop-blur transition-transform duration-300 ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-        <a href={page === "recruit" ? "/" : "#top"} className="text-lg font-bold text-white">
-          {COMPANY.name}
+        <a href={page === "recruit" ? "/" : "#top"}>
+          <Image
+            src="/images/logo-wide.jpg"
+            alt={COMPANY.name}
+            width={160}
+            height={40}
+            className="h-10 w-auto object-contain"
+          />
         </a>
 
         {page === "lp" && (
           <nav className="hidden items-center gap-5 text-sm md:flex">
             {LP_NAV.map(({ label, href }) => (
-              <a key={href} href={href} className="text-white/80 hover:text-gold transition-colors">
+              <a key={href} href={href} className="text-black hover:text-gold transition-colors">
                 {label}
               </a>
             ))}
@@ -48,16 +55,16 @@ export default function Header({ page, alwaysVisible = false }: Props) {
           {page === "lp" ? (
             <a
               href="/recruit"
-              className="rounded-full bg-gold px-3 py-2 text-sm font-medium text-navy hover:opacity-90 transition-opacity"
+              className="relative text-sm font-medium text-black after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:bg-gold after:transition-transform after:duration-200 after:scale-x-100 hover:after:scale-x-75"
             >
-              正社員募集中！
+              正社員募集中！ ›
             </a>
           ) : (
             <a
               href="#apply"
-              className="rounded-full bg-gold px-3 py-2 text-sm font-medium text-navy hover:opacity-90 transition-opacity"
+              className="relative text-sm font-medium text-black after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:bg-gold after:transition-transform after:duration-200 after:scale-x-100 hover:after:scale-x-75"
             >
-              今すぐ応募する
+              今すぐ応募する ›
             </a>
           )}
         </div>
