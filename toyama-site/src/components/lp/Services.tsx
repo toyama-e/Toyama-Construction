@@ -19,7 +19,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="scroll-mt-16 bg-gray-100">
+    <section id="services" className="scroll-mt-16 bg-white">
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
         <p className="text-sm font-medium tracking-widest text-gold uppercase">
           Services
@@ -27,7 +27,7 @@ export default function Services() {
         <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
           事業内容
         </h2>
-        <p className="mt-3 text-gray-700">
+        <p className="mt-3 text-black">
           現場の状況に合わせて、最適な進め方をご提案します。
         </p>
 
@@ -35,7 +35,7 @@ export default function Services() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="rounded-2xl border border-navy/15 bg-white p-6 shadow-sm"
+              className="rounded-2xl border border-navy/15 bg-gray-100 p-6 shadow-sm"
             >
               <h3 className="text-lg font-bold text-black">{s.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-sub">{s.desc}</p>

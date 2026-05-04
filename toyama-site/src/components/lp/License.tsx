@@ -20,7 +20,7 @@ const items = [
 
 export default function License() {
   return (
-    <section id="license" className="scroll-mt-16 bg-gray-100">
+    <section id="license" className="scroll-mt-16 bg-white">
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
         <p className="text-sm font-medium tracking-widest text-gold uppercase">
           License &amp; Qualification
@@ -28,7 +28,7 @@ export default function License() {
         <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
           許可・資格・保険
         </h2>
-        <p className="mt-3 text-gray-700">
+        <p className="mt-3 text-black">
           適切な許可と資格のもと、安全・確実に施工を行います。
         </p>
 
@@ -36,7 +36,7 @@ export default function License() {
           {items.map((item) => (
             <div
               key={item.category}
-              className="rounded-2xl border border-gray-200 bg-white p-6"
+              className="rounded-2xl border border-gray-200 bg-gray-100 p-6"
             >
               <h3 className="text-base font-bold text-gold">{item.category}</h3>
               <ul className="mt-3 space-y-2">

@@ -14,7 +14,7 @@ const rows = [
 
 export default function About() {
   return (
-    <section id="about" className="scroll-mt-16 bg-gray-100">
+    <section id="about" className="scroll-mt-16 bg-white">
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
         <p className="text-sm font-medium tracking-widest text-gold uppercase">
           About Us
@@ -34,7 +34,7 @@ export default function About() {
             />
           </div>
 
-          <div className="overflow-hidden rounded-2xl border border-navy/15 bg-white md:flex-1">
+          <div className="overflow-hidden rounded-2xl border border-navy/15 bg-gray-100 md:flex-1">
             <dl className="divide-y divide-navy/10">
               {rows.map((r) => (
                 <div
@@ -60,7 +60,7 @@ export default function About() {
             referrerPolicy="no-referrer-when-downgrade"
             title="株式会社 外山建設 地図"
           />
-          <div className="flex items-center gap-2 border-t border-navy/10 bg-white px-4 py-3 text-sm text-sub">
+          <div className="flex items-center gap-2 border-t border-navy/10 bg-gray-100 px-4 py-3 text-sm text-sub">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 shrink-0 text-gold" viewBox="0 0 24 24" fill="currentColor">
               <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.079 3.218-4.402 3.218-7.327 0-4.418-3.582-8-8-8s-8 3.582-8 8c0 2.925 1.274 5.248 3.218 7.327a19.58 19.58 0 002.683 2.282 16.975 16.975 0 001.144.742zM12 13.5a3.5 3.5 0 100-7 3.5 3.5 0 000 7z" clipRule="evenodd" />
             </svg>
