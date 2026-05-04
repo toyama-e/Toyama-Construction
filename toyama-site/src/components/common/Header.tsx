@@ -30,7 +30,7 @@ export default function Header({ page, alwaysVisible = false }: Props) {
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
+      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-5">
         <a href={page === "recruit" ? "/" : "#top"}>
           <Image
             src="/images/logo-wide.jpg"
@@ -42,7 +42,7 @@ export default function Header({ page, alwaysVisible = false }: Props) {
         </a>
 
         {page === "lp" && (
-          <nav className="hidden items-center gap-5 text-sm md:flex">
+          <nav className="hidden items-center gap-5 text-base md:flex">
             {LP_NAV.map(({ label, href }) => (
               <a key={href} href={href} className="text-black hover:text-gold transition-colors">
                 {label}
@@ -55,14 +55,14 @@ export default function Header({ page, alwaysVisible = false }: Props) {
           {page === "lp" ? (
             <a
               href="/recruit"
-              className="relative text-sm font-medium text-black after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:bg-gold after:transition-transform after:duration-200 after:scale-x-100 hover:after:scale-x-75"
+              className="relative text-base font-medium text-black after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:bg-gold after:transition-transform after:duration-200 after:scale-x-100 hover:after:scale-x-75"
             >
               正社員募集中！ →
             </a>
           ) : (
             <a
               href="#apply"
-              className="relative text-sm font-medium text-black after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:bg-gold after:transition-transform after:duration-200 after:scale-x-100 hover:after:scale-x-75"
+              className="relative text-base font-medium text-black after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:bg-gold after:transition-transform after:duration-200 after:scale-x-100 hover:after:scale-x-75"
             >
               今すぐ応募する →
             </a>
