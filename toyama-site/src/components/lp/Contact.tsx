@@ -3,7 +3,7 @@ import { COMPANY } from "@/constants/company";
 
 export default function Contact() {
   return (
-    <section id="contact" className="border-t border-gray-200 scroll-mt-16 bg-white">
+    <section id="contact" className="scroll-mt-16 bg-white">
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
         <p className="text-sm font-medium tracking-widest text-gold uppercase">
           Contact

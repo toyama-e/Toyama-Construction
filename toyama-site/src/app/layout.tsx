@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
+import { Noto_Serif_JP } from "next/font/google";
 import { COMPANY } from "@/constants/company";
 import "./globals.css";
+
+const notoSerifJP = Noto_Serif_JP({
+  weight: ["700"],
+  subsets: ["latin"],
+  variable: "--font-serif-ja",
+  display: "swap",
+});
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://toyama-kensetsu.example.com";
 
@@ -66,7 +74,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>{children}</body>
+      <body className={notoSerifJP.variable}>{children}</body>
     </html>
   );
 }

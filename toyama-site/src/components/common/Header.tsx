@@ -26,7 +26,7 @@ export default function Header({ page, alwaysVisible = false }: Props) {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b border-gray-200 bg-white backdrop-blur transition-transform duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 bg-white backdrop-blur transition-transform duration-300 ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -57,14 +57,14 @@ export default function Header({ page, alwaysVisible = false }: Props) {
               href="/recruit"
               className="relative text-sm font-medium text-black after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:bg-gold after:transition-transform after:duration-200 after:scale-x-100 hover:after:scale-x-75"
             >
-              正社員募集中！ ›
+              正社員募集中！ →
             </a>
           ) : (
             <a
               href="#apply"
               className="relative text-sm font-medium text-black after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:bg-gold after:transition-transform after:duration-200 after:scale-x-100 hover:after:scale-x-75"
             >
-              今すぐ応募する ›
+              今すぐ応募する →
             </a>
           )}
         </div>

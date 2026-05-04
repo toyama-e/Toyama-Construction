@@ -18,7 +18,7 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="border-t border-navy/10">
+    <section>
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
         <p className="text-sm font-medium tracking-widest text-gold uppercase">
           Why Us
