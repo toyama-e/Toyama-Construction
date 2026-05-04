@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section id="top" className="relative isolate scroll-mt-4 h-[calc(100dvh-4rem)] flex flex-col pt-16 mb-[1cm]">
+    <section id="top" className="relative isolate scroll-mt-4 h-[calc(100dvh-4rem)] flex flex-col pt-20 mb-[1cm]">
       {/* 画像エリア：残りスペースをすべて使う */}
       <div className="relative flex-1 overflow-hidden ml-0">
         <div
@@ -26,7 +26,7 @@ export default function Hero() {
         <div className="mt-6">
           <a
             href="#contact"
-            className="relative text-sm font-medium text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:bg-gold after:transition-transform after:duration-200 after:scale-x-100 hover:after:scale-x-75"
+            className="relative text-lg font-medium text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:bg-gold after:transition-transform after:duration-200 after:scale-x-100 hover:after:scale-x-75"
           >
             ご相談はこちら →
           </a>

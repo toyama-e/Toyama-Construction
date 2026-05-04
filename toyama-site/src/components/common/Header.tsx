@@ -30,7 +30,7 @@ export default function Header({ page, alwaysVisible = false }: Props) {
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-5">
+      <div className="flex w-full items-center justify-between px-8 py-5">
         <a href={page === "recruit" ? "/" : "#top"}>
           <Image
             src="/images/logo-wide.jpg"
