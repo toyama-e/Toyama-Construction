@@ -9,19 +9,19 @@ const SCHEDULE = [
 
 export default function DailySchedule() {
   return (
-    <section className="border-t border-navy/10 scroll-mt-16">
+    <section id="schedule" className="scroll-mt-16 bg-white">
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
         <p className="text-sm font-medium tracking-widest text-gold uppercase">A Day&apos;s Work</p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-navy md:text-3xl">
+        <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
           1日の流れ
         </h2>
 
-        <div className="mt-10 rounded-2xl border border-navy/15 bg-white p-6 shadow-sm">
+        <div className="mt-10 rounded-2xl border border-navy/15 bg-gray-100 p-6 shadow-sm">
           <ol>
             {SCHEDULE.map((s, i) => (
               <li key={s.time} className="flex gap-4">
                 <div className="flex flex-col items-center">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold text-[10px] font-bold text-navy">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold text-[10px] font-bold text-black">
                     {i + 1}
                   </span>
                   {i < SCHEDULE.length - 1 && (
@@ -30,7 +30,7 @@ export default function DailySchedule() {
                 </div>
                 <div className="pb-4">
                   <span className="text-xs font-bold text-gold">{s.time}</span>
-                  <p className="mt-0.5 text-sm text-navy">{s.task}</p>
+                  <p className="mt-0.5 text-sm text-black">{s.task}</p>
                 </div>
               </li>
             ))}

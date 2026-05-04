@@ -3,7 +3,7 @@ import { COMPANY } from "@/constants/company";
 
 export default function Apply() {
   return (
-    <section id="apply" className="border-t border-gray-200 scroll-mt-16 bg-white">
+    <section id="apply" className="scroll-mt-16 bg-white">
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
         <p className="text-sm font-medium tracking-widest text-gold uppercase">Apply</p>
         <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
@@ -16,7 +16,7 @@ export default function Apply() {
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {/* 1. 電話 */}
-          <div className="flex flex-col rounded-2xl border border-gray-200 bg-gray-50 p-6">
+          <div className="flex flex-col rounded-2xl border border-gray-200 bg-gray-100 p-6">
             <p className="text-base font-bold text-gold">電話で応募する</p>
             <div className="mt-3 flex flex-1 flex-col items-center justify-center gap-3">
               <a
@@ -29,11 +29,11 @@ export default function Apply() {
               </a>
               <Image src="/call.png" alt="電話" width={80} height={80} />
             </div>
-            <p className="mt-3 text-xs text-gray-400 text-center">QRコードを読み取るか、ボタンをタップ</p>
-            <p className="mt-1 text-xs text-gray-400 text-center">受付時間：平日 {COMPANY.hours}</p>
+            <p className="mt-3 text-xs text-black text-center">QRコードを読み取るか、ボタンをタップ</p>
+            <p className="mt-1 text-xs text-black text-center">受付時間：平日 {COMPANY.hours}</p>
           </div>
           {/* 2. LINE */}
-          <div className="flex flex-col rounded-2xl border border-gray-200 bg-gray-50 p-6">
+          <div className="flex flex-col rounded-2xl border border-gray-200 bg-gray-100 p-6">
             <p className="text-base font-bold text-gold">LINEで応募する</p>
             <div className="mt-3 flex flex-1 flex-col items-center justify-center gap-3">
               <a href="https://lin.ee/TjLtnmk" target="_blank" rel="noopener noreferrer" className="inline-block rounded-full bg-[#06C755] px-6 py-2 text-sm font-bold text-white transition-opacity hover:opacity-75">
@@ -43,10 +43,10 @@ export default function Apply() {
                 <Image src="/images/line-qr.png" alt="LINE友だち追加QRコード" width={120} height={120} />
               </a>
             </div>
-            <p className="mt-3 text-xs text-gray-400 text-center">QRコードを読み取るか、ボタンをタップ</p>
+            <p className="mt-3 text-xs text-black text-center">QRコードを読み取るか、ボタンをタップ</p>
           </div>
           {/* 3. メール */}
-          <div className="flex flex-col rounded-2xl border border-gray-200 bg-gray-50 p-6">
+          <div className="flex flex-col rounded-2xl border border-gray-200 bg-gray-100 p-6">
             <p className="text-base font-bold text-gold">メールで応募する</p>
             <div className="mt-3 flex flex-1 flex-col items-center justify-center gap-3">
               <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400">
@@ -60,7 +60,7 @@ export default function Apply() {
                 メールを送る
               </a>
             </div>
-            <p className="mt-3 text-xs text-gray-400 text-center">{COMPANY.email}</p>
+            <p className="mt-3 text-xs text-black text-center">{COMPANY.email}</p>
           </div>
         </div>
       </div>

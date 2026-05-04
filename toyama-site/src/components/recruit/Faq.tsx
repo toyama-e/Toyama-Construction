@@ -15,21 +15,21 @@ const FAQS = [
 
 export default function Faq() {
   return (
-    <section className="border-t border-navy/10 scroll-mt-16">
+    <section id="faq" className="scroll-mt-16 bg-white">
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
         <p className="text-sm font-medium tracking-widest text-gold uppercase">FAQ</p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-navy md:text-3xl">
+        <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
           よくある質問
         </h2>
 
         <div className="mt-10 space-y-6">
           {FAQS.map((f) => (
-            <div key={f.q} className="rounded-2xl border border-navy/15 bg-white p-6 shadow-sm">
-              <p className="font-medium text-navy">
+            <div key={f.q} className="rounded-2xl border border-navy/15 bg-gray-100 p-6 shadow-sm">
+              <p className="font-medium text-black">
                 <span className="mr-1.5 font-bold text-gold">Q.</span>{f.q}
               </p>
-              <p className="mt-3 pl-5 text-sm text-sub">
-                <span className="font-medium text-navy">A.</span>　{f.a}
+              <p className="mt-3 pl-5 text-sm text-black">
+                <span className="font-medium text-black">A.</span>　{f.a}
               </p>
             </div>
           ))}
