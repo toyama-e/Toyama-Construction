@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { COMPANY } from "@/constants/company";
 
 type Props = { page: "lp" | "recruit" };
@@ -8,8 +9,14 @@ export default function Footer({ page }: Props) {
       <div className="mx-auto max-w-5xl px-4 py-10">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div>
-            <a href={page === "recruit" ? "/" : "#top"} className="font-bold text-black hover:text-gold transition-colors">
-              {COMPANY.name}
+            <a href={page === "recruit" ? "/" : "#top"}>
+              <Image
+                src="/images/logo-wide.jpg"
+                alt={COMPANY.name}
+                width={160}
+                height={40}
+                className="h-10 w-auto object-contain mb-2"
+              />
             </a>
             <p className="mt-1 text-sm text-gray-600">{COMPANY.address}</p>
             <p className="mt-1 text-sm text-gray-600">
