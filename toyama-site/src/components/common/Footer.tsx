@@ -29,23 +29,31 @@ export default function Footer({ page }: Props) {
               MAIL：<a href={`mailto:${COMPANY.email}`} className="hover:text-gold transition-colors">{COMPANY.email}</a>
             </p>
           </div>
-          {page === "lp" && (
-            <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-              {[
-                { label: "事業内容", href: "#services" },
-                { label: "許可・資格", href: "#license" },
-                { label: "会社概要", href: "#about" },
-                { label: "お問い合わせ", href: "#contact" },
-              ].map(({ label, href }) => (
-                <a key={href} href={href} className="text-gray-600 hover:text-gold transition-colors">
-                  {label}
-                </a>
-              ))}
-              <a href="/recruit" className="text-gray-600 hover:text-gold transition-colors">
-                採用情報
-              </a>
-            </nav>
-          )}
+          <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            {page === "lp"
+              ? [
+                  { label: "事業内容", href: "#services" },
+                  { label: "許可・資格", href: "#license" },
+                  { label: "会社概要", href: "#about" },
+                  { label: "お問い合わせ", href: "#contact" },
+                  { label: "採用情報", href: "/recruit" },
+                ].map(({ label, href }) => (
+                  <a key={href} href={href} className="text-gray-600 hover:text-gold transition-colors">
+                    {label}
+                  </a>
+                ))
+              : [
+                  { label: "募集要項", href: "#jobspec" },
+                  { label: "働く環境", href: "#promise" },
+                  { label: "1日の流れ", href: "#schedule" },
+                  { label: "よくある質問", href: "#faq" },
+                  { label: "今すぐ応募", href: "#apply" },
+                ].map(({ label, href }) => (
+                  <a key={href} href={href} className="text-gray-600 hover:text-gold transition-colors">
+                    {label}
+                  </a>
+                ))}
+          </nav>
         </div>
         <p className="mt-8 text-center text-xs text-gray-400">
           © {new Date().getFullYear()} {COMPANY.name} All Rights Reserved.

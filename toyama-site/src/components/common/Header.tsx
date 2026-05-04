@@ -13,6 +13,13 @@ const LP_NAV = [
   { label: "お問い合わせ", href: "#contact" },
 ];
 
+const RECRUIT_NAV = [
+  { label: "募集要項", href: "#jobspec" },
+  { label: "働く環境", href: "#promise" },
+  { label: "1日の流れ", href: "#schedule" },
+  { label: "よくある質問", href: "#faq" },
+];
+
 export default function Header({ page, alwaysVisible = false }: Props) {
   const [scrolled, setScrolled] = useState(false);
 
@@ -41,15 +48,13 @@ export default function Header({ page, alwaysVisible = false }: Props) {
           />
         </a>
 
-        {page === "lp" && (
-          <nav className="hidden items-center gap-5 text-base md:flex">
-            {LP_NAV.map(({ label, href }) => (
-              <a key={href} href={href} className="text-black hover:text-gold transition-colors">
-                {label}
-              </a>
-            ))}
-          </nav>
-        )}
+        <nav className="hidden items-center gap-5 text-base md:flex">
+          {(page === "lp" ? LP_NAV : RECRUIT_NAV).map(({ label, href }) => (
+            <a key={href} href={href} className="text-black hover:text-gold transition-colors">
+              {label}
+            </a>
+          ))}
+        </nav>
 
         <div className="flex items-center gap-2">
           {page === "lp" ? (
