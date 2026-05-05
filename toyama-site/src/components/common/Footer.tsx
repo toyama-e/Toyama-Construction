@@ -15,7 +15,8 @@ export default function Footer({ page }: Props) {
                 alt={COMPANY.name}
                 width={160}
                 height={40}
-                className="h-10 w-auto object-contain mb-2"
+                className="object-contain mb-2"
+            style={{ width: "auto" }}
               />
             </a>
             <p className="mt-1 text-sm text-gray-600">{COMPANY.address}</p>

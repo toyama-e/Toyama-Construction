@@ -31,6 +31,7 @@ export default function About() {
               width={3024}
               height={3024}
               className="w-full object-cover"
+              style={{ height: "auto" }}
             />
           </div>
 

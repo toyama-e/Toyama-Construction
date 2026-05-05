@@ -17,6 +17,7 @@ export default function Message() {
                   src="/images/jiji&kento.jpeg"
                   alt="代表 外山 澄男"
                   fill
+                  sizes="192px"
                   className="object-cover object-top"
                 />
               </div>

@@ -44,7 +44,8 @@ export default function Header({ page, alwaysVisible = false }: Props) {
             alt={COMPANY.name}
             width={160}
             height={40}
-            className="h-10 w-auto object-contain"
+            className="object-contain"
+            style={{ width: "auto" }}
           />
         </a>
 
