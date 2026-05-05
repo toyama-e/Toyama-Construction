@@ -5,14 +5,14 @@
 :root {
   --color-navy: #1E3A5F;
   --color-gold: #C9A84C;
-  --color-offwhite: #F7F5F2;
-  --color-ink: #1A1A1A;
+  --color-offwhite: #FFFFFF;
+  --color-ink: #000000;
   --color-sub: #666666;
 }
 
 body {
-  background-color: #F7F5F2;
-  color: #1A1A1A;
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
 @keyframes heroFadeA {

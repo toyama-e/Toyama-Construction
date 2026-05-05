@@ -15,21 +15,21 @@ const SPECS = [
 
 export default function JobSpec() {
   return (
-    <section className="border-t border-navy/10 scroll-mt-16">
+    <section id="jobspec" className="scroll-mt-16 bg-white">
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
         <p className="text-sm font-medium tracking-widest text-gold uppercase">Job Details</p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-navy md:text-3xl">
+        <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
           現場スタッフ（正社員）募集要項
         </h2>
 
-        <div className="mt-10 rounded-2xl border border-navy/15 bg-white shadow-sm overflow-hidden">
+        <div className="mt-10 rounded-2xl border border-navy/15 bg-gray-100 shadow-sm overflow-hidden">
           <dl>
             {SPECS.map((s, i) => (
               <div
                 key={s.label}
-                className={`flex gap-4 px-6 py-4 text-sm ${i % 2 === 0 ? "bg-white" : "bg-navy/[0.025]"}`}
+                className={`flex gap-4 px-6 py-4 text-sm ${i % 2 === 0 ? "bg-gray-100" : "bg-white"}`}
               >
-                <dt className="w-28 shrink-0 font-medium text-navy">{s.label}</dt>
+                <dt className="w-28 shrink-0 font-medium text-black">{s.label}</dt>
                 <dd className="text-sub">{s.value}</dd>
               </div>
             ))}

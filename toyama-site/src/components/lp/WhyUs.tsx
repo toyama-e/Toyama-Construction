@@ -18,15 +18,15 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="border-t border-navy/10">
+    <section className="bg-white">
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
         <p className="text-sm font-medium tracking-widest text-gold uppercase">
           Why Us
         </p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-navy md:text-3xl">
+        <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
           選ばれる理由
         </h2>
-        <p className="mt-3 text-sub">
+        <p className="mt-3 text-black">
           地域のお客様に長く選ばれ続ける、3つの強みをご紹介します。
         </p>
 
@@ -34,10 +34,10 @@ export default function WhyUs() {
           {reasons.map((r) => (
             <div
               key={r.title}
-              className="rounded-2xl border border-navy/15 bg-white p-6 shadow-sm"
+              className="rounded-2xl border border-navy/15 bg-gray-100 p-6 shadow-sm"
             >
               <span className="text-3xl font-black text-gold/50">{r.num}</span>
-              <h3 className="mt-3 text-lg font-bold text-navy">{r.title}</h3>
+              <h3 className="mt-3 text-lg font-bold text-black">{r.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-sub">{r.desc}</p>
             </div>
           ))}

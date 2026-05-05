@@ -10,7 +10,7 @@ import Footer from "@/components/common/Footer";
 export default function Home() {
   return (
     <div className="min-h-dvh bg-offwhite text-ink">
-      <Header page="lp" />
+      <Header page="lp" alwaysVisible />
       <main>
         <Hero />
         <Services />

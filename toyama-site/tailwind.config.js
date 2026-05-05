@@ -3,11 +3,14 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        mincho: ["var(--font-serif-ja)", "serif"],
+      },
       colors: {
         navy: "#1E3A5F",
         gold: "#C9A84C",
-        offwhite: "#F7F5F2",
-        ink: "#1A1A1A",
+        offwhite: "#FFFFFF",
+        ink: "#000000",
         sub: "#666666",
       },
     },

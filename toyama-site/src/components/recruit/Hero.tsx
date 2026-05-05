@@ -2,11 +2,11 @@ const TAGS = ["未経験OK", "資格取得支援あり", "月給22万円〜", "�
 
 export default function Hero() {
   return (
-    <section id="top" className="bg-navy text-white scroll-mt-4">
+    <section id="top" className="bg-white text-black scroll-mt-4">
       <div className="mx-auto max-w-5xl px-4 pt-20 pb-20 md:pt-24 md:pb-32">
         <div className="flex flex-col items-start gap-10">
           <div className="flex items-center gap-4">
-          <span className="inline-block rounded-full bg-gold px-4 py-1 text-sm font-medium text-navy">
+          <span className="inline-block rounded-full bg-gold px-4 py-1 text-sm font-medium text-black">
             未経験者歓迎
           </span>
         </div>
@@ -15,7 +15,7 @@ export default function Hero() {
           「手を動かす人間が、いちばん強い時代がくる。」
         </h1>
 
-        <p className="mt-6 leading-relaxed text-white/80 md:text-lg">
+        <p className="mt-6 leading-relaxed text-gray-700 md:text-lg">
           AIがどれだけ進化しても、現場に立つのは人間です。<br />
           うちで働いているスタッフの多くは、未経験からスタートしています。<br />
           丁寧に教えます。資格も一緒に取ります。<br />
@@ -26,7 +26,7 @@ export default function Hero() {
           {TAGS.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-white/30 px-4 py-1 text-sm text-white/80"
+              className="rounded-full border border-gray-300 px-4 py-1 text-sm text-gray-600"
             >
               {tag}
             </span>

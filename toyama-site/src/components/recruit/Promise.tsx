@@ -18,18 +18,18 @@ const PROMISES = [
 
 export default function Promise() {
   return (
-    <section className="border-t border-navy/10 scroll-mt-16">
+    <section id="promise" className="scroll-mt-16 bg-white">
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
         <p className="text-sm font-medium tracking-widest text-gold uppercase">Our Promise</p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-navy md:text-3xl">
+        <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
           入社後の3つの約束
         </h2>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-3">
           {PROMISES.map((p) => (
-            <div key={p.num} className="rounded-2xl border border-navy/15 bg-white p-6 shadow-sm">
+            <div key={p.num} className="rounded-2xl border border-navy/15 bg-gray-100 p-6 shadow-sm">
               <span className="text-3xl font-black text-gold/50">{p.num}</span>
-              <p className="mt-3 font-bold text-navy leading-snug">{p.title}</p>
+              <p className="mt-3 font-bold text-black leading-snug">{p.title}</p>
               <p className="mt-2 text-sm text-sub leading-relaxed">{p.desc}</p>
             </div>
           ))}
