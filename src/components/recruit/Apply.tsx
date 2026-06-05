@@ -39,7 +39,7 @@ export default function Apply() {
             <p className="text-base font-bold text-gold">LINEで応募する</p>
             <div className="mt-3 flex flex-1 flex-col items-center justify-center gap-3">
               <a
-                href="https://lin.ee/TjLtnmk"
+                href={COMPANY.lineAddUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block rounded-full bg-[#06C755] px-6 py-2 text-sm font-bold text-white transition-opacity hover:opacity-75"
@@ -47,7 +47,7 @@ export default function Apply() {
                 友だち追加
               </a>
               <a
-                href="https://lin.ee/TjLtnmk"
+                href={COMPANY.lineAddUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-opacity hover:opacity-70"
@@ -63,6 +63,7 @@ export default function Apply() {
             <p className="mt-3 text-center text-xs text-black">
               QRコードを読み取るか、ボタンをタップ
             </p>
+            <p className="mt-1 text-center text-xs text-black">LINE ID：{COMPANY.line}</p>
           </div>
           {/* 3. メール */}
           <div className="flex flex-col rounded-2xl border border-gray-200 bg-gray-100 p-6">

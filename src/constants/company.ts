@@ -4,6 +4,7 @@ export const COMPANY = {
   fax: "0256-55-5048",
   line: "@264ghvzz",
   lineUrl: "https://lin.ee/WdKxxdx",
+  lineAddUrl: "https://lin.ee/svXKisk",
   email: "toyama.kensetsu@outlook.com",
   hours: "8:00〜17:30",
   holiday: "第2・第4土曜・日曜・祝日・年末年始",

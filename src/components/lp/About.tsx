@@ -8,6 +8,8 @@ const rows = [
   { k: "事業内容", v: "土木一式工事・外構工事・改修・修繕" },
   { k: "対応エリア", v: COMPANY.area },
   { k: "建設業許可", v: "○○ 第○○号（差し替え予定）" },
+  { k: "FAX", v: COMPANY.fax },
+  { k: "LINE", v: COMPANY.line },
   { k: "営業時間", v: COMPANY.hours },
   { k: "定休日", v: COMPANY.holiday },
 ];
