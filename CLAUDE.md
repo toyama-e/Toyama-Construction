@@ -78,6 +78,7 @@ export const COMPANY = {
   address: "〒955-0014 新潟県三条市西潟14-23",
   tel: "0256-55-5048",
   email: "info@example.com", // 仮・差し替えること
+  lineUrl: "https://line.me/ti/p/XXXXXXXXXX", // 仮・差し替えること
   hours: "8:00〜17:30",
   holiday: "第2・第4土曜・日曜・祝日・年末年始",
   area: "新潟県 県央地区 / 近隣エリア",
@@ -92,7 +93,7 @@ export const COMPANY = {
 4. License（建設業許可・資格・保険）
 5. About（会社概要テーブル + Googleマップ）
 6. Recruit（採用情報・給与・1日の流れ）
-7. Contact（電話・メール・Googleフォームリンク）
+7. Contact（LINE通話・LINEチャット・メール）
 8. Footer
 
 > 施工実績セクションは **フェーズ2** で追加予定。現時点では実装しない。
@@ -104,17 +105,32 @@ export const COMPANY = {
 - 必ずSquoosh等で圧縮し **1枚200KB以下** にしてからコミットする
 - 外部ストレージ（S3等）は使用しない
 
-## お問い合わせフォーム
+## お問い合わせ
 
-現時点はGoogleフォームへの外部リンクで実装。
+LINE通話・LINEチャット・メールの3手段で実装する。Googleフォームは使用しない。
 
 ```tsx
-<a href="GOOGLE_FORM_URL" target="_blank" rel="noopener noreferrer">
-  フォームを開く
-</a>
+{
+  /* LINE通話 */
+}
+<a href="https://line.me/R/XXXXXXXXXX" target="_blank" rel="noopener noreferrer">
+  LINE通話で相談する
+</a>;
+
+{
+  /* LINEチャット */
+}
+<a href="https://line.me/ti/p/XXXXXXXXXX" target="_blank" rel="noopener noreferrer">
+  LINEチャットで相談する
+</a>;
+
+{
+  /* メール */
+}
+<a href="mailto:info@example.com">メールで相談する</a>;
 ```
 
-フェーズ2でResend等の独自フォームに差し替える予定。
+LINE URLは `src/constants/company.ts` の `lineUrl` に定数化する。
 
 ## Googleマップ埋め込み
 
@@ -143,6 +159,6 @@ git push → GitHub → Cloudflare Pagesが自動ビルド・デプロイ。
 - [ ] メールアドレス（現在 `info@example.com`）
 - [ ] 建設業許可番号（現在「○○」）
 - [ ] 加入保険の正式名称
-- [ ] Googleフォームの実際のURL
+- [ ] LINE公式アカウントのURL
 - [ ] GoogleマップのAPIキー
 - [ ] ヒーロー背景画像（実際の施工・現場写真）
