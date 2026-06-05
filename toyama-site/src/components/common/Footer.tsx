@@ -15,19 +15,27 @@ export default function Footer({ page }: Props) {
                 alt={COMPANY.name}
                 width={160}
                 height={40}
-                className="object-contain mb-2"
-            style={{ width: "auto" }}
+                className="mb-2 object-contain"
+                style={{ width: "auto" }}
               />
             </a>
             <p className="mt-1 text-sm text-gray-600">{COMPANY.address}</p>
             <p className="mt-1 text-sm text-gray-600">
-              <a href={COMPANY.lineUrl} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">電話：LINE通話をかける（受付時間：平日 8:00〜17:30）</a>
+              <a
+                href={COMPANY.lineUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-gold"
+              >
+                電話：LINE通話をかける（受付時間：平日 8:00〜17:30）
+              </a>
             </p>
+            <p className="mt-1 text-sm text-gray-600">FAX：{COMPANY.fax}</p>
             <p className="mt-1 text-sm text-gray-600">
-              FAX：{COMPANY.fax}
-            </p>
-            <p className="mt-1 text-sm text-gray-600">
-              MAIL：<a href={`mailto:${COMPANY.email}`} className="hover:text-gold transition-colors">{COMPANY.email}</a>
+              MAIL：
+              <a href={`mailto:${COMPANY.email}`} className="transition-colors hover:text-gold">
+                {COMPANY.email}
+              </a>
             </p>
           </div>
           <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
@@ -39,7 +47,11 @@ export default function Footer({ page }: Props) {
                   { label: "お問い合わせ", href: "#contact" },
                   { label: "採用情報", href: "/recruit" },
                 ].map(({ label, href }) => (
-                  <a key={href} href={href} className="text-gray-600 hover:text-gold transition-colors">
+                  <a
+                    key={href}
+                    href={href}
+                    className="text-gray-600 transition-colors hover:text-gold"
+                  >
                     {label}
                   </a>
                 ))
@@ -50,7 +62,11 @@ export default function Footer({ page }: Props) {
                   { label: "よくある質問", href: "#faq" },
                   { label: "今すぐ応募", href: "#apply" },
                 ].map(({ label, href }) => (
-                  <a key={href} href={href} className="text-gray-600 hover:text-gold transition-colors">
+                  <a
+                    key={href}
+                    href={href}
+                    className="text-gray-600 transition-colors hover:text-gold"
+                  >
                     {label}
                   </a>
                 ))}

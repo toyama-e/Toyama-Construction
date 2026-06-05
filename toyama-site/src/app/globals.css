@@ -3,26 +3,38 @@
 @tailwind utilities;
 
 :root {
-  --color-navy: #1E3A5F;
-  --color-gold: #C9A84C;
-  --color-offwhite: #FFFFFF;
+  --color-navy: #1e3a5f;
+  --color-gold: #c9a84c;
+  --color-offwhite: #ffffff;
   --color-ink: #000000;
   --color-sub: #666666;
 }
 
 body {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #000000;
 }
 
 @keyframes heroFadeA {
-  0%, 45% { opacity: 1; }
-  55%, 100% { opacity: 0; }
+  0%,
+  45% {
+    opacity: 1;
+  }
+  55%,
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes heroFadeB {
-  0%, 45% { opacity: 0; }
-  55%, 100% { opacity: 1; }
+  0%,
+  45% {
+    opacity: 0;
+  }
+  55%,
+  100% {
+    opacity: 1;
+  }
 }
 
 .hero-bg-a {

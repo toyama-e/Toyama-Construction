@@ -17,12 +17,12 @@ export default function JobSpec() {
   return (
     <section id="jobspec" className="scroll-mt-16 bg-white">
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
-        <p className="text-sm font-medium tracking-widest text-gold uppercase">Job Details</p>
+        <p className="text-sm font-medium uppercase tracking-widest text-gold">Job Details</p>
         <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
           現場スタッフ（正社員）募集要項
         </h2>
 
-        <div className="mt-10 rounded-2xl border border-navy/15 bg-gray-100 shadow-sm overflow-hidden">
+        <div className="mt-10 overflow-hidden rounded-2xl border border-navy/15 bg-gray-100 shadow-sm">
           <dl>
             {SPECS.map((s, i) => (
               <div

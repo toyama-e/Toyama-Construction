@@ -21,15 +21,9 @@ export default function Services() {
   return (
     <section id="services" className="scroll-mt-16 bg-white">
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
-        <p className="text-sm font-medium tracking-widest text-gold uppercase">
-          Services
-        </p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
-          事業内容
-        </h2>
-        <p className="mt-3 text-black">
-          現場の状況に合わせて、最適な進め方をご提案します。
-        </p>
+        <p className="text-sm font-medium uppercase tracking-widest text-gold">Services</p>
+        <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">事業内容</h2>
+        <p className="mt-3 text-black">現場の状況に合わせて、最適な進め方をご提案します。</p>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {services.map((s) => (
