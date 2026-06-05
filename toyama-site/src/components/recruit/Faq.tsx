@@ -17,7 +17,7 @@ export default function Faq() {
   return (
     <section id="faq" className="scroll-mt-16 bg-white">
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
-        <p className="text-sm font-medium tracking-widest text-gold uppercase">FAQ</p>
+        <p className="text-sm font-medium uppercase tracking-widest text-gold">FAQ</p>
         <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
           よくある質問
         </h2>
@@ -26,7 +26,8 @@ export default function Faq() {
           {FAQS.map((f) => (
             <div key={f.q} className="rounded-2xl border border-navy/15 bg-gray-100 p-6 shadow-sm">
               <p className="font-medium text-black">
-                <span className="mr-1.5 font-bold text-gold">Q.</span>{f.q}
+                <span className="mr-1.5 font-bold text-gold">Q.</span>
+                {f.q}
               </p>
               <p className="mt-3 pl-5 text-sm text-black">
                 <span className="font-medium text-black">A.</span>　{f.a}

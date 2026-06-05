@@ -11,10 +11,8 @@ export default function DailySchedule() {
   return (
     <section id="schedule" className="scroll-mt-16 bg-white">
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
-        <p className="text-sm font-medium tracking-widest text-gold uppercase">A Day&apos;s Work</p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
-          1日の流れ
-        </h2>
+        <p className="text-sm font-medium uppercase tracking-widest text-gold">A Day&apos;s Work</p>
+        <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">1日の流れ</h2>
 
         <div className="mt-10 rounded-2xl border border-navy/15 bg-gray-100 p-6 shadow-sm">
           <ol>
@@ -25,7 +23,7 @@ export default function DailySchedule() {
                     {i + 1}
                   </span>
                   {i < SCHEDULE.length - 1 && (
-                    <div className="mt-1 w-px flex-1 min-h-6 bg-navy/10" />
+                    <div className="mt-1 min-h-6 w-px flex-1 bg-navy/10" />
                   )}
                 </div>
                 <div className="pb-4">
@@ -35,7 +33,7 @@ export default function DailySchedule() {
               </li>
             ))}
           </ol>
-          <p className="mt-2 text-xs text-sub border-t border-navy/10 pt-4">
+          <p className="mt-2 border-t border-navy/10 pt-4 text-xs text-sub">
             残業は月10時間以内がほとんど。仕事終わりの時間をしっかり確保できます。
           </p>
         </div>
