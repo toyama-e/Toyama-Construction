@@ -32,6 +32,16 @@ export default function Footer({ page }: Props) {
             </p>
             <p className="mt-1 text-sm text-gray-600">FAX：{COMPANY.fax}</p>
             <p className="mt-1 text-sm text-gray-600">
+              <a
+                href={COMPANY.lineAddUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-gold"
+              >
+                LINE：{COMPANY.line}
+              </a>
+            </p>
+            <p className="mt-1 text-sm text-gray-600">
               MAIL：
               <a href={`mailto:${COMPANY.email}`} className="transition-colors hover:text-gold">
                 {COMPANY.email}
