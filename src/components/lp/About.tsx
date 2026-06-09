@@ -50,7 +50,7 @@ export default function About() {
 
         <div className="mt-8 overflow-hidden rounded-2xl border border-navy/15">
           <iframe
-            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=${encodeURIComponent(COMPANY.address)}`}
+            src={`https://maps.google.com/maps?q=${encodeURIComponent(COMPANY.address)}&output=embed`}
             width="100%"
             height="360"
             style={{ border: 0 }}
