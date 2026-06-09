@@ -136,12 +136,8 @@ LINE URLは `src/constants/company.ts` の `lineUrl` に定数化する。
 
 ## Googleマップ埋め込み
 
-会社概要セクションに Google Maps Embed APIで埋め込む。
-APIキーは `.env.local` で管理し、GitHubにはコミットしない。
-
-```
-NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_api_key
-```
+会社概要セクションにiframeで埋め込む。APIキーは不要。
+Google マップの「共有 → 地図を埋め込む」から取得したiframe URLをそのまま使用する。
 
 ## ローカル開発
 
@@ -162,5 +158,4 @@ git push → GitHub → Cloudflare Pagesが自動ビルド・デプロイ。
 - [ ] 建設業許可番号（現在「○○」）
 - [ ] 加入保険の正式名称
 - [ ] LINE公式アカウントのURL
-- [ ] GoogleマップのAPIキー
 - [ ] ヒーロー背景画像（実際の施工・現場写真）
