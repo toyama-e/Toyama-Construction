@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { COMPANY } from "@/constants/company";
+import { trackConversion } from "@/lib/analytics";
 
 export default function Apply() {
   return (
@@ -23,6 +26,7 @@ export default function Apply() {
                 href={COMPANY.lineUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackConversion("line_call", "recruit")}
                 className="inline-block rounded-full bg-[#06C755] px-6 py-2 text-sm font-bold text-white transition-opacity hover:opacity-75"
               >
                 LINE通話をかける
@@ -42,6 +46,7 @@ export default function Apply() {
                 href={COMPANY.lineAddUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackConversion("line_add", "recruit")}
                 className="inline-block rounded-full bg-[#06C755] px-6 py-2 text-sm font-bold text-white transition-opacity hover:opacity-75"
               >
                 友だち追加
@@ -50,6 +55,7 @@ export default function Apply() {
                 href={COMPANY.lineAddUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackConversion("line_add", "recruit")}
                 className="transition-opacity hover:opacity-70"
               >
                 <Image
@@ -86,6 +92,7 @@ export default function Apply() {
               </svg>
               <a
                 href={`mailto:${COMPANY.email}`}
+                onClick={() => trackConversion("email", "recruit")}
                 className="inline-block rounded-full bg-black px-6 py-2 text-sm font-bold text-white transition-opacity hover:opacity-75"
               >
                 メールを送る
