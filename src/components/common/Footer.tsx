@@ -14,9 +14,9 @@ export default function Footer({ page }: Props) {
                 src="/images/logo-wide.jpg"
                 alt={COMPANY.name}
                 width={160}
-                height={40}
+                height={29}
                 className="mb-2 object-contain"
-                style={{ width: "auto" }}
+                style={{ height: "auto" }}
               />
             </a>
             <p className="mt-1 text-sm text-gray-600">{COMPANY.address}</p>

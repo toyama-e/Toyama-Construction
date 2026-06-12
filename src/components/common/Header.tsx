@@ -43,9 +43,9 @@ export default function Header({ page, alwaysVisible = false }: Props) {
             src="/images/logo-wide.jpg"
             alt={COMPANY.name}
             width={160}
-            height={40}
+            height={29}
             className="object-contain"
-            style={{ width: "auto" }}
+            style={{ height: "auto" }}
           />
         </a>
 
