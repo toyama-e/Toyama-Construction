@@ -152,6 +152,12 @@ npm run build    # 本番ビルド確認
 git push → GitHub → Cloudflare Pagesが自動ビルド・デプロイ。
 手動操作は不要。
 
+## Git運用
+
+- 新しいブランチは作成しない
+- すべての変更を `develop` ブランチに直接コミット・プッシュする
+- プルリクエストは `develop` から `main` に向けて作成する
+
 ## 未完了・仮データ（差し替えリスト）
 
 - [ ] メールアドレス（現在 `info@example.com`）
