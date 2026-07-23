@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="relative ml-0 flex-1 overflow-hidden">
         <div
           className="hero-bg-a absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url(/images/office4-3.jpeg)" }}
+          style={{ backgroundImage: "url(/images/office4-3.webp)" }}
         />
         <div
           className="hero-bg-b absolute inset-0 bg-cover bg-center"
