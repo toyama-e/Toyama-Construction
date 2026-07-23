@@ -28,7 +28,7 @@ export default function Contact() {
               >
                 LINE通話をかける
               </a>
-              <Image src="/call.png" alt="電話" width={80} height={80} />
+              <Image src="/images/call.png" alt="電話" width={80} height={80} />
             </div>
             <p className="mt-3 text-center text-xs text-black">
               QRコードを読み取るか、ボタンをタップ
