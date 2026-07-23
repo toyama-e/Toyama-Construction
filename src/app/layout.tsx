@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${siteUrl}/images/og-image.png`,
+        url: `${siteUrl}/images/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: "株式会社 外山建設",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "株式会社 外山建設｜新潟県三条市の土木・外構工事",
     description:
       "新潟県県央地区を中心に土木一式工事・外構工事を手がける株式会社外山建設の公式サイトです。外構・改修・小規模工事まで、地域密着で丁寧に対応します。",
-    images: [`${siteUrl}/images/og-image.png`],
+    images: [`${siteUrl}/images/og-image.jpg`],
   },
 };
 
@@ -54,7 +54,7 @@ const jsonLd = {
     postalCode: "955-0014",
     addressCountry: "JP",
   },
-  telephone: COMPANY.fax,
+  faxNumber: COMPANY.fax,
   email: COMPANY.email,
   url: siteUrl,
   openingHours: "Mo-Fr 08:00-17:30",
