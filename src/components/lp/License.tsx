@@ -1,7 +1,9 @@
+import { COMPANY } from "@/constants/company";
+
 const items = [
   {
     category: "建設業許可",
-    entries: ["建設業許可番号：○○ 第○○号（差し替え予定）"],
+    entries: [`建設業許可番号：${COMPANY.constructionLicense}`],
   },
   {
     category: "保有資格",
@@ -14,7 +16,7 @@ const items = [
   },
   {
     category: "加入保険",
-    entries: ["建設工事保険（正式名称差し替え予定）", "労働者災害補償保険"],
+    entries: COMPANY.insurance,
   },
 ];
 
