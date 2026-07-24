@@ -6,7 +6,7 @@ import { trackConversion } from "@/lib/analytics";
 
 export default function Contact() {
   return (
-    <section id="contact" className="scroll-mt-16 bg-white">
+    <section id="contact" className="scroll-mt-16 bg-offwhite">
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
         <p className="text-sm font-medium uppercase tracking-widest text-gold">Contact</p>
         <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">

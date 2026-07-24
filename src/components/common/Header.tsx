@@ -33,7 +33,7 @@ export default function Header({ page, alwaysVisible = false }: Props) {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 bg-white backdrop-blur transition-transform duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 border-b border-gray-200/70 bg-offwhite/95 backdrop-blur transition-transform duration-300 ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
