@@ -1,7 +1,7 @@
 const SCHEDULE = [
   { time: "07:30", task: "集合・朝礼（現場または事務所）" },
-  { time: "08:00", task: "作業開始（掘削・舗装・外構など）" },
-  { time: "12:00", task: "昼休憩（1時間　作業内容によっては前後することがあります）" },
+  { time: "08:00", task: "作業開始" },
+  { time: "12:00", task: "昼休憩（1時間 作業内容によっては前後することがあります）" },
   { time: "13:00", task: "午後作業" },
   { time: "17:00", task: "片付け・日報記録" },
   { time: "17:30", task: "終業" },
@@ -34,7 +34,7 @@ export default function DailySchedule() {
             ))}
           </ol>
           <p className="mt-2 border-t border-navy/10 pt-4 text-xs text-sub">
-            残業は月10時間以内がほとんど。仕事終わりの時間をしっかり確保できます。
+            残業は月3時間以内がほとんど。仕事終わりの時間をしっかり確保できます。
           </p>
         </div>
       </div>
