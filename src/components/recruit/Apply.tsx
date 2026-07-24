@@ -7,9 +7,12 @@ import { trackConversion } from "@/lib/analytics";
 export default function Apply() {
   return (
     <section id="apply" className="scroll-mt-16 bg-offwhite">
-      <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
-        <p className="text-sm font-medium uppercase tracking-widest text-gold">Apply</p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
+      <div className="mx-auto max-w-5xl px-4 py-12 md:py-24">
+        <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-bronze">
+          <span className="h-px w-6 bg-bronze" />
+          Apply
+        </p>
+        <h2 className="mt-3 text-3xl font-bold tracking-tight text-black md:text-5xl">
           まずは気軽に連絡してください
         </h2>
 
@@ -17,10 +20,44 @@ export default function Apply() {
           「まだ迷っている」「話だけ聞きたい」でも大歓迎です。
         </p>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 border-y border-bronze/60 py-6 sm:hidden">
+          <p className="font-display text-xl font-bold text-ink">まずはLINEで話してみませんか？</p>
+          <p className="mt-2 text-sm leading-relaxed text-sub">
+            応募を決める前の質問や、仕事内容を聞くだけでも大丈夫です。
+          </p>
+          <div className="mt-5 grid gap-3">
+            <a
+              href={COMPANY.lineUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackConversion("line_call", "recruit")}
+              className="flex min-h-12 items-center justify-center rounded-full bg-[#06C755] px-5 font-bold text-white"
+            >
+              LINE通話で応募・相談
+            </a>
+            <a
+              href={COMPANY.lineAddUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackConversion("line_add", "recruit")}
+              className="flex min-h-12 items-center justify-center rounded-full border border-[#06C755] bg-white px-5 font-bold text-[#069c43]"
+            >
+              LINEチャットで応募・相談
+            </a>
+          </div>
+          <a
+            href={`mailto:${COMPANY.email}`}
+            onClick={() => trackConversion("email", "recruit")}
+            className="mt-4 block min-h-11 text-center text-sm leading-[2.75rem] text-sub underline underline-offset-4"
+          >
+            メールで応募・相談
+          </a>
+        </div>
+
+        <div className="mt-10 hidden gap-4 sm:grid sm:grid-cols-2 lg:grid-cols-3">
           {/* 1. 電話 */}
           <div className="flex flex-col rounded-2xl border border-gray-200 bg-gray-100 p-6">
-            <p className="text-base font-bold text-gold">電話で応募する</p>
+            <p className="text-base font-bold text-bronze">電話で応募する</p>
             <div className="mt-3 flex flex-1 flex-col items-center justify-center gap-3">
               <a
                 href={COMPANY.lineUrl}
@@ -40,7 +77,7 @@ export default function Apply() {
           </div>
           {/* 2. LINE */}
           <div className="flex flex-col rounded-2xl border border-gray-200 bg-gray-100 p-6">
-            <p className="text-base font-bold text-gold">LINEで応募する</p>
+            <p className="text-base font-bold text-bronze">LINEで応募する</p>
             <div className="mt-3 flex flex-1 flex-col items-center justify-center gap-3">
               <a
                 href={COMPANY.lineAddUrl}
@@ -73,7 +110,7 @@ export default function Apply() {
           </div>
           {/* 3. メール */}
           <div className="flex flex-col rounded-2xl border border-gray-200 bg-gray-100 p-6">
-            <p className="text-base font-bold text-gold">メールで応募する</p>
+            <p className="text-base font-bold text-bronze">メールで応募する</p>
             <div className="mt-3 flex flex-1 flex-col items-center justify-center gap-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

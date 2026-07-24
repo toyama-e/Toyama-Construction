@@ -10,16 +10,18 @@ const SCHEDULE = [
 export default function DailySchedule() {
   return (
     <section id="schedule" className="scroll-mt-16 bg-offwhite">
-      <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
-        <p className="text-sm font-medium uppercase tracking-widest text-gold">A Day&apos;s Work</p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">1日の流れ</h2>
+      <div className="mx-auto max-w-5xl px-4 py-12 md:py-24">
+        <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-bronze">
+          <span className="h-px w-6 bg-bronze" />A Day&apos;s Work
+        </p>
+        <h2 className="mt-3 text-3xl font-bold tracking-tight text-black md:text-5xl">1日の流れ</h2>
 
-        <div className="mt-10 rounded-2xl border border-navy/15 bg-gray-100 p-6 shadow-sm">
+        <div className="mt-8 border-y border-bronze/60 bg-gray-100 p-5 md:mt-12 md:p-8">
           <ol>
             {SCHEDULE.map((s, i) => (
               <li key={s.time} className="flex gap-4">
                 <div className="flex flex-col items-center">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold text-[10px] font-bold text-black">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-bronze text-[10px] font-bold text-white">
                     {i + 1}
                   </span>
                   {i < SCHEDULE.length - 1 && (
@@ -27,7 +29,7 @@ export default function DailySchedule() {
                   )}
                 </div>
                 <div className="pb-4">
-                  <span className="text-xs font-bold text-gold">{s.time}</span>
+                  <span className="text-xs font-bold text-bronze">{s.time}</span>
                   <p className="mt-0.5 text-sm text-black">{s.task}</p>
                 </div>
               </li>

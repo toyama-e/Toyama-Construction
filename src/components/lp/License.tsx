@@ -23,20 +23,26 @@ const items = [
 export default function License() {
   return (
     <section id="license" className="scroll-mt-16 bg-offwhite">
-      <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
-        <p className="text-sm font-medium uppercase tracking-widest text-gold">
+      <div className="mx-auto max-w-5xl px-4 py-12 md:py-24">
+        <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-bronze">
+          <span className="h-px w-6 bg-bronze" />
           License &amp; Qualification
         </p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
+        <h2 className="mt-3 text-3xl font-bold tracking-tight text-black md:text-5xl">
           許可・資格・保険
         </h2>
-        <p className="mt-3 text-black">適切な許可と資格のもと、安全・確実に施工を行います。</p>
+        <p className="mt-4 max-w-xl leading-relaxed text-black">
+          適切な許可と資格のもと、安全・確実に施工を行います。
+        </p>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-3">
+        <div className="mt-8 border-t border-bronze/60 md:mt-12 md:grid md:grid-cols-3">
           {items.map((item) => (
-            <div key={item.category} className="rounded-2xl border border-gray-200 bg-gray-100 p-6">
-              <h3 className="text-base font-bold text-gold">{item.category}</h3>
-              <ul className="mt-3 space-y-2">
+            <div
+              key={item.category}
+              className="border-b border-bronze/60 py-6 md:border-b-0 md:border-r md:px-7 md:py-8 md:last:border-r-0"
+            >
+              <h3 className="font-display text-xl font-bold text-black">{item.category}</h3>
+              <ul className="mt-4 space-y-2">
                 {item.entries.map((e) => (
                   <li key={e} className="text-sm text-gray-700">
                     {e}

@@ -16,20 +16,23 @@ const FAQS = [
 export default function Faq() {
   return (
     <section id="faq" className="scroll-mt-16 bg-offwhite">
-      <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
-        <p className="text-sm font-medium uppercase tracking-widest text-gold">FAQ</p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
+      <div className="mx-auto max-w-5xl px-4 py-12 md:py-24">
+        <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-bronze">
+          <span className="h-px w-6 bg-bronze" />
+          FAQ
+        </p>
+        <h2 className="mt-3 text-3xl font-bold tracking-tight text-black md:text-5xl">
           よくある質問
         </h2>
 
-        <div className="mt-10 space-y-6">
+        <div className="mt-8 divide-y divide-bronze/50 border-y border-bronze/60 md:mt-12">
           {FAQS.map((f) => (
-            <div key={f.q} className="rounded-2xl border border-navy/15 bg-gray-100 p-6 shadow-sm">
-              <p className="font-medium text-black">
-                <span className="mr-1.5 font-bold text-gold">Q.</span>
+            <div key={f.q} className="grid gap-3 py-6 md:grid-cols-[1fr_1.4fr] md:gap-10 md:py-8">
+              <p className="font-display text-lg font-bold text-black">
+                <span className="mr-1.5 font-bold text-bronze">Q.</span>
                 {f.q}
               </p>
-              <p className="mt-3 pl-5 text-sm text-black">
+              <p className="pl-5 text-sm leading-relaxed text-black md:pl-0">
                 <span className="font-medium text-black">A.</span>　{f.a}
               </p>
             </div>

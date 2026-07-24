@@ -7,17 +7,54 @@ import { trackConversion } from "@/lib/analytics";
 export default function Contact() {
   return (
     <section id="contact" className="scroll-mt-16 bg-offwhite">
-      <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
-        <p className="text-sm font-medium uppercase tracking-widest text-gold">Contact</p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
+      <div className="mx-auto max-w-5xl px-4 py-12 md:py-24">
+        <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-bronze">
+          <span className="h-px w-6 bg-bronze" />
+          Contact
+        </p>
+        <h2 className="mt-3 text-3xl font-bold tracking-tight text-black md:text-5xl">
           お問い合わせ
         </h2>
         <p className="mt-4 text-sm text-gray-700">相談・見積りなど、お気軽にご連絡ください。</p>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 border-y border-bronze/60 py-6 sm:hidden">
+          <p className="font-display text-xl font-bold text-ink">LINEなら、そのまま相談できます</p>
+          <p className="mt-2 text-sm leading-relaxed text-sub">
+            工事の相談はLINE通話またはチャットから。写真を送っていただくこともできます。
+          </p>
+          <div className="mt-5 grid gap-3">
+            <a
+              href={COMPANY.lineUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackConversion("line_call", "contact")}
+              className="flex min-h-12 items-center justify-center rounded-full bg-[#06C755] px-5 font-bold text-white"
+            >
+              LINE通話で相談する
+            </a>
+            <a
+              href={COMPANY.lineAddUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackConversion("line_add", "contact")}
+              className="flex min-h-12 items-center justify-center rounded-full border border-[#06C755] bg-white px-5 font-bold text-[#069c43]"
+            >
+              LINEチャットで相談する
+            </a>
+          </div>
+          <a
+            href={`mailto:${COMPANY.email}`}
+            onClick={() => trackConversion("email", "contact")}
+            className="mt-4 block min-h-11 text-center text-sm leading-[2.75rem] text-sub underline underline-offset-4"
+          >
+            メールで問い合わせる
+          </a>
+        </div>
+
+        <div className="mt-10 hidden gap-4 sm:grid sm:grid-cols-2 lg:grid-cols-3">
           {/* 1. 電話 */}
           <div className="flex flex-col rounded-2xl border border-gray-200 bg-gray-100 p-6">
-            <p className="text-base font-bold text-gold">電話で問い合わせる</p>
+            <p className="text-base font-bold text-bronze">電話で問い合わせる</p>
             <div className="mt-3 flex flex-1 flex-col items-center justify-center gap-3">
               <a
                 href={COMPANY.lineUrl}
@@ -37,7 +74,7 @@ export default function Contact() {
           </div>
           {/* 2. LINE */}
           <div className="flex flex-col rounded-2xl border border-gray-200 bg-gray-100 p-6">
-            <p className="text-base font-bold text-gold">LINEで問い合わせる</p>
+            <p className="text-base font-bold text-bronze">LINEで問い合わせる</p>
             <div className="mt-3 flex flex-1 flex-col items-center justify-center gap-3">
               <a
                 href={COMPANY.lineAddUrl}
@@ -70,7 +107,7 @@ export default function Contact() {
           </div>
           {/* 3. メール */}
           <div className="flex flex-col rounded-2xl border border-gray-200 bg-gray-100 p-6">
-            <p className="text-base font-bold text-gold">メールで問い合わせる</p>
+            <p className="text-base font-bold text-bronze">メールで問い合わせる</p>
             <div className="mt-3 flex flex-1 flex-col items-center justify-center gap-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
