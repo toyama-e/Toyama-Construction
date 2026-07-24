@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Message() {
   return (
-    <section className="scroll-mt-16 bg-white">
+    <section className="scroll-mt-16 bg-offwhite">
       <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
         <p className="text-sm font-medium uppercase tracking-widest text-gold">
           From the President

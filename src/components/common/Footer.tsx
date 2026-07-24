@@ -5,7 +5,7 @@ type Props = { page: "lp" | "recruit" };
 
 export default function Footer({ page }: Props) {
   return (
-    <footer className="bg-white">
+    <footer className="border-t border-gray-200 bg-offwhite">
       <div className="mx-auto max-w-5xl px-4 py-10">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div>
