@@ -3,16 +3,17 @@ import Image from "next/image";
 export default function Message() {
   return (
     <section className="scroll-mt-16 bg-offwhite">
-      <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
-        <p className="text-sm font-medium uppercase tracking-widest text-gold">
+      <div className="mx-auto max-w-5xl px-4 py-12 md:py-24">
+        <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-bronze">
+          <span className="h-px w-6 bg-bronze" />
           From the President
         </p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">代表より</h2>
+        <h2 className="mt-3 text-3xl font-bold tracking-tight text-black md:text-5xl">代表より</h2>
 
-        <div className="mt-10 rounded-2xl border border-gold/40 bg-gray-100 px-8 py-10">
-          <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
+        <div className="mt-8 border-y border-bronze/60 bg-gray-100 px-5 py-7 md:mt-12 md:px-8 md:py-10">
+          <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:gap-8">
             <div className="flex-shrink-0">
-              <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-gold/40">
+              <div className="relative h-44 w-44 overflow-hidden md:h-56 md:w-56">
                 <Image
                   src="/images/jiji&kento.jpeg"
                   alt="代表 外山 澄男"

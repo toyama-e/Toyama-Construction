@@ -25,7 +25,7 @@ export default function Footer({ page }: Props) {
                 href={COMPANY.lineUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover:text-gold"
+                className="transition-colors hover:text-bronze"
               >
                 電話：LINE通話をかける（受付時間：平日 8:00〜17:30）
               </a>
@@ -36,14 +36,14 @@ export default function Footer({ page }: Props) {
                 href={COMPANY.lineAddUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover:text-gold"
+                className="transition-colors hover:text-bronze"
               >
                 LINE：{COMPANY.line}
               </a>
             </p>
             <p className="mt-1 text-sm text-gray-600">
               MAIL：
-              <a href={`mailto:${COMPANY.email}`} className="transition-colors hover:text-gold">
+              <a href={`mailto:${COMPANY.email}`} className="transition-colors hover:text-bronze">
                 {COMPANY.email}
               </a>
             </p>
@@ -60,7 +60,7 @@ export default function Footer({ page }: Props) {
                   <a
                     key={href}
                     href={href}
-                    className="text-gray-600 transition-colors hover:text-gold"
+                    className="text-gray-600 transition-colors hover:text-bronze"
                   >
                     {label}
                   </a>
@@ -75,7 +75,7 @@ export default function Footer({ page }: Props) {
                   <a
                     key={href}
                     href={href}
-                    className="text-gray-600 transition-colors hover:text-gold"
+                    className="text-gray-600 transition-colors hover:text-bronze"
                   >
                     {label}
                   </a>

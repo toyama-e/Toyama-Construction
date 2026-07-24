@@ -17,12 +17,15 @@ const rows = [
 export default function About() {
   return (
     <section id="about" className="scroll-mt-16 bg-offwhite">
-      <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
-        <p className="text-sm font-medium uppercase tracking-widest text-gold">About Us</p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">会社概要</h2>
+      <div className="mx-auto max-w-5xl px-4 py-12 md:py-24">
+        <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-bronze">
+          <span className="h-px w-6 bg-bronze" />
+          About Us
+        </p>
+        <h2 className="mt-3 text-3xl font-bold tracking-tight text-black md:text-5xl">会社概要</h2>
 
-        <div className="mt-10 flex flex-col gap-6 md:flex-row md:items-start">
-          <div className="overflow-hidden rounded-2xl border border-navy/15 md:w-2/5 md:shrink-0">
+        <div className="mt-7 flex flex-col gap-5 md:mt-10 md:flex-row md:items-start md:gap-6">
+          <div className="overflow-hidden md:w-2/5 md:shrink-0">
             <Image
               src="/images/office1-1.jpeg"
               alt="株式会社 外山建設 事務所"
@@ -33,12 +36,12 @@ export default function About() {
             />
           </div>
 
-          <div className="overflow-hidden rounded-2xl border border-navy/15 bg-gray-100 md:flex-1">
-            <dl className="divide-y divide-navy/10">
+          <div className="overflow-hidden border-y border-bronze/60 md:flex-1">
+            <dl className="divide-y divide-navy/15">
               {rows.map((r) => (
                 <div
                   key={r.k}
-                  className="grid gap-1 px-5 py-4 sm:grid-cols-[140px_1fr] sm:gap-4 sm:px-6"
+                  className="grid grid-cols-[104px_1fr] gap-3 px-4 py-3 sm:grid-cols-[140px_1fr] sm:gap-4 sm:px-6 sm:py-4"
                 >
                   <dt className="text-sm font-medium text-sub">{r.k}</dt>
                   <dd className="text-sm text-ink">{r.v}</dd>
@@ -48,11 +51,11 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-8 overflow-hidden rounded-2xl border border-navy/15">
+        <div className="mt-5 overflow-hidden border-y border-navy/15 md:mt-8">
           <iframe
             src={`https://maps.google.com/maps?q=${encodeURIComponent(COMPANY.address)}&output=embed`}
             width="100%"
-            height="360"
+            height="280"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
@@ -62,7 +65,7 @@ export default function About() {
           <div className="flex items-center gap-2 border-t border-navy/10 bg-gray-100 px-4 py-3 text-sm text-sub">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 shrink-0 text-gold"
+              className="h-4 w-4 shrink-0 text-bronze"
               viewBox="0 0 24 24"
               fill="currentColor"
             >

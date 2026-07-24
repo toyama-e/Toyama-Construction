@@ -3,16 +3,41 @@
 @tailwind utilities;
 
 :root {
-  --color-navy: #202020;
-  --color-gold: #b84f2d;
+  --color-navy: #17233a;
+  --color-bronze: #955f3a;
   --color-offwhite: #f7f4ee;
-  --color-ink: #202020;
-  --color-sub: #5f5a54;
+  --color-ink: #202734;
+  --color-sub: #626a75;
 }
 
 body {
   background-color: #f7f4ee;
-  color: #202020;
+  color: #202734;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-serif-ja), "Yu Mincho", "Hiragino Mincho ProN", serif;
+}
+
+h1,
+h2 {
+  font-family: var(--font-serif-ja), "Yu Mincho", "Hiragino Mincho ProN", serif;
+}
+
+.animate-enter {
+  animation: enter 700ms ease-out both;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes heroFadeA {
@@ -43,4 +68,15 @@ body {
 
 .hero-bg-b {
   animation: heroFadeB 14s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

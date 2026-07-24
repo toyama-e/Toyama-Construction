@@ -14,26 +14,43 @@ const SPECS = [
 ];
 
 export default function JobSpec() {
+  const primarySpecs = SPECS.slice(0, 4);
+  const secondarySpecs = SPECS.slice(4);
+
+  const renderRows = (specs: typeof SPECS, startIndex = 0) =>
+    specs.map((s, i) => (
+      <div
+        key={s.label}
+        className={`grid grid-cols-[96px_1fr] gap-3 px-4 py-3 text-sm sm:flex sm:gap-4 sm:px-6 sm:py-4 ${
+          (i + startIndex) % 2 === 0 ? "bg-gray-100" : "bg-white"
+        }`}
+      >
+        <dt className="font-medium text-black sm:w-28 sm:shrink-0">{s.label}</dt>
+        <dd className="min-w-0 text-sub">{s.value}</dd>
+      </div>
+    ));
+
   return (
     <section id="jobspec" className="scroll-mt-16 bg-offwhite">
-      <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
-        <p className="text-sm font-medium uppercase tracking-widest text-gold">Job Details</p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
+      <div className="mx-auto max-w-5xl px-4 py-12 md:py-24">
+        <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-bronze">
+          <span className="h-px w-6 bg-bronze" />
+          Job Details
+        </p>
+        <h2 className="mt-3 text-[1.7rem] font-bold leading-snug tracking-tight text-black md:text-5xl">
           現場スタッフ（正社員）募集要項
         </h2>
 
-        <div className="mt-10 overflow-hidden rounded-2xl border border-navy/15 bg-gray-100 shadow-sm">
-          <dl>
-            {SPECS.map((s, i) => (
-              <div
-                key={s.label}
-                className={`flex gap-4 px-6 py-4 text-sm ${i % 2 === 0 ? "bg-gray-100" : "bg-white"}`}
-              >
-                <dt className="w-28 shrink-0 font-medium text-black">{s.label}</dt>
-                <dd className="text-sub">{s.value}</dd>
-              </div>
-            ))}
-          </dl>
+        <div className="mt-8 overflow-hidden border-y border-bronze/60 bg-gray-100 md:mt-12">
+          <dl>{renderRows(primarySpecs)}</dl>
+          <details className="group md:hidden">
+            <summary className="flex min-h-12 cursor-pointer list-none items-center justify-center border-t border-navy/10 bg-white text-sm font-bold text-ink">
+              <span className="group-open:hidden">詳しい募集要項を見る ＋</span>
+              <span className="hidden group-open:inline">閉じる −</span>
+            </summary>
+            <dl>{renderRows(secondarySpecs, primarySpecs.length)}</dl>
+          </details>
+          <dl className="hidden md:block">{renderRows(secondarySpecs, primarySpecs.length)}</dl>
         </div>
       </div>
     </section>

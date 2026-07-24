@@ -2,38 +2,47 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate mb-[1cm] flex h-[calc(100dvh-4rem)] scroll-mt-4 flex-col pt-20"
+      className="relative isolate min-h-[720px] scroll-mt-4 overflow-hidden bg-ink pt-16 text-white md:min-h-[760px] md:pt-20"
     >
-      {/* 画像エリア：残りスペースをすべて使う */}
-      <div className="relative ml-0 flex-1 overflow-hidden">
-        <div
-          className="hero-bg-a absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url(/images/office4-3.webp)" }}
-        />
-        <div
-          className="hero-bg-b absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url(/images/yunbo.JPG)" }}
-        />
-      </div>
+      <div
+        className="hero-bg-a absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url(/images/office4-3.webp)" }}
+      />
+      <div
+        className="hero-bg-b absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url(/images/yunbo.JPG)" }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/5" />
 
-      {/* テキストエリア：画像の下に固定 */}
-      <div className="px-6 py-6 md:py-8 md:pl-16">
-        <h1 className="font-mincho text-2xl font-bold leading-snug tracking-tight text-ink md:text-4xl">
-          新潟県 県央地域の土木・外構工事
-        </h1>
+      <div className="relative mx-auto flex min-h-[656px] max-w-7xl items-end px-5 pb-12 md:min-h-[680px] md:px-12 md:pb-16">
+        <div className="animate-enter max-w-2xl">
+          <p className="mb-4 flex items-center gap-2 text-xs font-medium tracking-[0.2em] text-white/85">
+            <span className="h-px w-8 bg-bronze" />
+            新潟県 三条市
+          </p>
+          <h1 className="font-display text-[2.25rem] font-bold leading-[1.35] tracking-[0.02em] text-white md:text-6xl">
+            新潟県 県央地域の
+            <br />
+            土木・外構工事
+          </h1>
 
-        <p className="mt-4 max-w-md text-sm leading-loose tracking-wide text-ink md:text-base">
-          ご自宅の駐車場・お庭の整備や工事など、お任せください。
-        </p>
+          <p className="mt-5 max-w-md text-sm leading-loose tracking-wide text-white/90 md:text-base">
+            ご自宅の駐車場・お庭の整備や工事など、お任せください。
+          </p>
 
-        <div className="mt-6">
           <a
             href="#contact"
-            className="relative text-lg font-medium text-ink after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:scale-x-100 after:bg-gold after:transition-transform after:duration-200 hover:after:scale-x-75"
+            className="mt-7 inline-flex min-h-12 min-w-52 items-center justify-between rounded-full border border-white/70 bg-black/20 px-6 font-medium text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-ink"
           >
-            ご相談はこちら →
+            ご相談はこちら
+            <span aria-hidden="true">→</span>
           </a>
         </div>
+      </div>
+
+      <div className="absolute bottom-7 right-4 hidden items-center gap-3 text-[10px] tracking-[0.24em] text-white/80 sm:flex">
+        <span>SCROLL</span>
+        <span className="h-12 w-px bg-white/60" />
       </div>
     </section>
   );

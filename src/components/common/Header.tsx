@@ -22,6 +22,7 @@ const RECRUIT_NAV = [
 
 export default function Header({ page, alwaysVisible = false }: Props) {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 100);
@@ -29,7 +30,19 @@ export default function Header({ page, alwaysVisible = false }: Props) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
   const visible = alwaysVisible || scrolled;
+  const navItems = page === "lp" ? LP_NAV : RECRUIT_NAV;
+  const cta =
+    page === "lp"
+      ? { label: "採用情報を見る", href: "/recruit" }
+      : { label: "LINEで応募・相談", href: "#apply" };
 
   return (
     <header
@@ -37,43 +50,95 @@ export default function Header({ page, alwaysVisible = false }: Props) {
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="flex w-full items-center justify-between px-8 py-5">
-        <a href={page === "recruit" ? "/" : "#top"}>
+      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 md:h-auto md:px-8 md:py-5">
+        <a href={page === "recruit" ? "/" : "#top"} className="relative z-50 shrink-0">
           <Image
             src="/images/logo-wide.png"
             alt={COMPANY.name}
-            width={160}
-            height={29}
-            className="object-contain"
+            width={148}
+            height={27}
+            className="w-[132px] object-contain md:w-40"
             style={{ height: "auto" }}
           />
         </a>
 
         <nav className="hidden items-center gap-5 text-base md:flex">
-          {(page === "lp" ? LP_NAV : RECRUIT_NAV).map(({ label, href }) => (
-            <a key={href} href={href} className="text-black transition-colors hover:text-gold">
+          {navItems.map(({ label, href }) => (
+            <a key={href} href={href} className="text-black transition-colors hover:text-bronze">
               {label}
             </a>
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="hidden items-center gap-2 md:flex">
           {page === "lp" ? (
             <a
               href="/recruit"
-              className="relative text-base font-medium text-black after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:scale-x-100 after:bg-gold after:transition-transform after:duration-200 hover:after:scale-x-75"
+              className="relative text-base font-medium text-black after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:scale-x-100 after:bg-bronze after:transition-transform after:duration-200 hover:after:scale-x-75"
             >
               正社員募集中！ →
             </a>
           ) : (
             <a
               href="#apply"
-              className="relative text-base font-medium text-black after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:scale-x-100 after:bg-gold after:transition-transform after:duration-200 hover:after:scale-x-75"
+              className="relative text-base font-medium text-black after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:scale-x-100 after:bg-bronze after:transition-transform after:duration-200 hover:after:scale-x-75"
             >
               今すぐ応募する →
             </a>
           )}
         </div>
+
+        <button
+          type="button"
+          className="relative z-50 flex h-11 w-11 items-center justify-center rounded-full border border-navy/20 md:hidden"
+          aria-label={menuOpen ? "メニューを閉じる" : "メニューを開く"}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span className="sr-only">{menuOpen ? "メニューを閉じる" : "メニューを開く"}</span>
+          <span className="relative block h-4 w-5">
+            <span
+              className={`absolute left-0 top-0 h-px w-5 bg-ink transition-transform ${menuOpen ? "translate-y-[7px] rotate-45" : ""}`}
+            />
+            <span
+              className={`absolute left-0 top-[7px] h-px w-5 bg-ink transition-opacity ${menuOpen ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`absolute left-0 top-[14px] h-px w-5 bg-ink transition-transform ${menuOpen ? "-translate-y-[7px] -rotate-45" : ""}`}
+            />
+          </span>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        className={`absolute inset-x-0 top-0 z-40 h-dvh bg-offwhite px-6 pb-8 pt-24 transition-[opacity,visibility] duration-200 md:hidden ${
+          menuOpen ? "visible opacity-100" : "invisible opacity-0"
+        }`}
+      >
+        <nav aria-label="スマートフォンメニュー" className="border-t border-navy/10">
+          {navItems.map(({ label, href }) => (
+            <a
+              key={href}
+              href={href}
+              className="flex min-h-14 items-center justify-between border-b border-navy/10 text-lg font-medium"
+              onClick={() => setMenuOpen(false)}
+            >
+              {label}
+              <span aria-hidden="true" className="text-bronze">
+                →
+              </span>
+            </a>
+          ))}
+        </nav>
+        <a
+          href={cta.href}
+          className="mt-8 flex min-h-12 items-center justify-center rounded-full bg-navy px-5 font-bold text-white"
+          onClick={() => setMenuOpen(false)}
+        >
+          {cta.label}
+        </a>
       </div>
     </header>
   );
