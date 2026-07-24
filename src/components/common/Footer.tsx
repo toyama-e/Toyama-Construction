@@ -11,7 +11,7 @@ export default function Footer({ page }: Props) {
           <div>
             <a href={page === "recruit" ? "/" : "#top"}>
               <Image
-                src="/images/logo-wide.jpg"
+                src="/images/logo-wide.png"
                 alt={COMPANY.name}
                 width={160}
                 height={29}

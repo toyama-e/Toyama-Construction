@@ -40,7 +40,7 @@ export default function Header({ page, alwaysVisible = false }: Props) {
       <div className="flex w-full items-center justify-between px-8 py-5">
         <a href={page === "recruit" ? "/" : "#top"}>
           <Image
-            src="/images/logo-wide.jpg"
+            src="/images/logo-wide.png"
             alt={COMPANY.name}
             width={160}
             height={29}
