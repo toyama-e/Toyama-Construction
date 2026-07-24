@@ -7,7 +7,7 @@ const rows = [
   { k: "代表", v: "外山 澄男" },
   { k: "事業内容", v: "土木一式工事・外構工事・改修・修繕" },
   { k: "対応エリア", v: COMPANY.area },
-  { k: "建設業許可", v: "○○ 第○○号（差し替え予定）" },
+  { k: "建設業許可", v: COMPANY.constructionLicense },
   { k: "FAX", v: COMPANY.fax },
   { k: "LINE", v: COMPANY.line },
   { k: "営業時間", v: COMPANY.hours },
