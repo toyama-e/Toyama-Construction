@@ -22,13 +22,11 @@ export default function WhyUs() {
       <div className="mx-auto max-w-5xl px-4 py-12 md:py-24">
         <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-bronze">
           <span className="h-px w-6 bg-bronze" />
-          Why Us
+          OUR STRENGTHS
         </p>
-        <h2 className="mt-3 text-3xl font-bold tracking-tight text-black md:text-5xl">
-          選ばれる理由
-        </h2>
+        <h2 className="mt-3 text-3xl font-bold tracking-tight text-black md:text-5xl">3つの強み</h2>
         <p className="mt-4 max-w-xl leading-relaxed text-black">
-          地域のお客様に長く選ばれ続ける、3つの強みをご紹介します。
+          小さな会社だからこそできる、柔軟で身近な対応をご紹介します。
         </p>
 
         <div className="mt-8 border-t border-navy/15 md:mt-12 md:grid md:grid-cols-3">
