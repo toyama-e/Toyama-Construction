@@ -18,7 +18,7 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="bg-gray-100">
+    <section id="strengths" className="scroll-mt-16 bg-gray-100">
       <div className="mx-auto max-w-5xl px-4 py-12 md:py-24">
         <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-bronze">
           <span className="h-px w-6 bg-bronze" />

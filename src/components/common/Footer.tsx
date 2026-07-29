@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { COMPANY } from "@/constants/company";
 
-type Props = { page: "lp" | "recruit" };
+type Props = { page: "lp" | "company" | "recruit" };
 
 export default function Footer({ page }: Props) {
   return (
@@ -9,7 +9,7 @@ export default function Footer({ page }: Props) {
       <div className="mx-auto max-w-5xl px-4 py-10">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div>
-            <a href={page === "recruit" ? "/" : "#top"}>
+            <a href={page === "lp" ? "#top" : "/"}>
               <Image
                 src="/images/logo-wide.png"
                 alt={COMPANY.name}
@@ -49,12 +49,12 @@ export default function Footer({ page }: Props) {
             </p>
           </div>
           <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-            {page === "lp"
+            {page !== "recruit"
               ? [
-                  { label: "事業内容", href: "#services" },
-                  { label: "許可・資格", href: "#license" },
-                  { label: "会社概要", href: "#about" },
-                  { label: "お問い合わせ", href: "#contact" },
+                  { label: "トップ", href: "/" },
+                  { label: "事業内容", href: "/#services" },
+                  { label: "会社案内", href: "/company" },
+                  { label: "お問い合わせ", href: "/#contact" },
                   { label: "採用情報", href: "/recruit" },
                 ].map(({ label, href }) => (
                   <a

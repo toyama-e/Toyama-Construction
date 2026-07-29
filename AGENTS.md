@@ -35,6 +35,7 @@
 - 写真と余白を主役にし、カードや角丸の装飾を必要以上に増やさない
 - 人物写真では社長と役員の自然な表情や会話が伝わる親しみを重視する
 - LINEのボタンはサービスを認識しやすいよう公式の緑を維持する
+- トップページは事業内容・人柄・採用・工事相談に絞り、詳細な会社情報は `/company` に集約する
 
 ### カラーパレット
 
@@ -51,13 +52,20 @@
 
 ## 現在のページ構成
 
-- `/`：営業・会社案内ページ
+- `/`：営業・採用への入口となる簡潔なトップページ
   - Header
   - Hero
   - Services
+  - CompanyIntro
+  - RecruitIntro
+  - Contact
+  - Footer
+- `/company`：詳しい会社案内ページ
+  - Header
+  - Hero
   - WhyUs
-  - License
   - About
+  - License
   - Contact
   - Footer
 - `/recruit`：採用専用ページ
@@ -171,7 +179,7 @@
 - 存在しないOGP画像を参照しない
 - LocalBusinessの `telephone` にFAX番号を設定しない
 - FAXを構造化データへ載せる場合は `faxNumber` を使用する
-- トップページと採用ページで適切なtitleとdescriptionを設定する
+- トップページ、会社案内ページ、採用ページで適切なtitleとdescriptionを設定する
 
 ## アクセシビリティ
 

@@ -1,9 +1,8 @@
 import Header from "@/components/common/Header";
 import Hero from "@/components/lp/Hero";
 import Services from "@/components/lp/Services";
-import WhyUs from "@/components/lp/WhyUs";
-import License from "@/components/lp/License";
-import About from "@/components/lp/About";
+import CompanyIntro from "@/components/lp/CompanyIntro";
+import RecruitIntro from "@/components/lp/RecruitIntro";
 import Contact from "@/components/lp/Contact";
 import Footer from "@/components/common/Footer";
 
@@ -14,9 +13,8 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
-        <WhyUs />
-        <License />
-        <About />
+        <CompanyIntro />
+        <RecruitIntro />
         <Contact />
       </main>
       <Footer page="lp" />
