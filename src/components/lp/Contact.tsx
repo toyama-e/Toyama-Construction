@@ -18,9 +18,11 @@ export default function Contact() {
         <p className="mt-4 text-sm text-gray-700">相談・見積りなど、お気軽にご連絡ください。</p>
 
         <div className="mt-8 border-y border-bronze/60 py-6 sm:hidden">
-          <p className="font-display text-xl font-bold text-ink">LINEなら、そのまま相談できます</p>
+          <p className="font-display text-xl font-bold text-ink">LINEで気軽にご相談いただけます</p>
           <p className="mt-2 text-sm leading-relaxed text-sub">
-            工事の相談はLINE通話またはチャットから。写真を送っていただくこともできます。
+            直接話せるLINE通話がおすすめです。
+            <br />
+            文章や写真は、LINEチャットから送れます。
           </p>
           <div className="mt-5 grid gap-3">
             <a
@@ -42,16 +44,9 @@ export default function Contact() {
               LINEチャットで相談する
             </a>
           </div>
-          <a
-            href={`mailto:${COMPANY.email}`}
-            onClick={() => trackConversion("email", "contact")}
-            className="mt-4 block min-h-11 text-center text-sm leading-[2.75rem] text-sub underline underline-offset-4"
-          >
-            メールで問い合わせる
-          </a>
         </div>
 
-        <div className="mt-10 hidden gap-4 sm:grid sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-10 hidden max-w-2xl gap-4 sm:grid sm:grid-cols-2">
           {/* 1. 電話 */}
           <div className="flex flex-col rounded-2xl border border-gray-200 bg-gray-100 p-6">
             <p className="text-base font-bold text-bronze">電話で問い合わせる</p>
@@ -104,35 +99,6 @@ export default function Contact() {
               QRコードを読み取るか、ボタンをタップ
             </p>
             <p className="mt-1 text-center text-xs text-black">LINE ID：{COMPANY.line}</p>
-          </div>
-          {/* 3. メール */}
-          <div className="flex flex-col rounded-2xl border border-gray-200 bg-gray-100 p-6">
-            <p className="text-base font-bold text-bronze">メールで問い合わせる</p>
-            <div className="mt-3 flex flex-1 flex-col items-center justify-center gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="80"
-                height="80"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-gray-400"
-              >
-                <rect width="20" height="16" x="2" y="4" rx="2" />
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-              </svg>
-              <a
-                href={`mailto:${COMPANY.email}`}
-                onClick={() => trackConversion("email", "contact")}
-                className="inline-block rounded-full bg-black px-6 py-2 text-sm font-bold text-white transition-opacity hover:opacity-75"
-              >
-                メールを送る
-              </a>
-            </div>
-            <p className="mt-3 text-center text-xs text-black">{COMPANY.email}</p>
           </div>
         </div>
       </div>

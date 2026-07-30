@@ -4,12 +4,19 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { COMPANY } from "@/constants/company";
 
-type Props = { page: "lp" | "recruit"; alwaysVisible?: boolean };
+type Props = { page: "lp" | "company" | "recruit"; alwaysVisible?: boolean };
 
 const LP_NAV = [
   { label: "事業内容", href: "#services" },
-  { label: "許可・資格", href: "#license" },
+  { label: "外山建設について", href: "#company" },
+  { label: "採用情報", href: "/recruit" },
+  { label: "お問い合わせ", href: "#contact" },
+];
+
+const COMPANY_NAV = [
+  { label: "私たちの特徴", href: "#strengths" },
   { label: "会社概要", href: "#about" },
+  { label: "許可・資格", href: "#license" },
   { label: "お問い合わせ", href: "#contact" },
 ];
 
@@ -38,7 +45,7 @@ export default function Header({ page, alwaysVisible = false }: Props) {
   }, [menuOpen]);
 
   const visible = alwaysVisible || scrolled;
-  const navItems = page === "lp" ? LP_NAV : RECRUIT_NAV;
+  const navItems = page === "lp" ? LP_NAV : page === "company" ? COMPANY_NAV : RECRUIT_NAV;
   const cta =
     page === "lp"
       ? { label: "採用情報を見る", href: "/recruit" }
@@ -51,7 +58,7 @@ export default function Header({ page, alwaysVisible = false }: Props) {
       }`}
     >
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 md:h-auto md:px-8 md:py-5">
-        <a href={page === "recruit" ? "/" : "#top"} className="relative z-50 shrink-0">
+        <a href={page === "lp" ? "#top" : "/"} className="relative z-50 shrink-0">
           <Image
             src="/images/logo-wide.png"
             alt={COMPANY.name}
@@ -71,7 +78,7 @@ export default function Header({ page, alwaysVisible = false }: Props) {
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
-          {page === "lp" ? (
+          {page !== "recruit" ? (
             <a
               href="/recruit"
               className="relative text-base font-medium text-black after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:scale-x-100 after:bg-bronze after:transition-transform after:duration-200 hover:after:scale-x-75"
