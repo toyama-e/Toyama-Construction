@@ -27,9 +27,7 @@ describe("Contact", () => {
     expect(link).toHaveAttribute("rel", "noopener noreferrer");
   });
 
-  it("メールリンクのhrefがmailto形式である", () => {
-    const link = screen.getByText("メールを送る").closest("a");
-
-    expect(link).toHaveAttribute("href", `mailto:${COMPANY.email}`);
+  it("メールリンクはContactに表示しない", () => {
+    expect(screen.queryByText("メールで問い合わせる")).not.toBeInTheDocument();
   });
 });

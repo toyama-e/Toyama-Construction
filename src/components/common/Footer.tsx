@@ -6,49 +6,30 @@ type Props = { page: "lp" | "company" | "recruit" };
 export default function Footer({ page }: Props) {
   return (
     <footer className="border-t border-gray-200 bg-offwhite">
-      <div className="mx-auto max-w-5xl px-4 py-10">
-        <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-          <div>
+      <div className="mx-auto max-w-5xl px-5 py-12 md:px-4 md:py-16">
+        <div className="flex flex-col items-center">
+          <div className="text-center">
             <a href={page === "lp" ? "#top" : "/"}>
               <Image
                 src="/images/logo-wide.png"
                 alt={COMPANY.name}
-                width={160}
-                height={29}
-                className="mb-2 object-contain"
+                width={184}
+                height={34}
+                className="mx-auto object-contain"
                 style={{ height: "auto" }}
               />
             </a>
-            <p className="mt-1 text-sm text-gray-600">{COMPANY.address}</p>
-            <p className="mt-1 text-sm text-gray-600">
+            <div className="mt-5 space-y-3 text-sm leading-relaxed text-gray-600">
+              <p>{COMPANY.address}</p>
               <a
-                href={COMPANY.lineUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-colors hover:text-bronze"
+                href={`mailto:${COMPANY.email}`}
+                className="inline-block min-h-11 leading-[2.75rem] underline decoration-gray-300 underline-offset-4 transition-colors hover:text-bronze"
               >
-                電話：LINE通話をかける（受付時間：平日 8:00〜17:30）
+                メールで問い合わせる
               </a>
-            </p>
-            <p className="mt-1 text-sm text-gray-600">FAX：{COMPANY.fax}</p>
-            <p className="mt-1 text-sm text-gray-600">
-              <a
-                href={COMPANY.lineAddUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-colors hover:text-bronze"
-              >
-                LINE：{COMPANY.line}
-              </a>
-            </p>
-            <p className="mt-1 text-sm text-gray-600">
-              MAIL：
-              <a href={`mailto:${COMPANY.email}`} className="transition-colors hover:text-bronze">
-                {COMPANY.email}
-              </a>
-            </p>
+            </div>
           </div>
-          <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+          <nav className="mt-5 grid w-full grid-cols-3 gap-x-2 border-t border-gray-200 pt-4 text-sm md:mt-7 md:max-w-lg">
             {page !== "recruit"
               ? [
                   { label: "トップ", href: "/" },
@@ -60,7 +41,7 @@ export default function Footer({ page }: Props) {
                   <a
                     key={href}
                     href={href}
-                    className="text-gray-600 transition-colors hover:text-bronze"
+                    className="flex min-h-11 items-center text-gray-600 transition-colors hover:text-bronze"
                   >
                     {label}
                   </a>
@@ -75,15 +56,18 @@ export default function Footer({ page }: Props) {
                   <a
                     key={href}
                     href={href}
-                    className="text-gray-600 transition-colors hover:text-bronze"
+                    className="flex min-h-11 items-center text-gray-600 transition-colors hover:text-bronze"
                   >
                     {label}
                   </a>
                 ))}
           </nav>
         </div>
-        <p className="mt-8 text-center text-xs text-gray-400">
-          © {new Date().getFullYear()} {COMPANY.name} All Rights Reserved.
+        <p className="mt-8 border-t border-gray-200 pt-6 text-center text-xs leading-relaxed text-gray-400">
+          <span className="block md:inline">
+            © {new Date().getFullYear()} {COMPANY.name}
+          </span>{" "}
+          <span className="block md:inline">All Rights Reserved.</span>
         </p>
       </div>
     </footer>
