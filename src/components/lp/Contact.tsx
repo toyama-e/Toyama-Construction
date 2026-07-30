@@ -18,9 +18,11 @@ export default function Contact() {
         <p className="mt-4 text-sm text-gray-700">相談・見積りなど、お気軽にご連絡ください。</p>
 
         <div className="mt-8 border-y border-bronze/60 py-6 sm:hidden">
-          <p className="font-display text-xl font-bold text-ink">LINEなら、そのまま相談できます</p>
+          <p className="font-display text-xl font-bold text-ink">LINEで気軽にご相談いただけます</p>
           <p className="mt-2 text-sm leading-relaxed text-sub">
-            工事の相談はLINE通話またはチャットから。写真を送っていただくこともできます。
+            直接話せるLINE通話がおすすめです。
+            <br />
+            文章や写真は、LINEチャットから送れます。
           </p>
           <div className="mt-5 grid gap-3">
             <a

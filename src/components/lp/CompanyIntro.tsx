@@ -30,7 +30,9 @@ export default function CompanyIntro() {
             <br />
             地域に根ざして仕事をしています。
             <br />
-            ご相談から施工まで、一つひとつ丁寧に対応します。
+            ご相談から施工まで、
+            <br />
+            一つひとつ丁寧に対応します。
           </p>
           <a
             href="/company"

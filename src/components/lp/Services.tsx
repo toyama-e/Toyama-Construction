@@ -1,19 +1,19 @@
 const services = [
   {
     title: "土木一式工事",
-    desc: "道路・水路・造成など、土木工事全般に対応。公共・民間を問わず幅広く請け負います。",
+    descLines: ["道路、水路、造成など、", "土木工事全般に対応します。"],
   },
   {
     title: "外構工事",
-    desc: "駐車場・フェンス・門扉・舗装など。使い勝手と安全性を両立した外構を提案します。",
+    descLines: ["駐車場、フェンス、舗装など、", "使いやすく安全な外構をつくります。"],
   },
   {
     title: "改修・修繕",
-    desc: "老朽化した構造物の補修・修繕に対応。現地確認を行い、最適な工法で丁寧に施工します。",
+    descLines: ["老朽化した構造物を確認し、", "適切な方法で修繕します。"],
   },
   {
     title: "小規模リフォーム",
-    desc: "部分的なリフォームや住宅周りの改善工事もお任せください。お困りごとをスピーディに解決します。",
+    descLines: ["住宅周りの小さな改修やリフォームにも", "対応します。"],
   },
 ];
 
@@ -43,9 +43,7 @@ export default function Services() {
 
         <div className="px-5 pt-7 md:px-0 md:pt-9">
           <p className="text-base leading-[2] text-sub">
-            現場の状況に合わせて、
-            <br />
-            最適な進め方をご提案します。
+            現場に合わせて、最適な工事をご提案します。
           </p>
           <div className="mt-7 border-t border-bronze/60 md:mt-9">
             {services.map((s, index) => (
@@ -56,14 +54,11 @@ export default function Services() {
                 <span className="text-xs font-bold text-bronze">0{index + 1}</span>
                 <h3 className="font-display text-xl font-bold text-black md:text-2xl">{s.title}</h3>
                 <p className="col-start-2 mt-1 text-sm leading-[1.9] text-sub">
-                  {s.desc.split("。").map(
-                    (sentence) =>
-                      sentence && (
-                        <span key={sentence} className="block">
-                          {sentence}。
-                        </span>
-                      )
-                  )}
+                  {s.descLines.map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
                 </p>
               </div>
             ))}
