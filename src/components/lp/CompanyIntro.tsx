@@ -10,7 +10,7 @@ export default function CompanyIntro() {
           <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 px-5 pb-7 text-white md:px-10 md:pb-10">
             <p className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-white/80 md:text-xs md:tracking-[0.2em]">
-              <span className="h-px w-5 bg-bronze md:w-6" />
+              <span className="h-px w-5 bg-white md:w-6" />
               About Us
             </p>
             <h2 className="mt-3 text-[1.8rem] font-bold leading-[1.5] tracking-tight md:text-5xl md:leading-tight">

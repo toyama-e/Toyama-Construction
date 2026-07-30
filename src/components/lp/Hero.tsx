@@ -4,20 +4,44 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate scroll-mt-4 overflow-hidden bg-offwhite pt-16 text-ink md:min-h-[760px] md:pt-20"
+      className="relative isolate scroll-mt-4 overflow-hidden bg-white pt-16 text-ink md:pt-20"
     >
-      <div className="mx-auto grid max-w-7xl md:min-h-[680px] md:grid-cols-[46%_54%] md:items-center md:px-12">
-        <div className="animate-enter order-2 px-5 pb-12 pt-9 md:order-1 md:px-0 md:pb-0 md:pr-10 md:pt-0">
-          <p className="mb-4 flex items-center gap-2 text-xs font-medium tracking-[0.2em] text-bronze">
-            <span className="h-px w-8 bg-bronze" />
-            新潟県 三条市
-          </p>
-          <h1 className="font-display text-[2rem] font-bold leading-[1.45] tracking-[0.02em] text-ink min-[370px]:text-[2.25rem] md:text-5xl lg:text-[3.5rem]">
-            県央地域の
-            <br />
-            土木・外構工事
-          </h1>
+      <div className="mx-auto max-w-7xl md:px-12">
+        <div className="relative h-[min(100vw,500px)] overflow-hidden bg-gray-200 md:h-[600px]">
+          <div className="hero-photo-people absolute inset-0 z-10">
+            <Image
+              src="/images/yunbo.JPG"
+              alt="重機を使った工事の様子（現在は仮写真）"
+              fill
+              priority
+              sizes="(min-width: 1280px) 1184px, 100vw"
+              className="object-cover object-[56%_50%] md:object-[55%_50%]"
+            />
+          </div>
+          <div className="hero-photo-office absolute inset-0">
+            <Image
+              src="/images/office4-3.webp"
+              alt="株式会社外山建設の会社外観"
+              fill
+              sizes="(min-width: 1280px) 1184px, 100vw"
+              className="object-cover object-center"
+            />
+          </div>
+          <div className="absolute inset-0 z-20 bg-gradient-to-t from-navy/90 via-navy/15 to-transparent" />
+          <div className="animate-enter absolute inset-x-0 bottom-0 z-30 px-5 pb-7 text-white md:px-10 md:pb-10">
+            <p className="mb-3 flex items-center gap-2 text-[10px] font-medium tracking-[0.18em] text-white/85 md:text-xs md:tracking-[0.2em]">
+              <span className="h-px w-6 bg-white md:w-8" />
+              新潟県 三条市
+            </p>
+            <h1 className="font-display text-[2rem] font-bold leading-[1.45] tracking-[0.02em] min-[370px]:text-[2.25rem] md:text-6xl">
+              県央地域の
+              <br />
+              土木・外構工事
+            </h1>
+          </div>
+        </div>
 
+        <div className="px-5 pb-12 pt-7 md:max-w-2xl md:px-0 md:pt-9">
           <p className="mt-5 max-w-md text-base font-medium leading-[1.9] tracking-wide text-sub">
             ご自宅の駐車場、お庭の整備や工事など、
             <br />
@@ -31,28 +55,6 @@ export default function Hero() {
             ご相談はこちら
             <span aria-hidden="true">→</span>
           </a>
-        </div>
-
-        <div className="relative order-1 h-[min(100vw,430px)] overflow-hidden bg-gray-200 md:order-2 md:h-[600px]">
-          <div className="hero-photo-people absolute inset-0 z-10">
-            <Image
-              src="/images/yunbo.JPG"
-              alt="重機を使った工事の様子（現在は仮写真）"
-              fill
-              priority
-              sizes="(min-width: 768px) 54vw, 100vw"
-              className="object-cover object-[56%_50%] md:object-[55%_50%]"
-            />
-          </div>
-          <div className="hero-photo-office absolute inset-0">
-            <Image
-              src="/images/office4-3.webp"
-              alt="株式会社外山建設の会社外観"
-              fill
-              sizes="(min-width: 768px) 54vw, 100vw"
-              className="object-cover object-center"
-            />
-          </div>
         </div>
       </div>
     </section>
