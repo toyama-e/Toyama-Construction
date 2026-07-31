@@ -15,10 +15,26 @@ export default function Contact() {
         <h2 className="mt-3 text-3xl font-bold tracking-tight text-black md:text-5xl">
           お問い合わせ
         </h2>
-        <p className="mt-4 text-sm text-gray-700">相談・見積りなど、お気軽にご連絡ください。</p>
+        <p className="mt-4 text-sm text-gray-700">
+          <span className="min-[360px]:hidden">
+            相談・見積りなど、
+            <br />
+            お気軽にご連絡ください。
+          </span>
+          <span className="hidden min-[360px]:inline">
+            相談・見積りなど、お気軽にご連絡ください。
+          </span>
+        </p>
 
         <div className="mt-8 border-y border-bronze/60 py-6 sm:hidden">
-          <p className="font-display text-xl font-bold text-ink">LINEで気軽にご相談いただけます</p>
+          <p className="font-display text-xl font-bold text-ink">
+            <span className="min-[360px]:hidden">
+              LINEで気軽に
+              <br />
+              ご相談いただけます
+            </span>
+            <span className="hidden min-[360px]:inline">LINEで気軽にご相談いただけます</span>
+          </p>
           <p className="mt-2 text-sm leading-relaxed text-sub">
             直接話せるLINE通話がおすすめです。
             <br />
