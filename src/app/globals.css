@@ -5,13 +5,13 @@
 :root {
   --color-navy: #17233a;
   --color-bronze: #955f3a;
-  --color-offwhite: #f7f4ee;
+  --color-offwhite: #ffffff;
   --color-ink: #202734;
   --color-sub: #626a75;
 }
 
 body {
-  background-color: #f7f4ee;
+  background-color: #ffffff;
   color: #202734;
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", sans-serif;
 }

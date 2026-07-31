@@ -8,9 +8,9 @@ const SPECS = [
   { label: "昇給", value: "年1回（実績・資格取得を評価）" },
   { label: "休日", value: COMPANY.holiday },
   { label: "会社都合休み", value: "6日/月まで補償" },
-  { label: "応募資格", value: "普通自動車免許（AT可）／未経験可" },
+  { label: "応募資格", value: "普通自動車免許（AT可）/未経験可" },
   { label: "待遇", value: "社会保険完備・資格取得費用全額会社負担" },
-  { label: "応募方法", value: "お電話またはメールにてご連絡ください" },
+  { label: "応募方法", value: "LINE通話・LINEチャット・メールにてご連絡ください" },
 ];
 
 export default function JobSpec() {
@@ -45,8 +45,8 @@ export default function JobSpec() {
           <dl>{renderRows(primarySpecs)}</dl>
           <details className="group md:hidden">
             <summary className="flex min-h-12 cursor-pointer list-none items-center justify-center border-t border-navy/10 bg-white text-sm font-bold text-ink">
-              <span className="group-open:hidden">詳しい募集要項を見る ＋</span>
-              <span className="hidden group-open:inline">閉じる −</span>
+              <span className="group-open:hidden">詳しい募集要項を見る +</span>
+              <span className="hidden group-open:inline">閉じる -</span>
             </summary>
             <dl>{renderRows(secondarySpecs, primarySpecs.length)}</dl>
           </details>

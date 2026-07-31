@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative scroll-mt-4 overflow-hidden bg-gradient-to-br from-warmgray via-offwhite to-taupe text-ink"
+      className="relative scroll-mt-4 overflow-hidden bg-gradient-to-br from-bluegray via-paleblue to-lightblue text-ink"
     >
       <span className="pointer-events-none absolute -right-16 top-24 h-56 w-56 rounded-full border border-bronze/20" />
       <span className="pointer-events-none absolute -right-4 top-36 h-40 w-40 rounded-full border border-bronze/30" />
