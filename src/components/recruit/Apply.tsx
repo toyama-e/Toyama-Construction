@@ -28,7 +28,11 @@ export default function Apply() {
         </p>
 
         <div className="mt-8 border-y border-bronze/60 py-6 sm:hidden">
-          <p className="font-display text-xl font-bold text-ink">まずはLINEで話してみませんか？</p>
+          <p className="font-display text-xl font-bold text-ink">
+            まずはLINEで
+            <br className="min-[360px]:hidden" />
+            話してみませんか？
+          </p>
           <p className="mt-2 text-sm leading-relaxed text-sub">
             応募を決める前の質問や、
             <br />

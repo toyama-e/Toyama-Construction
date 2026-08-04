@@ -17,16 +17,16 @@ const FAQS: {
   },
   {
     q: "体力に自信がなくても大丈夫ですか？",
-    a: "最初はそれほど重い作業はありません。慣れながら少しずつ担当範囲を広げていきます。",
+    a: "はい。最初は重い作業を任せません。慣れながら、少しずつ担当範囲を広げます。",
   },
   {
     q: "車の免許以外に、入社前に必要な資格はありますか？",
-    a: "普通免許があれば問題ありません。現場で必要な特殊免許は、入社後に会社がサポートして取得できます。",
-    mobileQuestionLines: ["車の免許以外に、", "入社前に必要な資格はありますか？"],
+    a: "普通免許があれば問題ありません。現場で必要な特殊免許は、入社後に会社の支援で取得できます。",
+    mobileQuestionLines: ["車の免許以外に、", "必要な資格はありますか？"],
     mobileAnswerLines: [
       "普通免許があれば問題ありません。",
       "現場で必要な特殊免許は、",
-      "入社後に会社がサポートして取得できます。",
+      "入社後に会社の支援で取得できます。",
     ],
   },
 ];
@@ -52,7 +52,10 @@ export default function Faq() {
                   <>
                     <span className="md:hidden">
                       {f.mobileQuestionLines.map((line, index) => (
-                        <span key={line} className={index === 0 ? "inline" : "block pl-7"}>
+                        <span
+                          key={line}
+                          className={index === 0 ? "inline" : "block min-[360px]:pl-7"}
+                        >
                           {line}
                         </span>
                       ))}
@@ -63,7 +66,7 @@ export default function Faq() {
                   f.q
                 )}
               </p>
-              <p className="pl-5 text-sm leading-relaxed text-black lg:pl-0">
+              <p className="text-sm leading-relaxed text-black min-[360px]:pl-5 lg:pl-0">
                 <span className="font-medium text-black">A.</span>　
                 <span className="md:hidden">
                   {(f.mobileAnswerLines ?? f.a.match(/[^。]+。?/g) ?? []).map((sentence, index) => (

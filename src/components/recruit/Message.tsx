@@ -26,30 +26,10 @@ export default function Message() {
 
             <div className="flex-1">
               <blockquote className="text-base leading-loose text-black md:text-lg">
-                {[
-                  "うちに来る人に、",
-                  "特別なスキルは求めていません。",
-                  "現場をやってみたい。",
-                  "手に職をつけたい。",
-                  "地元で働きたい。",
-                  "それだけで十分です。",
-                  "あとは一緒に育てていきます。",
-                ].map((line) => (
-                  <span key={line} className="block md:inline">
-                    {line}
-                  </span>
-                ))}
+                うちに来る人に、特別なスキルは求めていません。現場をやってみたい。手に職をつけたい。地元で働きたい。それだけで十分です。あとは一緒に育てていきます。
               </blockquote>
               <p className="mt-3 text-base leading-loose text-black md:text-lg">
-                {[
-                  "小さい会社だからこそ、",
-                  "一人ひとりをちゃんと見られる。",
-                  "それがうちの強みだと思っています。",
-                ].map((line) => (
-                  <span key={line} className="block md:inline">
-                    {line}
-                  </span>
-                ))}
+                小さい会社だからこそ、一人ひとりをちゃんと見られる。それがうちの強みです。
               </p>
               <p className="mt-6 text-sm font-medium text-black">代表　外山 澄男</p>
             </div>

@@ -1,7 +1,7 @@
 const SCHEDULE = [
   { time: "07:30", task: "集合・朝礼（現場または事務所）" },
   { time: "08:00", task: "作業開始" },
-  { time: "12:00", task: "昼休憩（1時間・作業内容により前後あり）" },
+  { time: "12:00", task: "昼休憩（1時間・作業により前後あり）" },
   { time: "13:00", task: "午後作業" },
   { time: "17:00", task: "片付け・日報記録" },
   { time: "17:30", task: "終業" },
@@ -35,7 +35,9 @@ export default function DailySchedule() {
                       <>
                         <span className="md:hidden">
                           昼休憩
-                          <span className="block">（1時間・作業内容により前後あり）</span>
+                          <span className="block whitespace-nowrap text-[13px]">
+                            （1時間・作業により前後あり）
+                          </span>
                         </span>
                         <span className="hidden md:inline">{s.task}</span>
                       </>

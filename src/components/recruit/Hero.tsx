@@ -25,7 +25,14 @@ export default function Hero() {
           <p className="mt-4 text-sm leading-relaxed text-gray-700 md:mt-6 md:text-lg">
             未経験から始めて、地元で手に職を。
             <br className="md:hidden" />
-            小さな会社だからこそ、一人ひとり丁寧に教えます。
+            <span className="min-[360px]:hidden">
+              小さな会社だからこそ、
+              <br />
+              一人ひとり丁寧に教えます。
+            </span>
+            <span className="hidden min-[360px]:inline">
+              小さな会社だからこそ、一人ひとり丁寧に教えます。
+            </span>
           </p>
 
           <dl className="mt-6 grid w-full grid-cols-2 overflow-hidden border-y border-bronze/50 bg-offwhite/60 md:max-w-xl">

@@ -33,7 +33,13 @@ export default function Promise() {
                 {p.num}
               </span>
               <p className="font-display text-xl font-bold leading-snug text-black lg:mt-8 lg:text-2xl">
-                {p.num === "02" ? (
+                {p.num === "01" ? (
+                  <>
+                    資格取得は
+                    <br className="min-[360px]:hidden" />
+                    会社が全力サポート
+                  </>
+                ) : p.num === "02" ? (
                   <>
                     会社都合の休みは
                     <br className="md:hidden" />

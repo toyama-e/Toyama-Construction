@@ -49,12 +49,14 @@ export default function JobSpec() {
     specs.map((s, i) => (
       <div
         key={s.label}
-        className={`grid grid-cols-[96px_1fr] gap-3 px-4 py-3 text-sm sm:flex sm:gap-4 sm:px-6 sm:py-4 ${
+        className={`grid grid-cols-1 gap-1.5 border-b border-navy/10 px-4 py-3 min-[360px]:grid-cols-[96px_1fr] min-[360px]:gap-3 min-[360px]:border-b-0 min-[360px]:text-sm sm:flex sm:gap-4 sm:px-6 sm:py-4 ${
           (i + startIndex) % 2 === 0 ? "bg-gray-100" : "bg-white"
         }`}
       >
-        <dt className="font-medium text-black sm:w-28 sm:shrink-0">{s.label}</dt>
-        <dd className="min-w-0 text-sub">
+        <dt className="text-[13px] font-bold text-bronze min-[360px]:text-sm min-[360px]:font-medium min-[360px]:text-black sm:w-28 sm:shrink-0">
+          {s.label}
+        </dt>
+        <dd className="min-w-0 text-[15px] leading-relaxed text-ink min-[360px]:text-sm min-[360px]:leading-normal min-[360px]:text-sub">
           {s.mobileLines ? (
             <>
               <span className="md:hidden">
@@ -81,7 +83,9 @@ export default function JobSpec() {
           Job Details
         </p>
         <h2 className="mt-3 text-[1.7rem] font-bold leading-snug tracking-tight text-black md:text-5xl">
-          現場スタッフ（正社員）
+          現場スタッフ
+          <br className="min-[360px]:hidden" />
+          （正社員）
           <br className="md:hidden" />
           募集要項
         </h2>
