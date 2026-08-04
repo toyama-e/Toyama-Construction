@@ -44,13 +44,13 @@ export default function WhyUs() {
                 {r.title === "ご要望に合わせ、柔軟に対応" ? (
                   <>
                     ご要望に合わせ、
-                    <br />
+                    <br className="min-[375px]:hidden" />
                     柔軟に対応
                   </>
                 ) : r.title === "土木から外構まで一式対応" ? (
                   <>
                     土木から外構まで
-                    <br />
+                    <br className="min-[375px]:hidden" />
                     一式対応
                   </>
                 ) : (
