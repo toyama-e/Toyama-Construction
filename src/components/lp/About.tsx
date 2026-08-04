@@ -7,7 +7,6 @@ const rows = [
   { k: "代表", v: "外山 澄男" },
   { k: "事業内容", v: "土木一式工事・外構工事・改修・修繕" },
   { k: "対応エリア", v: COMPANY.area },
-  { k: "建設業許可", v: COMPANY.constructionLicense },
   { k: "FAX", v: COMPANY.fax },
   { k: "LINE", v: COMPANY.line },
   { k: "営業時間", v: COMPANY.hours },
@@ -16,16 +15,10 @@ const rows = [
 
 export default function About() {
   return (
-    <section id="about" className="scroll-mt-16 bg-offwhite">
+    <section id="about" className="scroll-mt-16 bg-gray-100">
       <div className="mx-auto max-w-5xl px-4 py-12 md:py-24">
-        <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-bronze">
-          <span className="h-px w-6 bg-bronze" />
-          About Us
-        </p>
-        <h2 className="mt-3 text-3xl font-bold tracking-tight text-black md:text-5xl">会社概要</h2>
-
-        <div className="mt-7 flex flex-col gap-5 md:mt-10 md:flex-row md:items-start md:gap-6">
-          <div className="overflow-hidden md:w-2/5 md:shrink-0">
+        <div className="flex flex-col gap-5 md:flex-row md:items-start md:gap-6">
+          <div className="relative overflow-hidden md:w-2/5 md:shrink-0">
             <Image
               src="/images/office1-1.jpeg"
               alt="株式会社 外山建設 事務所"
@@ -34,6 +27,14 @@ export default function About() {
               className="w-full object-cover"
               style={{ height: "auto" }}
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/10 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 px-5 pb-6 text-white">
+              <p className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-white/80">
+                <span className="h-px w-5 bg-white" />
+                About Us
+              </p>
+              <h2 className="mt-3 text-[1.8rem] font-bold tracking-tight md:text-4xl">会社概要</h2>
+            </div>
           </div>
 
           <div className="overflow-hidden border-y border-bronze/60 md:flex-1">
@@ -41,10 +42,10 @@ export default function About() {
               {rows.map((r) => (
                 <div
                   key={r.k}
-                  className="grid grid-cols-[104px_1fr] gap-3 px-4 py-3 sm:grid-cols-[140px_1fr] sm:gap-4 sm:px-6 sm:py-4"
+                  className="grid grid-cols-1 gap-1 px-0 py-3 sm:grid-cols-[140px_1fr] sm:gap-4 sm:px-6 sm:py-4"
                 >
                   <dt className="text-sm font-medium text-sub">{r.k}</dt>
-                  <dd className="text-sm text-ink">{r.v}</dd>
+                  <dd className="break-words text-sm leading-relaxed text-ink">{r.v}</dd>
                 </div>
               ))}
             </dl>

@@ -3,7 +3,7 @@ import { COMPANY } from "@/constants/company";
 const items = [
   {
     category: "建設業許可",
-    entries: [`建設業許可番号：${COMPANY.constructionLicense}`],
+    entries: [COMPANY.constructionLicense],
   },
   {
     category: "保有資格",
@@ -26,13 +26,16 @@ export default function License() {
       <div className="mx-auto max-w-5xl px-4 py-12 md:py-24">
         <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-bronze">
           <span className="h-px w-6 bg-bronze" />
-          License &amp; Qualification
+          <span className="min-[360px]:hidden">License</span>
+          <span className="hidden min-[360px]:inline">License &amp; Qualification</span>
         </p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight text-black md:text-5xl">
           許可・資格・保険
         </h2>
-        <p className="mt-4 max-w-xl leading-relaxed text-black">
-          適切な許可と資格のもと、安全・確実に施工を行います。
+        <p className="mt-4 max-w-xl leading-[1.9] text-sub">
+          適切な許可と資格のもと、
+          <br className="md:hidden" />
+          安全・確実に施工を行います。
         </p>
 
         <div className="mt-8 border-t border-bronze/60 md:mt-12 md:grid md:grid-cols-3">
@@ -44,7 +47,7 @@ export default function License() {
               <h3 className="font-display text-xl font-bold text-black">{item.category}</h3>
               <ul className="mt-4 space-y-2">
                 {item.entries.map((e) => (
-                  <li key={e} className="text-sm text-gray-700">
+                  <li key={e} className="break-words text-sm leading-[1.9] text-gray-700">
                     {e}
                   </li>
                 ))}
