@@ -2,12 +2,12 @@ const PROMISES = [
   {
     num: "01",
     title: "資格取得は会社が全力サポート",
-    desc: "入社後に取れる資格もたくさんあります。受験費用は全額会社負担。",
+    descLines: ["入社後に取れる資格もたくさんあります。", "受験費用は全額会社負担。"],
   },
   {
     num: "02",
     title: "会社都合の休みは6日/月まで補償",
-    desc: "天気や工期の都合で急に休みになっても、給与はきちんと守ります。",
+    descLines: ["天気や工期の都合で急に休みになっても、", "給与はきちんと守ります。"],
   },
 ];
 
@@ -23,19 +23,39 @@ export default function Promise() {
           入社後の2つの約束
         </h2>
 
-        <div className="mt-8 border-t border-navy/15 md:mt-12 md:grid md:grid-cols-2">
+        <div className="mt-8 border-t border-navy/15 md:mt-12 lg:grid lg:grid-cols-2">
           {PROMISES.map((p) => (
             <div
               key={p.num}
-              className="grid grid-cols-[48px_1fr] border-b border-navy/15 py-6 md:block md:border-b-0 md:border-r md:px-7 md:py-8 md:last:border-r-0"
+              className="grid grid-cols-[48px_1fr] border-b border-navy/15 py-6 lg:block lg:border-b-0 lg:border-r lg:px-7 lg:py-8 lg:last:border-r-0"
             >
               <span className="row-span-2 text-sm font-bold tracking-widest text-bronze">
                 {p.num}
               </span>
-              <p className="font-display text-xl font-bold leading-snug text-black md:mt-8 md:text-2xl">
-                {p.title}
+              <p className="font-display text-xl font-bold leading-snug text-black lg:mt-8 lg:text-2xl">
+                {p.num === "01" ? (
+                  <>
+                    資格取得は
+                    <br className="min-[360px]:hidden" />
+                    会社が全力サポート
+                  </>
+                ) : p.num === "02" ? (
+                  <>
+                    会社都合の休みは
+                    <br className="md:hidden" />
+                    6日/月まで補償
+                  </>
+                ) : (
+                  p.title
+                )}
               </p>
-              <p className="mt-2 text-sm leading-relaxed text-sub md:mt-4">{p.desc}</p>
+              <p className="col-span-2 mt-4 text-sm leading-relaxed text-sub lg:mt-4">
+                {p.descLines.map((line) => (
+                  <span key={line} className="block md:inline">
+                    {line}
+                  </span>
+                ))}
+              </p>
             </div>
           ))}
         </div>

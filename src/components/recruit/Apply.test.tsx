@@ -26,8 +26,9 @@ describe("Apply", () => {
   });
 
   it("メールリンクがmailto形式である", () => {
-    const link = screen.getByText("メールを送る").closest("a");
+    const links = screen.getAllByText("メールで応募する").map((label) => label.closest("a"));
 
-    expect(link).toHaveAttribute("href", `mailto:${COMPANY.email}`);
+    expect(links).toHaveLength(2);
+    links.forEach((link) => expect(link).toHaveAttribute("href", `mailto:${COMPANY.email}`));
   });
 });

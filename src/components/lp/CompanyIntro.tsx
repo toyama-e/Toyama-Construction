@@ -24,14 +24,14 @@ export default function CompanyIntro() {
           </span>
         </div>
 
-        <div className="px-5 pt-7 md:max-w-2xl md:px-0 md:pt-9">
+        <div className="px-5 pt-7 md:max-w-3xl md:px-0 md:pt-9">
           <p className="text-base leading-[2] text-sub">
             社長と役員を中心に、
-            <br />
+            <br className="md:hidden" />
             地域に根ざして仕事をしています。
             <br />
             ご相談から施工まで、
-            <br />
+            <br className="md:hidden" />
             一つひとつ丁寧に対応します。
           </p>
           <a

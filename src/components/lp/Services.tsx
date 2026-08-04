@@ -2,18 +2,22 @@ const services = [
   {
     title: "土木一式工事",
     descLines: ["道路、水路、造成など、", "土木工事全般に対応します。"],
+    narrowLines: ["道路、水路、造成など、", "土木工事全般に対応します。"],
   },
   {
     title: "外構工事",
     descLines: ["駐車場、フェンス、舗装など、", "使いやすく安全な外構をつくります。"],
+    narrowLines: ["駐車場、フェンス、舗装など、", "使いやすく安全な", "外構をつくります。"],
   },
   {
     title: "改修・修繕",
     descLines: ["老朽化した構造物を確認し、", "適切な方法で修繕します。"],
+    narrowLines: ["老朽化した構造物を確認し、", "適切な方法で修繕します。"],
   },
   {
     title: "小規模リフォーム",
-    descLines: ["住宅周りの小さな改修やリフォームにも", "対応します。"],
+    descLines: ["住宅周りの小さな改修やリフォームにも、", "対応します。"],
+    narrowLines: ["住宅周りの小さな改修や", "リフォームにも、", "対応します。"],
   },
 ];
 
@@ -43,7 +47,14 @@ export default function Services() {
 
         <div className="px-5 pt-7 md:px-0 md:pt-9">
           <p className="text-base leading-[2] text-sub">
-            現場に合わせて、最適な工事をご提案します。
+            <span className="min-[360px]:hidden">
+              現場に合わせて、
+              <br />
+              最適な工事をご提案します。
+            </span>
+            <span className="hidden min-[360px]:inline">
+              現場に合わせて、最適な工事をご提案します。
+            </span>
           </p>
           <div className="mt-7 border-t border-bronze/60 md:mt-9">
             {services.map((s, index) => (
@@ -54,11 +65,20 @@ export default function Services() {
                 <span className="text-xs font-bold text-bronze">0{index + 1}</span>
                 <h3 className="font-display text-xl font-bold text-black md:text-2xl">{s.title}</h3>
                 <p className="col-start-2 mt-1 text-sm leading-[1.9] text-sub">
-                  {s.descLines.map((line) => (
-                    <span key={line} className="block">
-                      {line}
-                    </span>
-                  ))}
+                  <span className="min-[360px]:hidden">
+                    {s.narrowLines.map((line) => (
+                      <span key={line} className="block">
+                        {line}
+                      </span>
+                    ))}
+                  </span>
+                  <span className="hidden min-[360px]:inline">
+                    {s.descLines.map((line) => (
+                      <span key={line} className="block md:inline">
+                        {line}
+                      </span>
+                    ))}
+                  </span>
                 </p>
               </div>
             ))}

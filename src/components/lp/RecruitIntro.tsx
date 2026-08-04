@@ -24,12 +24,12 @@ export default function RecruitIntro() {
           </span>
         </div>
 
-        <div className="px-5 pt-7 md:max-w-2xl md:px-0 md:pt-9">
+        <div className="px-5 pt-7 md:max-w-3xl md:px-0 md:pt-9">
           <p className="text-base leading-[2] text-white/75">
             未経験から、地元で手に職を。
-            <br />
+            <br className="md:hidden" />
             小さな会社だからこそ、
-            <br />
+            <br className="md:hidden" />
             一人ひとり丁寧に向き合います。
           </p>
           <a

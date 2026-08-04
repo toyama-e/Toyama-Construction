@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { COMPANY } from "@/constants/company";
 
-type Props = { page: "lp" | "company" | "recruit"; alwaysVisible?: boolean };
+type Props = { page: "lp" | "company" | "recruit" | "privacy"; alwaysVisible?: boolean };
 
 const LP_NAV = [
   { label: "事業内容", href: "#services" },
@@ -27,6 +27,13 @@ const RECRUIT_NAV = [
   { label: "よくある質問", href: "#faq" },
 ];
 
+const PRIVACY_NAV = [
+  { label: "トップ", href: "/" },
+  { label: "事業内容", href: "/#services" },
+  { label: "会社案内", href: "/company" },
+  { label: "採用情報", href: "/recruit" },
+];
+
 export default function Header({ page, alwaysVisible = false }: Props) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -45,11 +52,20 @@ export default function Header({ page, alwaysVisible = false }: Props) {
   }, [menuOpen]);
 
   const visible = alwaysVisible || scrolled;
-  const navItems = page === "lp" ? LP_NAV : page === "company" ? COMPANY_NAV : RECRUIT_NAV;
+  const navItems =
+    page === "lp"
+      ? LP_NAV
+      : page === "company"
+        ? COMPANY_NAV
+        : page === "recruit"
+          ? RECRUIT_NAV
+          : PRIVACY_NAV;
   const cta =
     page === "lp"
       ? { label: "採用情報を見る", href: "/recruit" }
-      : { label: "LINEで応募・相談", href: "#apply" };
+      : page === "recruit"
+        ? { label: "LINEで応募・相談", href: "#apply" }
+        : { label: "採用情報を見る", href: "/recruit" };
 
   return (
     <header
@@ -57,19 +73,19 @@ export default function Header({ page, alwaysVisible = false }: Props) {
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 md:h-auto md:px-8 md:py-5">
+      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 lg:h-auto lg:px-8 lg:py-5">
         <a href={page === "lp" ? "#top" : "/"} className="relative z-50 shrink-0">
           <Image
             src="/images/logo-wide.png"
             alt={COMPANY.name}
             width={148}
             height={27}
-            className="w-[132px] object-contain md:w-40"
+            className="w-[132px] object-contain lg:w-40"
             style={{ height: "auto" }}
           />
         </a>
 
-        <nav className="hidden items-center gap-5 text-base md:flex">
+        <nav className="hidden items-center gap-5 text-base lg:flex">
           {navItems.map(({ label, href }) => (
             <a key={href} href={href} className="text-black transition-colors hover:text-bronze">
               {label}
@@ -77,7 +93,7 @@ export default function Header({ page, alwaysVisible = false }: Props) {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-2 lg:flex">
           {page !== "recruit" ? (
             <a
               href="/recruit"
@@ -97,7 +113,7 @@ export default function Header({ page, alwaysVisible = false }: Props) {
 
         <button
           type="button"
-          className="relative z-50 flex h-11 w-11 items-center justify-center rounded-full border border-navy/20 md:hidden"
+          className="relative z-50 flex h-11 w-11 items-center justify-center rounded-full border border-navy/20 lg:hidden"
           aria-label={menuOpen ? "メニューを閉じる" : "メニューを開く"}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
@@ -120,7 +136,7 @@ export default function Header({ page, alwaysVisible = false }: Props) {
 
       <div
         id="mobile-menu"
-        className={`absolute inset-x-0 top-0 z-40 h-dvh bg-offwhite px-6 pb-8 pt-24 transition-[opacity,visibility] duration-200 md:hidden ${
+        className={`absolute inset-x-0 top-0 z-40 h-dvh bg-offwhite px-6 pb-8 pt-24 transition-[opacity,visibility] duration-200 lg:hidden ${
           menuOpen ? "visible opacity-100" : "invisible opacity-0"
         }`}
       >

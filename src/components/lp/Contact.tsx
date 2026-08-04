@@ -15,10 +15,26 @@ export default function Contact() {
         <h2 className="mt-3 text-3xl font-bold tracking-tight text-black md:text-5xl">
           お問い合わせ
         </h2>
-        <p className="mt-4 text-sm text-gray-700">相談・見積りなど、お気軽にご連絡ください。</p>
+        <p className="mt-4 text-sm text-gray-700">
+          <span className="min-[360px]:hidden">
+            相談・見積りなど、
+            <br />
+            お気軽にご連絡ください。
+          </span>
+          <span className="hidden min-[360px]:inline">
+            相談・見積りなど、お気軽にご連絡ください。
+          </span>
+        </p>
 
         <div className="mt-8 border-y border-bronze/60 py-6 sm:hidden">
-          <p className="font-display text-xl font-bold text-ink">LINEで気軽にご相談いただけます</p>
+          <p className="font-display text-xl font-bold text-ink">
+            <span className="min-[360px]:hidden">
+              LINEで気軽に
+              <br />
+              ご相談いただけます
+            </span>
+            <span className="hidden min-[360px]:inline">LINEで気軽にご相談いただけます</span>
+          </p>
           <p className="mt-2 text-sm leading-relaxed text-sub">
             直接話せるLINE通話がおすすめです。
             <br />
@@ -56,11 +72,11 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackConversion("line_call", "contact")}
-                className="inline-block rounded-full bg-[#06C755] px-6 py-2 text-sm font-bold text-white transition-opacity hover:opacity-75"
+                className="flex min-h-10 w-44 items-center justify-center rounded-full bg-[#06C755] px-5 text-sm font-bold text-white transition-opacity hover:opacity-75"
               >
                 LINE通話をかける
               </a>
-              <Image src="/images/call.png" alt="電話" width={80} height={80} />
+              <Image src="/images/call.png" alt="LINE通話QRコード" width={120} height={120} />
             </div>
             <p className="mt-3 text-center text-xs text-black">
               QRコードを読み取るか、ボタンをタップ
@@ -76,7 +92,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackConversion("line_add", "contact")}
-                className="inline-block rounded-full bg-[#06C755] px-6 py-2 text-sm font-bold text-white transition-opacity hover:opacity-75"
+                className="flex min-h-10 w-44 items-center justify-center rounded-full bg-[#06C755] px-5 text-sm font-bold text-white transition-opacity hover:opacity-75"
               >
                 友だち追加
               </a>
@@ -85,7 +101,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackConversion("line_add", "contact")}
-                className="transition-opacity hover:opacity-70"
+                className="block h-[120px] w-[120px] transition-opacity hover:opacity-70"
               >
                 <Image
                   src="/images/line-qr.png"

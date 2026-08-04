@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate scroll-mt-4 overflow-hidden bg-white pt-16 text-ink md:pt-20"
+      className="relative isolate scroll-mt-4 overflow-hidden bg-white pt-16 text-ink lg:pt-20"
     >
       <div className="mx-auto max-w-7xl md:px-12">
         <div className="relative h-[min(100vw,500px)] overflow-hidden bg-gray-200 md:h-[600px]">
@@ -41,11 +41,20 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="px-5 pb-12 pt-7 md:max-w-2xl md:px-0 md:pt-9">
-          <p className="mt-5 max-w-md text-base font-medium leading-[1.9] tracking-wide text-sub">
-            ご自宅の駐車場、お庭の整備や工事など、
-            <br />
-            お任せください。
+        <div className="px-5 pb-12 pt-7 md:max-w-3xl md:px-0 md:pt-9">
+          <p className="mt-5 text-base font-medium leading-[1.9] tracking-wide text-sub">
+            <span className="min-[360px]:hidden">
+              ご自宅の駐車場、
+              <br />
+              お庭の整備や工事など、
+              <br />
+              お任せください。
+            </span>
+            <span className="hidden min-[360px]:inline">
+              ご自宅の駐車場、お庭の整備や工事など、
+              <br className="md:hidden" />
+              お任せください。
+            </span>
           </p>
 
           <a

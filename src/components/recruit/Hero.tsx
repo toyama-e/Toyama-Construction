@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative scroll-mt-4 overflow-hidden bg-gradient-to-br from-warmgray via-offwhite to-taupe text-ink"
+      className="relative scroll-mt-4 overflow-hidden bg-gradient-to-br from-bluegray via-paleblue to-lightblue text-ink"
     >
       <span className="pointer-events-none absolute -right-16 top-24 h-56 w-56 rounded-full border border-bronze/20" />
       <span className="pointer-events-none absolute -right-4 top-36 h-40 w-40 rounded-full border border-bronze/30" />
@@ -24,11 +24,18 @@ export default function Hero() {
 
           <p className="mt-4 text-sm leading-relaxed text-gray-700 md:mt-6 md:text-lg">
             未経験から始めて、地元で手に職を。
-            <br className="hidden sm:block" />
-            小さな会社だからこそ、一人ひとり丁寧に教えます。
+            <br className="md:hidden" />
+            <span className="min-[360px]:hidden">
+              小さな会社だからこそ、
+              <br />
+              一人ひとり丁寧に教えます。
+            </span>
+            <span className="hidden min-[360px]:inline">
+              小さな会社だからこそ、一人ひとり丁寧に教えます。
+            </span>
           </p>
 
-          <dl className="mt-6 grid w-full grid-cols-2 overflow-hidden border-y border-bronze/50 bg-offwhite/60 md:max-w-xl">
+          <dl className="mt-6 grid w-full grid-cols-2 overflow-hidden border-y border-bronze/50 bg-offwhite/60 md:mx-auto md:max-w-xl">
             <div className="border-b border-r border-navy/10 p-4">
               <dt className="text-xs text-sub">給与</dt>
               <dd className="mt-1 font-bold text-ink">月給22万円〜</dd>
