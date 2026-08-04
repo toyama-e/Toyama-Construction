@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { COMPANY } from "@/constants/company";
 
-type Props = { page: "lp" | "company" | "recruit" };
+type Props = { page: "lp" | "company" | "recruit" | "privacy" };
 
 export default function Footer({ page }: Props) {
   const navItems =
@@ -12,6 +12,7 @@ export default function Footer({ page }: Props) {
           { label: "会社案内", href: "/company" },
           { label: "お問い合わせ", href: "/#contact" },
           { label: "採用情報", href: "/recruit" },
+          { label: "プライバシーポリシー", href: "/privacy" },
         ]
       : [
           { label: "募集要項", href: "#jobspec" },
@@ -19,6 +20,7 @@ export default function Footer({ page }: Props) {
           { label: "1日の流れ", href: "#schedule" },
           { label: "よくある質問", href: "#faq" },
           { label: "今すぐ応募", href: "#apply" },
+          { label: "プライバシーポリシー", href: "/privacy" },
         ];
 
   return (
@@ -47,15 +49,24 @@ export default function Footer({ page }: Props) {
             </div>
           </div>
           <nav className="mt-3 grid w-full grid-cols-6 border-t border-gray-200 pt-2 text-sm md:mt-0 md:w-[22rem] md:max-w-none md:grid-cols-3 md:border-t-0 md:pt-0 lg:w-[30rem]">
-            {navItems.map(({ label, href }, index) => (
+            {navItems.map(({ label, href }) => (
               <a
                 key={href}
                 href={href}
-                className={`flex min-h-11 items-center justify-center text-center text-gray-600 transition-colors hover:text-bronze md:col-span-1 md:justify-start md:text-left ${
-                  index < 3 ? "col-span-2" : "col-span-3"
-                }`}
+                className="col-span-2 flex min-h-11 items-center justify-center text-center text-gray-600 transition-colors hover:text-bronze md:col-span-1 md:justify-start md:text-left"
               >
-                {label}
+                {href === "/privacy" ? (
+                  <>
+                    <span className="lg:hidden">
+                      プライバシー
+                      <br />
+                      ポリシー
+                    </span>
+                    <span className="hidden lg:inline">{label}</span>
+                  </>
+                ) : (
+                  label
+                )}
               </a>
             ))}
           </nav>

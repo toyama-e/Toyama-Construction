@@ -14,4 +14,10 @@ describe("Footer", () => {
 
     expect(link).toHaveAttribute("href", `mailto:${COMPANY.email}`);
   });
+
+  it("プライバシーポリシーへのリンクがある", () => {
+    const { container } = render(<Footer page="lp" />);
+
+    expect(container.querySelector('a[href="/privacy"]')).toBeInTheDocument();
+  });
 });

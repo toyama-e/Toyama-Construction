@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { COMPANY } from "@/constants/company";
 
-type Props = { page: "lp" | "company" | "recruit"; alwaysVisible?: boolean };
+type Props = { page: "lp" | "company" | "recruit" | "privacy"; alwaysVisible?: boolean };
 
 const LP_NAV = [
   { label: "事業内容", href: "#services" },
@@ -27,6 +27,13 @@ const RECRUIT_NAV = [
   { label: "よくある質問", href: "#faq" },
 ];
 
+const PRIVACY_NAV = [
+  { label: "トップ", href: "/" },
+  { label: "事業内容", href: "/#services" },
+  { label: "会社案内", href: "/company" },
+  { label: "採用情報", href: "/recruit" },
+];
+
 export default function Header({ page, alwaysVisible = false }: Props) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -45,11 +52,20 @@ export default function Header({ page, alwaysVisible = false }: Props) {
   }, [menuOpen]);
 
   const visible = alwaysVisible || scrolled;
-  const navItems = page === "lp" ? LP_NAV : page === "company" ? COMPANY_NAV : RECRUIT_NAV;
+  const navItems =
+    page === "lp"
+      ? LP_NAV
+      : page === "company"
+        ? COMPANY_NAV
+        : page === "recruit"
+          ? RECRUIT_NAV
+          : PRIVACY_NAV;
   const cta =
     page === "lp"
       ? { label: "採用情報を見る", href: "/recruit" }
-      : { label: "LINEで応募・相談", href: "#apply" };
+      : page === "recruit"
+        ? { label: "LINEで応募・相談", href: "#apply" }
+        : { label: "採用情報を見る", href: "/recruit" };
 
   return (
     <header
