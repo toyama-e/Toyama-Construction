@@ -42,10 +42,22 @@ export default function About() {
               {rows.map((r) => (
                 <div
                   key={r.k}
-                  className="grid grid-cols-1 gap-1 px-0 py-3 sm:grid-cols-[140px_1fr] sm:gap-4 sm:px-6 sm:py-4"
+                  className="grid grid-cols-1 gap-1 px-0 py-3 sm:grid-cols-[140px_1fr] sm:gap-4 sm:px-6 sm:py-4 md:grid-cols-[84px_minmax(0,1fr)] md:gap-3 md:px-4 lg:grid-cols-[140px_1fr] lg:gap-4 lg:px-6"
                 >
                   <dt className="text-sm font-medium text-sub">{r.k}</dt>
-                  <dd className="break-words text-sm leading-relaxed text-ink">{r.v}</dd>
+                  <dd className="break-words text-sm leading-relaxed text-ink md:whitespace-nowrap md:text-[13px] lg:whitespace-normal lg:text-sm">
+                    {r.k === "会社名" ? (
+                      <>
+                        株式会社{" "}
+                        <ruby>
+                          外山<rt className="text-[0.55em] font-normal tracking-normal">とやま</rt>
+                        </ruby>
+                        建設
+                      </>
+                    ) : (
+                      r.v
+                    )}
+                  </dd>
                 </div>
               ))}
             </dl>

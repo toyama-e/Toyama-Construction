@@ -38,16 +38,19 @@ export default function License() {
           安全・確実に施工を行います。
         </p>
 
-        <div className="mt-8 border-t border-bronze/60 md:mt-12 md:grid md:grid-cols-3">
+        <div className="mt-8 border-t border-bronze/60 md:mt-12 lg:grid lg:grid-cols-3">
           {items.map((item) => (
             <div
               key={item.category}
-              className="border-b border-bronze/60 py-6 md:border-b-0 md:border-r md:px-7 md:py-8 md:last:border-r-0"
+              className="border-b border-bronze/60 py-6 md:grid md:grid-cols-[140px_minmax(0,1fr)] md:gap-8 lg:block lg:border-b-0 lg:border-r lg:px-7 lg:py-8 lg:last:border-r-0"
             >
               <h3 className="font-display text-xl font-bold text-black">{item.category}</h3>
-              <ul className="mt-4 space-y-2">
+              <ul className="mt-4 space-y-2 md:mt-0 lg:mt-4">
                 {item.entries.map((e) => (
-                  <li key={e} className="break-words text-sm leading-[1.9] text-gray-700">
+                  <li
+                    key={e}
+                    className="break-words text-sm leading-[1.9] text-gray-700 md:whitespace-nowrap lg:whitespace-normal"
+                  >
                     {e}
                   </li>
                 ))}

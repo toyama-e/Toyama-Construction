@@ -72,11 +72,11 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackConversion("line_call", "contact")}
-                className="inline-block rounded-full bg-[#06C755] px-6 py-2 text-sm font-bold text-white transition-opacity hover:opacity-75"
+                className="flex min-h-10 w-44 items-center justify-center rounded-full bg-[#06C755] px-5 text-sm font-bold text-white transition-opacity hover:opacity-75"
               >
                 LINE通話をかける
               </a>
-              <Image src="/images/call.png" alt="電話" width={80} height={80} />
+              <Image src="/images/call.png" alt="LINE通話QRコード" width={120} height={120} />
             </div>
             <p className="mt-3 text-center text-xs text-black">
               QRコードを読み取るか、ボタンをタップ
@@ -92,7 +92,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackConversion("line_add", "contact")}
-                className="inline-block rounded-full bg-[#06C755] px-6 py-2 text-sm font-bold text-white transition-opacity hover:opacity-75"
+                className="flex min-h-10 w-44 items-center justify-center rounded-full bg-[#06C755] px-5 text-sm font-bold text-white transition-opacity hover:opacity-75"
               >
                 友だち追加
               </a>
@@ -101,7 +101,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackConversion("line_add", "contact")}
-                className="transition-opacity hover:opacity-70"
+                className="block h-[120px] w-[120px] transition-opacity hover:opacity-70"
               >
                 <Image
                   src="/images/line-qr.png"

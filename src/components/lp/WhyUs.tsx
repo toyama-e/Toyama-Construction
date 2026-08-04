@@ -31,16 +31,16 @@ export default function WhyUs() {
           柔軟で身近な対応をご紹介します。
         </p>
 
-        <div className="mt-8 border-t border-navy/15 md:mt-12 md:grid md:grid-cols-3">
+        <div className="mt-8 border-t border-navy/15 md:mt-12 lg:grid lg:grid-cols-3">
           {reasons.map((r) => (
             <div
               key={r.title}
-              className="grid grid-cols-[48px_1fr] border-b border-navy/15 py-6 md:block md:border-b-0 md:border-r md:px-7 md:py-8 md:last:border-r-0"
+              className="grid grid-cols-[48px_1fr] border-b border-navy/15 py-6 lg:block lg:border-b-0 lg:border-r lg:px-4 lg:py-8 lg:last:border-r-0"
             >
               <span className="row-span-2 text-sm font-bold tracking-widest text-bronze">
                 {r.num}
               </span>
-              <h3 className="font-display text-xl font-bold leading-[1.6] text-black md:mt-8 md:text-2xl">
+              <h3 className="font-display text-xl font-bold leading-[1.6] text-black lg:mt-8 lg:whitespace-nowrap">
                 {r.title === "ご要望に合わせ、柔軟に対応" ? (
                   <>
                     ご要望に合わせ、
@@ -57,9 +57,9 @@ export default function WhyUs() {
                   r.title
                 )}
               </h3>
-              <p className="col-span-2 mt-4 text-sm leading-[1.9] text-sub md:mt-4 md:block">
+              <p className="col-span-2 mt-4 text-sm leading-[1.9] text-sub lg:mt-4 lg:block lg:text-[13px]">
                 {r.descLines.map((line) => (
-                  <span key={line} className="block md:inline">
+                  <span key={line} className="block">
                     {line}
                   </span>
                 ))}
