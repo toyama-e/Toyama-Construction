@@ -90,7 +90,7 @@ export default function JobSpec() {
           募集要項
         </h2>
 
-        <div className="mt-8 overflow-hidden border-y border-bronze/60 bg-gray-100 md:mt-12 md:max-w-4xl">
+        <div className="mt-8 overflow-hidden border-y border-bronze/60 bg-gray-100 md:mt-12 md:max-w-4xl lg:mx-auto">
           <dl>{renderRows(primarySpecs)}</dl>
           <details className="group md:hidden">
             <summary className="flex min-h-12 cursor-pointer list-none items-center justify-center border-t border-navy/10 bg-white text-sm font-bold text-ink">

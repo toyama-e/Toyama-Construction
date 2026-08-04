@@ -35,7 +35,7 @@ export default function Hero() {
             </span>
           </p>
 
-          <dl className="mt-6 grid w-full grid-cols-2 overflow-hidden border-y border-bronze/50 bg-offwhite/60 md:max-w-xl">
+          <dl className="mt-6 grid w-full grid-cols-2 overflow-hidden border-y border-bronze/50 bg-offwhite/60 md:mx-auto md:max-w-xl">
             <div className="border-b border-r border-navy/10 p-4">
               <dt className="text-xs text-sub">給与</dt>
               <dd className="mt-1 font-bold text-ink">月給22万円〜</dd>

@@ -16,7 +16,7 @@ export default function DailySchedule() {
         </p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight text-black md:text-5xl">1日の流れ</h2>
 
-        <div className="mt-8 border-y border-bronze/60 bg-gray-100 p-5 md:mt-12 md:max-w-3xl md:p-8">
+        <div className="mt-8 border-y border-bronze/60 bg-gray-100 p-5 md:mt-12 md:max-w-3xl md:p-8 lg:mx-auto">
           <ol>
             {SCHEDULE.map((s, i) => (
               <li key={s.time} className="flex gap-4">

@@ -3,6 +3,8 @@ const FAQS: {
   a: string;
   mobileQuestionLines?: string[];
   mobileAnswerLines?: string[];
+  desktopAnswerLines?: string[];
+  largeAnswerLines?: string[];
 }[] = [
   {
     q: "40代・50代でも応募できますか？",
@@ -14,10 +16,18 @@ const FAQS: {
       "「丁寧にやろう」という姿勢さえあれば",
       "大丈夫です。",
     ],
+    desktopAnswerLines: [
+      "はい。年齢は問いません。現在のスタッフも幅広い年齢層です。",
+      "「丁寧にやろう」という姿勢さえあれば大丈夫です。",
+    ],
   },
   {
     q: "体力に自信がなくても大丈夫ですか？",
     a: "はい。最初は重い作業を任せません。慣れながら、少しずつ担当範囲を広げます。",
+    largeAnswerLines: [
+      "はい。最初は重い作業を任せません。",
+      "慣れながら、少しずつ担当範囲を広げます。",
+    ],
   },
   {
     q: "車の免許以外に、入社前に必要な資格はありますか？",
@@ -27,6 +37,10 @@ const FAQS: {
       "普通免許があれば問題ありません。",
       "現場で必要な特殊免許は、",
       "入社後に会社の支援で取得できます。",
+    ],
+    largeAnswerLines: [
+      "普通免許があれば問題ありません。",
+      "現場で必要な特殊免許は、入社後に会社の支援で取得できます。",
     ],
   },
 ];
@@ -75,7 +89,24 @@ export default function Faq() {
                     </span>
                   ))}
                 </span>
-                <span className="hidden md:inline">{f.a}</span>
+                <span className={`hidden md:inline ${f.largeAnswerLines ? "lg:hidden" : ""}`}>
+                  {f.desktopAnswerLines
+                    ? f.desktopAnswerLines.map((line) => (
+                        <span key={line} className="block">
+                          {line}
+                        </span>
+                      ))
+                    : f.a}
+                </span>
+                {f.largeAnswerLines && (
+                  <span className="hidden lg:inline">
+                    {f.largeAnswerLines.map((line) => (
+                      <span key={line} className="block">
+                        {line}
+                      </span>
+                    ))}
+                  </span>
+                )}
               </p>
             </div>
           ))}
