@@ -2,6 +2,7 @@ import Header from "@/components/common/Header";
 import Hero from "@/components/recruit/Hero";
 import Promise from "@/components/recruit/Promise";
 import DailySchedule from "@/components/recruit/DailySchedule";
+import MidApplyCta from "@/components/recruit/MidApplyCta";
 import Message from "@/components/recruit/Message";
 import JobSpec from "@/components/recruit/JobSpec";
 import Faq from "@/components/recruit/Faq";
@@ -17,6 +18,7 @@ export default function RecruitPage() {
         <JobSpec />
         <Promise />
         <DailySchedule />
+        <MidApplyCta />
         <Message />
         <Faq />
         <Apply />
