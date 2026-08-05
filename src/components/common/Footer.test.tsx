@@ -20,4 +20,12 @@ describe("Footer", () => {
 
     expect(container.querySelector('a[href="/privacy"]')).toBeInTheDocument();
   });
+
+  it("採用ページの主要メニューとCTAを表示する", () => {
+    render(<Footer page="recruit" />);
+
+    expect(screen.getByText("入社後の2つの約束")).toHaveAttribute("href", "#promise");
+    expect(screen.getByText("代表より")).toHaveAttribute("href", "#message");
+    expect(screen.getByText("今すぐ応募")).toHaveAttribute("href", "#apply");
+  });
 });
