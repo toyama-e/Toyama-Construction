@@ -13,24 +13,24 @@ export default function Footer({ page }: Props) {
       <div className="mx-auto max-w-6xl px-5 py-8 md:px-8 md:py-16">
         <div className="flex flex-col items-center md:flex-row md:items-start md:justify-between md:gap-8 lg:gap-16">
           <div className="text-center md:text-left">
-            <a href={page === "lp" ? "#top" : "/"}>
-              <Image
-                src="/images/logo-wide.png"
-                alt={COMPANY.name}
-                width={184}
-                height={34}
-                className="mx-auto object-contain md:mx-0"
-                style={{ height: "auto" }}
-              />
-            </a>
+            <Image
+              src="/images/logo-wide.png"
+              alt={COMPANY.name}
+              width={184}
+              height={34}
+              className="mx-auto object-contain md:mx-0"
+              style={{ height: "auto" }}
+            />
             <div className="mt-3 space-y-1 text-sm leading-relaxed text-gray-600 md:mt-5 md:space-y-3">
               <p>{COMPANY.address}</p>
-              <a
-                href={`mailto:${COMPANY.email}`}
-                className="inline-block min-h-11 leading-[2.75rem] underline decoration-gray-300 underline-offset-4 transition-colors hover:text-bronze"
-              >
-                メールで問い合わせる
-              </a>
+              {page !== "recruit" && (
+                <a
+                  href={`mailto:${COMPANY.email}`}
+                  className="inline-block min-h-11 leading-[2.75rem] underline decoration-gray-300 underline-offset-4 transition-colors hover:text-bronze"
+                >
+                  メールで問い合わせる
+                </a>
+              )}
             </div>
           </div>
           <div

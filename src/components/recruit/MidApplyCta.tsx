@@ -24,7 +24,7 @@ export default function MidApplyCta() {
         </div>
         <a
           href="#apply"
-          className="flex min-h-12 w-full shrink-0 items-center justify-between rounded-full bg-navy px-6 font-bold text-white transition-colors hover:bg-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bronze md:w-64"
+          className="flex min-h-12 w-full shrink-0 items-center justify-between rounded-full bg-navy px-6 font-bold text-white transition-colors hover:bg-ink md:w-64"
         >
           LINEで応募・相談する
           <span aria-hidden="true">→</span>

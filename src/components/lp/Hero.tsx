@@ -59,7 +59,7 @@ export default function Hero() {
 
           <a
             href="#contact"
-            className="mt-7 inline-flex min-h-12 min-w-52 items-center justify-between rounded-full bg-navy px-6 font-medium text-white transition-colors hover:bg-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bronze"
+            className="mt-7 inline-flex min-h-12 min-w-52 items-center justify-between rounded-full bg-navy px-6 font-medium text-white transition-colors hover:bg-ink"
           >
             ご相談はこちら
             <span aria-hidden="true">→</span>

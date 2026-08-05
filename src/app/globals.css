@@ -25,6 +25,11 @@ h2 {
   font-family: var(--font-serif-ja), "Yu Mincho", "Hiragino Mincho ProN", serif;
 }
 
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--color-bronze);
+  outline-offset: 3px;
+}
+
 .animate-enter {
   animation: enter 700ms ease-out both;
 }

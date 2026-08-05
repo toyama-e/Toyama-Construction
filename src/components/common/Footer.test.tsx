@@ -7,12 +7,24 @@ vi.mock("next/image", () => ({
 }));
 
 describe("Footer", () => {
+  it("会社ロゴを重複するリンクにしない", () => {
+    render(<Footer page="lp" />);
+
+    expect(screen.getByRole("img", { name: COMPANY.name }).closest("a")).toBeNull();
+  });
+
   it("メールリンクのhrefがmailto形式である", () => {
     render(<Footer page="lp" />);
 
     const link = screen.getByText("メールで問い合わせる").closest("a");
 
     expect(link).toHaveAttribute("href", `mailto:${COMPANY.email}`);
+  });
+
+  it("採用ページでは応募欄と重複するメールリンクを表示しない", () => {
+    render(<Footer page="recruit" />);
+
+    expect(screen.queryByText("メールで問い合わせる")).not.toBeInTheDocument();
   });
 
   it("プライバシーポリシーへのリンクがある", () => {
