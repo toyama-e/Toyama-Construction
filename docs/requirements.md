@@ -102,7 +102,8 @@ Version 2.0　更新日：2026年7月31日
 - Hero、Services、CompanyIntro、RecruitIntroは、大きな写真に暗いグラデーションを重ね、白いラベルと短い見出しを載せる
 - 写真上のラベル前の横線は白にする
 - 長い説明文とCTAは写真の下へ分ける
-- Services、CompanyIntro、RecruitIntroの写真は本番素材が揃うまで単色のPHOTO MOCKとする
+- 本番写真は社長・役員の人物写真と会社外観を中心に構成し、施工写真は使用予定の本番素材として扱わない
+- Services、CompanyIntro、RecruitIntroの写真は人物写真と会社外観が揃うまで単色のPHOTO MOCKとする
 
 ## 6. スマートフォン表示
 

@@ -27,7 +27,7 @@ export default function Services() {
       <div className="mx-auto max-w-6xl py-12 md:px-4 md:py-24">
         <div
           role="img"
-          aria-label="事業内容に掲載する施工写真の仮置き"
+          aria-label="事業内容に掲載する本番写真の仮置き"
           className="relative h-[min(86vw,420px)] bg-[#A9B4BA] md:h-[560px]"
         >
           <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent" />
