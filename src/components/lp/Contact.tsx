@@ -96,20 +96,12 @@ export default function Contact() {
               >
                 友だち追加
               </a>
-              <a
-                href={COMPANY.lineAddUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackConversion("line_add", "contact")}
-                className="block h-[120px] w-[120px] transition-opacity hover:opacity-70"
-              >
-                <Image
-                  src="/images/line-qr.png"
-                  alt="LINE友だち追加QRコード"
-                  width={120}
-                  height={120}
-                />
-              </a>
+              <Image
+                src="/images/line-qr.png"
+                alt="LINE友だち追加QRコード"
+                width={120}
+                height={120}
+              />
             </div>
             <p className="mt-3 text-center text-xs text-black">
               QRコードを読み取るか、ボタンをタップ

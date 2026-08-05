@@ -3,36 +3,9 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { COMPANY } from "@/constants/company";
+import { PAGE_CTA, PAGE_NAV, type PageKey } from "@/constants/navigation";
 
-type Props = { page: "lp" | "company" | "recruit" | "privacy"; alwaysVisible?: boolean };
-
-const LP_NAV = [
-  { label: "事業内容", href: "#services" },
-  { label: "外山建設について", href: "#company" },
-  { label: "採用情報", href: "/recruit" },
-  { label: "お問い合わせ", href: "#contact" },
-];
-
-const COMPANY_NAV = [
-  { label: "私たちの特徴", href: "#strengths" },
-  { label: "会社概要", href: "#about" },
-  { label: "許可・資格", href: "#license" },
-  { label: "お問い合わせ", href: "#contact" },
-];
-
-const RECRUIT_NAV = [
-  { label: "募集要項", href: "#jobspec" },
-  { label: "働く環境", href: "#promise" },
-  { label: "1日の流れ", href: "#schedule" },
-  { label: "よくある質問", href: "#faq" },
-];
-
-const PRIVACY_NAV = [
-  { label: "トップ", href: "/" },
-  { label: "事業内容", href: "/#services" },
-  { label: "会社案内", href: "/company" },
-  { label: "採用情報", href: "/recruit" },
-];
+type Props = { page: PageKey; alwaysVisible?: boolean };
 
 export default function Header({ page, alwaysVisible = false }: Props) {
   const [scrolled, setScrolled] = useState(false);
@@ -52,20 +25,8 @@ export default function Header({ page, alwaysVisible = false }: Props) {
   }, [menuOpen]);
 
   const visible = alwaysVisible || scrolled;
-  const navItems =
-    page === "lp"
-      ? LP_NAV
-      : page === "company"
-        ? COMPANY_NAV
-        : page === "recruit"
-          ? RECRUIT_NAV
-          : PRIVACY_NAV;
-  const cta =
-    page === "lp"
-      ? { label: "採用情報を見る", href: "/recruit" }
-      : page === "recruit"
-        ? { label: "LINEで応募・相談", href: "#apply" }
-        : { label: "採用情報を見る", href: "/recruit" };
+  const navItems = PAGE_NAV[page];
+  const cta = PAGE_CTA[page];
 
   return (
     <header
@@ -93,23 +54,25 @@ export default function Header({ page, alwaysVisible = false }: Props) {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 lg:flex">
-          {page !== "recruit" ? (
-            <a
-              href="/recruit"
-              className="relative text-base font-medium text-black after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:scale-x-100 after:bg-bronze after:transition-transform after:duration-200 hover:after:scale-x-75"
-            >
-              正社員募集中！ →
-            </a>
-          ) : (
-            <a
-              href="#apply"
-              className="relative text-base font-medium text-black after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:scale-x-100 after:bg-bronze after:transition-transform after:duration-200 hover:after:scale-x-75"
-            >
-              今すぐ応募する →
-            </a>
-          )}
-        </div>
+        {cta && (
+          <div className="hidden items-center gap-2 lg:flex">
+            {page !== "recruit" ? (
+              <a
+                href={cta.href}
+                className="relative text-base font-medium text-black after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:scale-x-100 after:bg-bronze after:transition-transform after:duration-200 hover:after:scale-x-75"
+              >
+                正社員募集中！ →
+              </a>
+            ) : (
+              <a
+                href={cta.href}
+                className="relative text-base font-medium text-black after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:scale-x-100 after:bg-bronze after:transition-transform after:duration-200 hover:after:scale-x-75"
+              >
+                今すぐ応募する →
+              </a>
+            )}
+          </div>
+        )}
 
         <button
           type="button"
@@ -155,13 +118,15 @@ export default function Header({ page, alwaysVisible = false }: Props) {
             </a>
           ))}
         </nav>
-        <a
-          href={cta.href}
-          className="mt-8 flex min-h-12 items-center justify-center rounded-full bg-navy px-5 font-bold text-white"
-          onClick={() => setMenuOpen(false)}
-        >
-          {cta.label}
-        </a>
+        {cta && (
+          <a
+            href={cta.href}
+            className="mt-8 flex min-h-12 items-center justify-center rounded-full bg-navy px-5 font-bold text-white"
+            onClick={() => setMenuOpen(false)}
+          >
+            {cta.label}
+          </a>
+        )}
       </div>
     </header>
   );
