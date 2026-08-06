@@ -1,15 +1,4 @@
-const PROMISES = [
-  {
-    num: "01",
-    title: "資格取得は会社が全力サポート",
-    descLines: ["入社後に取れる資格もたくさんあります。", "受験費用は全額会社負担。"],
-  },
-  {
-    num: "02",
-    title: "会社都合の休みは6日/月まで補償",
-    descLines: ["天気や工期の都合で急に休みになっても、", "給与はきちんと守ります。"],
-  },
-];
+import { RECRUITMENT } from "@/constants/recruitment";
 
 export default function Promise() {
   return (
@@ -24,7 +13,7 @@ export default function Promise() {
         </h2>
 
         <div className="mt-8 border-t border-navy/15 md:mt-12 lg:grid lg:grid-cols-2">
-          {PROMISES.map((p) => (
+          {RECRUITMENT.promises.map((p) => (
             <div
               key={p.num}
               className="grid grid-cols-[48px_1fr] border-b border-navy/15 py-6 lg:block lg:border-b-0 lg:border-r lg:px-7 lg:py-8 lg:last:border-r-0"

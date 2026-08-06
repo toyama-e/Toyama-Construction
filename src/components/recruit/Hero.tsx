@@ -1,4 +1,4 @@
-const TAGS = ["未経験OK", "資格取得支援あり", "正社員雇用"];
+import { RECRUITMENT } from "@/constants/recruitment";
 
 export default function Hero() {
   return (
@@ -36,22 +36,15 @@ export default function Hero() {
           </p>
 
           <dl className="mt-6 grid w-full grid-cols-2 overflow-hidden border-y border-bronze/50 bg-offwhite/60 md:mx-auto md:max-w-xl">
-            <div className="border-b border-r border-navy/10 p-4">
-              <dt className="text-xs text-sub">給与</dt>
-              <dd className="mt-1 font-bold text-ink">月給22万円〜</dd>
-            </div>
-            <div className="border-b border-navy/10 p-4">
-              <dt className="text-xs text-sub">勤務地</dt>
-              <dd className="mt-1 font-bold text-ink">新潟県央地区</dd>
-            </div>
-            <div className="border-r border-navy/10 p-4">
-              <dt className="text-xs text-sub">経験</dt>
-              <dd className="mt-1 font-bold text-ink">未経験歓迎</dd>
-            </div>
-            <div className="p-4">
-              <dt className="text-xs text-sub">勤務時間</dt>
-              <dd className="mt-1 font-bold text-ink">7:30〜17:30</dd>
-            </div>
+            {RECRUITMENT.summary.map((item, index) => (
+              <div
+                key={item.label}
+                className={`p-4 ${index < 2 ? "border-b" : ""} ${index % 2 === 0 ? "border-r" : ""} border-navy/10`}
+              >
+                <dt className="text-xs text-sub">{item.label}</dt>
+                <dd className="mt-1 font-bold text-ink">{item.value}</dd>
+              </div>
+            ))}
           </dl>
 
           <a
@@ -63,7 +56,7 @@ export default function Hero() {
           </a>
 
           <div className="mt-4 flex flex-wrap gap-2 md:mt-6">
-            {TAGS.map((tag) => (
+            {RECRUITMENT.tags.map((tag) => (
               <span
                 key={tag}
                 className="rounded-full border border-gray-300 px-3 py-1 text-xs text-gray-600 md:px-4 md:text-sm"
