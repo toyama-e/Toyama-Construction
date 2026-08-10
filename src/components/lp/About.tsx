@@ -56,6 +56,12 @@ export default function About() {
                         </ruby>
                         建設
                       </>
+                    ) : r.k === "定休日" ? (
+                      <>
+                        毎週日曜日、第2・第4土曜日、祝日、
+                        <br className="hidden max-[320px]:block" />
+                        年末年始
+                      </>
                     ) : (
                       r.v
                     )}
