@@ -22,10 +22,10 @@ export default function About() {
         <div className="flex flex-col gap-5 md:flex-row md:items-start md:gap-6">
           <div className="relative overflow-hidden md:w-2/5 md:shrink-0">
             <Image
-              src="/images/office1-1.jpeg"
+              src="/images/company-exterior-square.avif"
               alt="株式会社 外山建設 事務所"
-              width={3024}
-              height={3024}
+              width={1600}
+              height={1600}
               className="w-full object-cover"
               style={{ height: "auto" }}
             />
@@ -55,6 +55,12 @@ export default function About() {
                           外山<rt className="text-[0.55em] font-normal tracking-normal">とやま</rt>
                         </ruby>
                         建設
+                      </>
+                    ) : r.k === "定休日" ? (
+                      <>
+                        毎週日曜日、第2・第4土曜日、祝日、
+                        <br className="hidden max-[320px]:block" />
+                        年末年始
                       </>
                     ) : (
                       r.v

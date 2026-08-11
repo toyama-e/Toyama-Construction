@@ -35,7 +35,7 @@ export const RECRUITMENT = {
     {
       label: "休日",
       value: COMPANY.holiday,
-      mobileLines: ["第2・第4土曜・日曜・祝日", "年末年始"],
+      mobileLines: ["毎週日曜日、第2・第4土曜日、", "祝日、年末年始"],
     },
     { label: "会社都合休み", value: "6日/月まで補償" },
     {
