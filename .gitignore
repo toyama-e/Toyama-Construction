@@ -20,6 +20,18 @@
 # production
 /build
 
+# Original production photos (local only)
+/public/images/company-exterior-1600x1200.jpg
+/public/images/company-exterior-2400x1800.jpg
+/public/images/company-exterior-square.jpg
+/public/images/director-at-work-wide.jpg
+/public/images/director-at-work.jpg
+/public/images/president-at-desk-wide.jpg
+/public/images/president-at-desk.jpg
+/public/images/president-director-truck-1600x1200.jpg
+/public/images/president-director-truck-2400x1800.jpg
+/public/images/president-portrait.jpg
+
 # misc
 .DS_Store
 *.pem
