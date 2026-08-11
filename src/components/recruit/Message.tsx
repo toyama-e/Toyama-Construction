@@ -15,7 +15,7 @@ export default function Message() {
             <div className="flex-shrink-0">
               <div className="relative h-44 w-44 overflow-hidden md:h-56 md:w-56">
                 <Image
-                  src="/images/jiji&kento.jpeg"
+                  src="/images/president-portrait.avif"
                   alt="代表 外山 澄男"
                   fill
                   sizes="192px"
@@ -31,7 +31,7 @@ export default function Message() {
               <p className="mt-3 text-base leading-loose text-black md:text-lg">
                 小さい会社だからこそ、一人ひとりをちゃんと見られる。それがうちの強みです。
               </p>
-              <p className="mt-6 text-sm font-medium text-black">代表　外山 澄男</p>
+              <p className="mt-6 text-sm font-medium text-black">代表 外山 澄男</p>
             </div>
           </div>
         </div>

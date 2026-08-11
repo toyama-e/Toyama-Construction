@@ -25,28 +25,43 @@ export default function Services() {
   return (
     <section id="services" className="scroll-mt-16 bg-white">
       <div className="mx-auto max-w-6xl py-12 md:px-4 md:py-24">
-        <div
-          role="img"
-          aria-label="事業内容に掲載する本番写真の仮置き"
-          className="relative h-[min(86vw,420px)] bg-[#A9B4BA] md:h-[560px]"
-        >
-          <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 px-5 pb-7 text-white md:px-10 md:pb-10">
-            <p className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-white/80 md:text-xs md:tracking-[0.2em]">
-              <span className="h-px w-5 bg-white md:w-6" />
+        <div className="xl:grid xl:grid-cols-[1.08fr_0.92fr] xl:items-stretch">
+          <div className="relative mx-auto aspect-square w-full max-w-[760px] overflow-hidden bg-[#A9B4BA] lg:aspect-[4/3] xl:aspect-auto xl:min-h-[420px] xl:max-w-none">
+            <picture>
+              <source media="(min-width: 1024px)" srcSet="/images/director-at-work-wide.avif" />
+              <img
+                src="/images/director-at-work.avif"
+                alt="一輪車を押して作業する役員"
+                className="absolute inset-0 h-full w-full object-cover object-center xl:object-[center_18%]"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <div className="absolute inset-0 z-10 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent xl:hidden" />
+            <div className="absolute inset-x-0 bottom-0 z-20 px-5 pb-7 text-white md:px-10 md:pb-10 xl:hidden">
+              <p className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-white/80 md:text-xs md:tracking-[0.2em]">
+                <span className="h-px w-5 bg-white md:w-6" />
+                Services
+              </p>
+              <h2 className="mt-3 text-[1.8rem] font-bold leading-[1.5] tracking-tight md:text-5xl md:leading-tight">
+                事業内容
+              </h2>
+            </div>
+          </div>
+          <div className="hidden flex-col justify-center bg-gray-100 px-12 xl:flex">
+            <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-bronze">
+              <span className="h-px w-7 bg-bronze" />
               Services
             </p>
-            <h2 className="mt-3 text-[1.8rem] font-bold leading-[1.5] tracking-tight md:text-5xl md:leading-tight">
-              事業内容
-            </h2>
+            <h2 className="font-display mt-5 text-5xl font-bold text-black">事業内容</h2>
+            <p className="mt-7 text-base leading-[2] text-sub">
+              現場に合わせて、最適な工事をご提案します。
+            </p>
           </div>
-          <span className="absolute right-4 top-4 text-[10px] font-bold tracking-[0.18em] text-navy/55 md:text-xs">
-            PHOTO MOCK
-          </span>
         </div>
 
-        <div className="px-5 pt-7 md:px-0 md:pt-9">
-          <p className="text-base leading-[2] text-sub">
+        <div className="px-5 pt-7 md:px-0 md:pt-9 xl:pt-12">
+          <p className="text-base leading-[2] text-sub xl:hidden">
             <span className="min-[360px]:hidden">
               現場に合わせて、
               <br />

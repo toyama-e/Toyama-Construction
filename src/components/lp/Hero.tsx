@@ -10,17 +10,17 @@ export default function Hero() {
         <div className="relative h-[min(100vw,500px)] overflow-hidden bg-gray-200 md:h-[600px]">
           <div className="hero-photo-people absolute inset-0 z-10">
             <Image
-              src="/images/yunbo.JPG"
-              alt="重機を使った工事の様子（現在は仮写真）"
+              src="/images/president-director-truck-1600x1200.avif"
+              alt="ダンプの前に立つ代表と役員"
               fill
               priority
               sizes="(min-width: 1280px) 1184px, 100vw"
-              className="object-cover object-[56%_50%] md:object-[55%_50%]"
+              className="object-cover object-center"
             />
           </div>
           <div className="hero-photo-office absolute inset-0">
             <Image
-              src="/images/office4-3.webp"
+              src="/images/company-exterior-1600x1200.avif"
               alt="株式会社外山建設の会社外観"
               fill
               sizes="(min-width: 1280px) 1184px, 100vw"

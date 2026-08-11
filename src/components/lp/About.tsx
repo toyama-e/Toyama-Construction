@@ -22,10 +22,10 @@ export default function About() {
         <div className="flex flex-col gap-5 md:flex-row md:items-start md:gap-6">
           <div className="relative overflow-hidden md:w-2/5 md:shrink-0">
             <Image
-              src="/images/office1-1.jpeg"
+              src="/images/company-exterior-square.avif"
               alt="株式会社 外山建設 事務所"
-              width={3024}
-              height={3024}
+              width={1600}
+              height={1600}
               className="w-full object-cover"
               style={{ height: "auto" }}
             />
