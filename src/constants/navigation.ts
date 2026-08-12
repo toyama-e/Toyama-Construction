@@ -23,7 +23,6 @@ export const PAGE_NAV = {
     { label: "トップ", href: "/" },
     { label: "事業内容", href: "/#services" },
     { label: "会社案内", href: "/company" },
-    { label: "採用情報", href: "/recruit" },
   ],
 } satisfies Record<PageKey, ReadonlyArray<{ label: string; href: string }>>;
 
@@ -31,5 +30,5 @@ export const PAGE_CTA = {
   lp: { label: "採用情報を見る", href: "/recruit" },
   company: { label: "採用情報を見る", href: "/recruit" },
   recruit: { label: "今すぐ応募", href: "#apply" },
-  privacy: null,
+  privacy: { label: "採用情報を見る", href: "/recruit" },
 } satisfies Record<PageKey, { label: string; href: string } | null>;

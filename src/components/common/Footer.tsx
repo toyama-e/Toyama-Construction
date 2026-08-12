@@ -64,7 +64,7 @@ export default function Footer({ page }: Props) {
               <a
                 href={cta.href}
                 className={`mx-auto mt-3 flex min-h-11 w-full max-w-xs items-center justify-center rounded-full bg-navy px-5 text-sm font-bold text-white transition-opacity hover:opacity-85 ${
-                  page === "lp" || page === "company" ? "md:mx-auto" : "md:mx-0"
+                  page === "recruit" ? "md:mx-0" : "md:mx-auto"
                 }`}
               >
                 {cta.label}
