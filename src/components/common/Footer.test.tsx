@@ -40,4 +40,15 @@ describe("Footer", () => {
     expect(screen.getByText("代表より")).toHaveAttribute("href", "#message");
     expect(screen.getByText("今すぐ応募")).toHaveAttribute("href", "#apply");
   });
+
+  it("プライバシーページでは採用情報をCTAとして表示する", () => {
+    render(<Footer page="privacy" />);
+
+    const link = screen.getByText("採用情報を見る");
+
+    expect(link).toHaveAttribute("href", "/recruit");
+    expect(link).toHaveClass("bg-navy", "rounded-full", "mx-auto", "md:mx-auto");
+    expect(link).not.toHaveClass("md:mx-0");
+    expect(screen.queryByText("採用情報")).not.toBeInTheDocument();
+  });
 });
