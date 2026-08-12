@@ -79,10 +79,10 @@ npm run build
 - 加入保険：建設工事保険、労働者災害補償保険
 - LINE通話URL、LINE友だち追加URL、メールアドレス
 - 採用条件・募集要件
+- 本番ドメイン：`https://toyama-kensetsu.com`
 
 ## 確認中・Mock
 
-- 本番ドメイン：未取得
 - 保有資格：Mock
 - 施工対応地域の具体的な市町村名：確認中
 - 人物写真：Mock
@@ -90,7 +90,7 @@ npm run build
 
 本番写真は社長・役員の人物写真と会社外観を中心に構成し、施工写真は使用予定の本番素材として扱いません。
 
-本番ドメイン以外の現在の会社情報と問い合わせ先は `src/constants/company.ts`、採用条件は `src/constants/recruitment.ts` を参照してください。
+現在の会社情報と問い合わせ先は `src/constants/company.ts`、採用条件は `src/constants/recruitment.ts`、本番URLは `src/constants/site.ts` を参照してください。
 
 ## Git運用
 

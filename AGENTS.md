@@ -129,12 +129,12 @@
 - 採用ページの1日の流れと「残業は月3時間以内がほとんど」は社長確認済み
 - 現在掲載している採用条件・募集要件は確定済み
 - 採用条件・募集要件は `src/constants/recruitment.ts` を唯一の情報源にする
+- 本番ドメインは `https://toyama-kensetsu.com`（wwwなし）
 
 ## 確認中・Mockの情報
 
 次の情報は確認が完了するまで確定値として扱わないでください。
 
-- 本番ドメイン：未取得
 - 保有資格：Mock
 - 施工対応地域の具体的な市町村名：確認中
 - Cloudflare Pages：公開予定だが未運用
@@ -257,8 +257,7 @@
 
 ## SEO・構造化データ
 
-- 本番ドメインが確定するまで、仮URLを本番値として固定しない
-- 公開前にmetadata、Open Graph、sitemap、robots、JSON-LDのURLを本番ドメインへ合わせる
+- metadata、Open Graph、sitemap、robots、JSON-LDのURLは `https://toyama-kensetsu.com` に統一する
 - 存在しないOGP画像を参照しない
 - LocalBusinessの `telephone` にFAX番号を設定しない
 - FAXを構造化データへ載せる場合は `faxNumber` を使用する

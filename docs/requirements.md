@@ -161,10 +161,10 @@ Version 2.0　更新日：2026年7月31日
 - Googleマップ：APIキー不要のiframe埋め込み
 - 再利用する会社情報：`src/constants/company.ts` を唯一の情報源とする
 - JSON-LD：固定電話の `telephone` は設定せず、FAXを掲載する場合は `faxNumber` を使う
+- 本番ドメイン：`https://toyama-kensetsu.com`（wwwなし）
 
 ## 8. 確認中・Mock
 
-- 本番ドメイン：未取得
 - 保有資格：Mock
 - 施工対応地域の具体的な市町村名：確認中
 - 人物写真：Mock
@@ -174,8 +174,8 @@ Version 2.0　更新日：2026年7月31日
 
 - 各ページに内容に合うtitleとdescriptionを設定する
 - OGP画像は実在する `/images/og-image.jpg` を参照する
-- 本番ドメイン確定後、metadata、Open Graph、sitemap、robots、JSON-LDのURLを更新する
-- 本番ドメイン未確定の間は `NEXT_PUBLIC_SITE_URL` または仮URLを使用する
+- metadata、Open Graph、sitemap、robots、JSON-LDのURLは `https://toyama-kensetsu.com` に統一する
+- 本番URLは `src/constants/site.ts` を唯一の情報源とする
 
 ## 10. プライバシー
 

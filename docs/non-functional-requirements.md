@@ -16,7 +16,7 @@ Version 2.0　更新日：2026年7月31日
 ## 2. 可用性・配信
 
 - Cloudflare Pagesでの公開を予定するが、現時点では未運用
-- 本番ドメインも未取得
+- 本番ドメインは `https://toyama-kensetsu.com`（wwwなし）とする
 - 公開設定完了後はGitHubの対象ブランチから静的ファイルを配信する
 - デプロイ失敗時は直前の正常なデプロイへ戻せる状態にする
 - 公開後に稼働監視の導入を検討する
@@ -81,7 +81,7 @@ LINEまたはメールで氏名、連絡先、応募内容、工事相談内容�
 - OGPは実在する `/images/og-image.jpg` を使用する
 - LocalBusiness JSON-LDに固定電話の `telephone` を設定しない
 - FAXを構造化する場合は `faxNumber` を使用する
-- 本番ドメイン確定後にmetadata、Open Graph、sitemap、robots、JSON-LDのURLを更新する
+- metadata、Open Graph、sitemap、robots、JSON-LDのURLは `https://toyama-kensetsu.com` に統一する
 - 公開後にGoogle Search Consoleへ登録する
 
 ## 8. 保守性
