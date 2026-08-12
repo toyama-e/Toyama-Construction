@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Serif_JP } from "next/font/google";
 import { COMPANY } from "@/constants/company";
+import { OGP_IMAGE_URL, SITE_URL } from "@/constants/site";
 import "./globals.css";
 
 const notoSerifJP = Noto_Serif_JP({
@@ -10,23 +11,25 @@ const notoSerifJP = Noto_Serif_JP({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://toyama-kensetsu.example.com";
-
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "株式会社 外山建設｜新潟県三条市の土木・外構工事",
   description:
     "新潟県三条市・県央地域を中心に土木一式工事・外構工事を手がける株式会社外山建設の公式サイトです。ご自宅の外構・改修・小規模工事まで、地域密着で丁寧に対応します。",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "株式会社 外山建設｜新潟県三条市の土木・外構工事",
     description:
       "新潟県三条市・県央地域を中心に土木一式工事・外構工事を手がける株式会社外山建設の公式サイトです。ご自宅の外構・改修・小規模工事まで、地域密着で丁寧に対応します。",
-    url: siteUrl,
+    url: SITE_URL,
     siteName: "株式会社 外山建設",
     locale: "ja_JP",
     type: "website",
     images: [
       {
-        url: `${siteUrl}/images/og-image.jpg`,
+        url: OGP_IMAGE_URL,
         width: 1200,
         height: 630,
         alt: "株式会社 外山建設",
@@ -38,7 +41,7 @@ export const metadata: Metadata = {
     title: "株式会社 外山建設｜新潟県三条市の土木・外構工事",
     description:
       "新潟県三条市・県央地域を中心に土木一式工事・外構工事を手がける株式会社外山建設の公式サイトです。ご自宅の外構・改修・小規模工事まで、地域密着で丁寧に対応します。",
-    images: [`${siteUrl}/images/og-image.jpg`],
+    images: [OGP_IMAGE_URL],
   },
 };
 
@@ -56,7 +59,9 @@ const jsonLd = {
   },
   faxNumber: COMPANY.fax,
   email: COMPANY.email,
-  url: siteUrl,
+  url: SITE_URL,
+  logo: OGP_IMAGE_URL,
+  image: OGP_IMAGE_URL,
   openingHours: "Mo-Fr 08:00-17:30",
   areaServed: COMPANY.area,
 };
