@@ -1,6 +1,6 @@
 # 株式会社 外山建設 ホームページ要件定義書
 
-Version 2.0　更新日：2026年7月31日
+Version 2.1　更新日：2026年8月18日
 
 ## 1. 目的
 
@@ -104,7 +104,7 @@ Version 2.0　更新日：2026年7月31日
 - 写真上のラベル前の横線は白にする
 - 長い説明文とCTAは写真の下へ分ける
 - 本番写真は社長・役員の人物写真と会社外観を中心に構成し、施工写真は使用予定の本番素材として扱わない
-- Services、CompanyIntro、RecruitIntroの写真は人物写真と会社外観が揃うまで単色のPHOTO MOCKとする
+- Services、CompanyIntro、RecruitIntroには、役員の作業写真、社長の執務写真、社長・役員の人物写真の本番素材を使用する
 
 ## 6. スマートフォン表示
 
@@ -167,8 +167,6 @@ Version 2.0　更新日：2026年7月31日
 
 - 保有資格：Mock
 - 施工対応地域の具体的な市町村名：確認中
-- 人物写真：Mock
-- Cloudflare Pages：公開予定だが未運用
 
 ## 9. SEO
 
@@ -186,7 +184,8 @@ LINEとメールで氏名、連絡先、応募内容、工事相談内容を受�
 - LINE通話は録音しない
 - 不採用者の情報は、選考終了後、保管の必要がなくなり次第速やかに削除または廃棄する
 - 採用者の情報は雇用管理に必要な範囲で利用する
-- アクセス解析を導入する場合は、利用サービスとCookie等の取り扱いを追記する
+- Google Analytics 4とCookie等の利用目的、収集する情報、無効化方法、Google公式のデータ利用説明へのリンクを掲載する
+- Google Signalsと広告パーソナライズは無効、データ保持期間は2か月とし、運用方針は `docs/analytics-operations.md` で管理する
 
 ## 11. 技術・運用
 
@@ -194,6 +193,6 @@ LINEとメールで氏名、連絡先、応募内容、工事相談内容を受�
 - 静的エクスポート
 - Vitest / Testing Library
 - ESLint / Prettier
-- Cloudflare Pagesでの公開を予定
+- Cloudflare Pagesで運用し、Production branchは `main` とする
 - `develop` で作業し、GitHubの `develop` へpushする
 - Pull Requestは `develop` から `main` に向ける
