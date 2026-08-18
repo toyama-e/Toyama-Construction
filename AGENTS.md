@@ -106,7 +106,7 @@
 - 静的エクスポート（`output: "export"`）
 - Vitest / Testing Library
 - ESLint / Prettier
-- Cloudflare Pagesでの公開を予定（未運用）
+- Cloudflare Pagesで運用中（Production branch: `main`）
 
 ## 確定している会社・問い合わせ仕様
 
@@ -137,7 +137,6 @@
 
 - 保有資格：Mock
 - 施工対応地域の具体的な市町村名：確認中
-- Cloudflare Pages：公開予定だが未運用
 
 これらを変更する場合は、ユーザーから明示された確定情報だけを使用してください。
 
@@ -280,7 +279,8 @@ LINEやメールで氏名、連絡先、応募内容、工事相談内容を受�
 - LINE通話は録音しない
 - 不採用者の情報は、選考終了後、保管の必要がなくなり次第速やかに削除または廃棄する
 - 採用者の情報は雇用管理に必要な範囲で利用する
-- アクセス解析を導入する場合は、利用サービスとCookie等の取り扱いを追記する
+- Google Analytics 4を使用し、利用目的、Cookie等の取り扱い、Google公式のデータ利用説明を `/privacy` に掲載する
+- Google Signalsと広告パーソナライズは無効、データ保持期間は2か月とし、詳細は `docs/analytics-operations.md` で管理する
 
 ## 作業時の確認
 
