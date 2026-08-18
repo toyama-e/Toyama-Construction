@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { COMPANY } from "@/constants/company";
-import { trackConversion } from "@/lib/analytics";
 
 export default function Contact() {
   return (
@@ -45,7 +44,6 @@ export default function Contact() {
               href={COMPANY.lineUrl}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackConversion("line_call", "contact")}
               className="flex min-h-12 items-center justify-center rounded-full bg-[#06C755] px-5 font-bold text-white"
             >
               LINE通話で相談する
@@ -54,7 +52,6 @@ export default function Contact() {
               href={COMPANY.lineAddUrl}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackConversion("line_add", "contact")}
               className="flex min-h-12 items-center justify-center rounded-full border border-[#06C755] bg-white px-5 font-bold text-[#069c43]"
             >
               LINEチャットで相談する
@@ -71,7 +68,6 @@ export default function Contact() {
                 href={COMPANY.lineUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => trackConversion("line_call", "contact")}
                 className="flex min-h-10 w-44 items-center justify-center rounded-full bg-[#06C755] px-5 text-sm font-bold text-white transition-opacity hover:opacity-75"
               >
                 LINE通話をかける
@@ -91,7 +87,6 @@ export default function Contact() {
                 href={COMPANY.lineAddUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => trackConversion("line_add", "contact")}
                 className="flex min-h-10 w-44 items-center justify-center rounded-full bg-[#06C755] px-5 text-sm font-bold text-white transition-opacity hover:opacity-75"
               >
                 友だち追加

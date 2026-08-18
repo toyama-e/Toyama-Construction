@@ -46,11 +46,20 @@ const sections = [
     note: "個人番号、金融機関の暗証番号、クレジットカード番号など、相談や応募に必要のない重要な情報は送信しないでください。",
   },
   {
-    title: "7. 開示・訂正・利用停止等",
+    title: "7. アクセス解析とCookie等の利用",
+    body: "当サイトでは、サイトの利用状況を把握し、サービスや採用情報の改善に役立てるため、Google Analyticsを利用します。Google AnalyticsはCookie等を使用し、閲覧ページ、流入元、サイト内のリンク操作等の利用情報を収集します。収集された情報はGoogle社のプライバシーポリシー等に基づいて管理されます。",
+    note: "Cookieはブラウザの設定により無効にできます。ただし、その場合はアクセス解析に関する一部の情報が収集されなくなります。",
+    externalLink: {
+      href: "https://policies.google.com/technologies/partner-sites?hl=ja",
+      label: "Googleのサービスを使用するサイトやアプリから収集した情報のGoogleによる使用",
+    },
+  },
+  {
+    title: "8. 開示・訂正・利用停止等",
     body: "本人から、当社が保有する個人情報について、開示、訂正、追加、削除、利用停止または第三者提供の停止を求められた場合は、本人確認を行ったうえで、法令に従って対応します。ご希望の場合は、下記のお問い合わせ窓口までご連絡ください。",
   },
   {
-    title: "8. 本ポリシーの変更",
+    title: "9. 本ポリシーの変更",
     body: "当社は、法令の改正や運用内容の変更などに応じて、本プライバシーポリシーを変更することがあります。変更後の内容は、このホームページへ掲載した時点から適用します。",
   },
 ];
@@ -97,13 +106,28 @@ export default function PrivacyPage() {
                       {section.note}
                     </p>
                   )}
+                  {"externalLink" in section && section.externalLink && (
+                    <p className="mt-4 text-[15px] leading-8 md:text-base">
+                      <a
+                        href={section.externalLink.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline decoration-gray-300 underline-offset-4 transition-colors hover:text-bronze"
+                      >
+                        {section.externalLink.label}
+                        <span className="ml-1" aria-hidden="true">
+                          ↗
+                        </span>
+                      </a>
+                    </p>
+                  )}
                 </section>
               ))}
             </div>
 
             <section className="mt-10 bg-gray-100 p-5 md:p-8">
               <h2 className="font-display text-xl font-bold text-black md:text-2xl">
-                9. お問い合わせ窓口
+                10. お問い合わせ窓口
               </h2>
               <div className="mt-4 space-y-2 text-[15px] leading-7 text-sub md:text-base">
                 <p>{COMPANY.name}</p>
@@ -120,7 +144,10 @@ export default function PrivacyPage() {
               </div>
             </section>
 
-            <p className="mt-8 text-right text-sm text-sub">制定日：2026年8月4日</p>
+            <div className="mt-8 text-right text-sm leading-6 text-sub">
+              <p>制定日：2026年8月4日</p>
+              <p>最終改定日：2026年8月18日</p>
+            </div>
           </div>
         </section>
       </main>

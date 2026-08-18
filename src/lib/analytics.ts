@@ -1,13 +1,43 @@
-type ConversionMethod = "line_call" | "line_add" | "email";
-type ConversionPage = "contact" | "recruit";
+type EventName =
+  | "line_call_click"
+  | "line_chat_click"
+  | "email_click"
+  | "recruit_page_click"
+  | "recruit_apply_click";
 
-export function trackConversion(method: ConversionMethod, page: ConversionPage) {
+type EventParameters = Record<string, string>;
+
+declare global {
+  interface Window {
+    gtag?: (command: "event", eventName: EventName, parameters?: EventParameters) => void;
+  }
+}
+
+function trackEvent(eventName: EventName, parameters?: EventParameters) {
   if (process.env.NODE_ENV === "development") {
-    console.log("[Analytics] conversion", { method, page });
+    console.log("[Analytics] event", { eventName, parameters });
   }
 
-  // GA4 (gtag) が追加された場合はここで送信
-  // if (typeof window !== "undefined" && (window as any).gtag) {
-  //   (window as any).gtag("event", "contact_click", { method, page });
-  // }
+  window.gtag?.("event", eventName, parameters);
+}
+
+export function trackLinkClick(link: HTMLAnchorElement) {
+  const href = link.getAttribute("href");
+  if (!href) return;
+
+  const page = window.location.pathname.startsWith("/recruit") ? "recruit" : "contact";
+  const linkText = link.textContent?.trim().replace(/\s+/g, " ").slice(0, 100) ?? "";
+  const parameters = { page, link_text: linkText };
+
+  if (href.includes("lin.ee/WdKxxdx")) {
+    trackEvent("line_call_click", parameters);
+  } else if (href.includes("lin.ee/svXKisk")) {
+    trackEvent("line_chat_click", parameters);
+  } else if (href.startsWith("mailto:")) {
+    trackEvent("email_click", parameters);
+  } else if (href === "/recruit" && page !== "recruit") {
+    trackEvent("recruit_page_click", parameters);
+  } else if (href === "#apply" && page === "recruit") {
+    trackEvent("recruit_apply_click", parameters);
+  }
 }

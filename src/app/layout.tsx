@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Serif_JP } from "next/font/google";
+import GoogleAnalytics from "@/components/common/GoogleAnalytics";
 import { COMPANY } from "@/constants/company";
 import { OGP_IMAGE_URL, SITE_URL } from "@/constants/site";
 import "./globals.css";
@@ -71,6 +72,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
   return (
     <html lang="ja">
       <head>
@@ -79,7 +82,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={notoSerifJP.variable}>{children}</body>
+      <body className={notoSerifJP.variable}>
+        {children}
+        <GoogleAnalytics measurementId={measurementId} />
+      </body>
     </html>
   );
 }
