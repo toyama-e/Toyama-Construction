@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { COMPANY } from "@/constants/company";
-import { trackConversion } from "@/lib/analytics";
 
 export default function Apply() {
   return (
@@ -43,7 +42,6 @@ export default function Apply() {
               href={COMPANY.lineUrl}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackConversion("line_call", "recruit")}
               className="flex min-h-12 items-center justify-center rounded-full bg-[#06C755] px-5 font-bold text-white"
             >
               LINE通話で応募・相談
@@ -52,7 +50,6 @@ export default function Apply() {
               href={COMPANY.lineAddUrl}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackConversion("line_add", "recruit")}
               className="flex min-h-12 items-center justify-center rounded-full border border-[#06C755] bg-white px-5 font-bold text-[#069c43]"
             >
               LINEチャットで応募・相談
@@ -60,7 +57,6 @@ export default function Apply() {
           </div>
           <a
             href={`mailto:${COMPANY.email}`}
-            onClick={() => trackConversion("email", "recruit")}
             className="mt-4 flex min-h-12 w-full items-center justify-center rounded-full border border-navy bg-white px-5 text-sm font-bold text-navy"
           >
             メールで応募する
@@ -77,7 +73,6 @@ export default function Apply() {
                   href={COMPANY.lineUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => trackConversion("line_call", "recruit")}
                   className="flex min-h-10 w-44 items-center justify-center rounded-full bg-[#06C755] px-5 text-sm font-bold text-white transition-opacity hover:opacity-75"
                 >
                   LINE通話をかける
@@ -97,7 +92,6 @@ export default function Apply() {
                   href={COMPANY.lineAddUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => trackConversion("line_add", "recruit")}
                   className="flex min-h-10 w-44 items-center justify-center rounded-full bg-[#06C755] px-5 text-sm font-bold text-white transition-opacity hover:opacity-75"
                 >
                   友だち追加
@@ -117,7 +111,6 @@ export default function Apply() {
           </div>
           <a
             href={`mailto:${COMPANY.email}`}
-            onClick={() => trackConversion("email", "recruit")}
             className="mx-auto mt-6 flex min-h-12 w-full max-w-lg items-center justify-center rounded-full border border-navy bg-white px-6 text-sm font-bold text-navy transition-colors hover:bg-navy hover:text-white"
           >
             メールで応募する
