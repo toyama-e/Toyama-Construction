@@ -89,10 +89,29 @@ LINEボタンのみ公式グリーンを使用します。
 
 ## ローカル開発
 
+Node.js **24.22.1 LTS**を使用します。バージョンは `.node-version`、対応範囲は `package.json` の `engines.node` で管理します。Node.js 24.10.0は使用しません。
+
+Node.jsのバージョン管理ツールを使用している場合は、`.node-version` の値を指定してインストール・切り替えを行ってください。例（nvm導入済みの場合）：
+
 ```bash
-npm install
+nvm install "$(cat .node-version)"
+nvm use "$(cat .node-version)"
+node --version
+npm ci
 npm run dev
 ```
+
+nvmを使わない場合も、[Node.js公式配布](https://nodejs.org/en/download)から24.22.1を導入し、`node --version` が `v24.22.1` になることを確認してから `npm ci` を実行します。`engines`の記載だけではNode.js自体は更新されません。
+
+### Node.jsの更新手順
+
+1. [Node.js公式のセキュリティ告知](https://nodejs.org/en/blog/vulnerability)を確認し、サポート中の24系LTSの修正版を選びます。
+2. `.node-version`を更新し、`package.json`と`package-lock.json`ルートの`engines.node`の最低バージョンも揃えます。
+3. ローカルのNode.jsを切り替え、`npm ci`、テスト、lint、本番ビルドを実行します。
+4. Cloudflare PagesのProduction・Preview双方に`NODE_VERSION`環境変数が設定されていないか確認し、ある場合は同じ版へ更新するか削除して`.node-version`へ統一します。
+5. 次回デプロイのビルドログで、実際に使用されたNode.jsの版とビルド成功を確認します。
+
+Cloudflare Pagesはリポジトリルートの`.node-version`をサポートしています。ビルドのルートディレクトリはリポジトリルート、Cloudflare側の既存ビルドコマンド`npx next build`と出力ディレクトリ`out`は維持します。ローカルの`npm run build`も同じ`next build`を実行します。ファイルを追加しただけでは既存のデプロイは変わりません。管理画面の設定や実行ログを確認するまではCloudflare側の更新完了とは扱いません。
 
 同じWi-Fi上のスマートフォンで確認するときは、次のコマンドで起動し、MacのローカルIPアドレスとポート3000をSafariで開きます。
 
