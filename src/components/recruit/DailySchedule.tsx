@@ -27,9 +27,9 @@ export default function DailySchedule() {
                     {s.time === "12:00" ? (
                       <>
                         <span className="md:hidden">
-                          昼休憩
+                          {s.task.split("（")[0]}
                           <span className="block whitespace-nowrap text-[13px]">
-                            （1時間・作業により前後あり）
+                            {`（${s.task.split("（")[1]}`}
                           </span>
                         </span>
                         <span className="hidden md:inline">{s.task}</span>

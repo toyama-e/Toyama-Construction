@@ -8,7 +8,7 @@ export type RecruitmentSpec = {
 
 export const RECRUITMENT = {
   summary: [
-    { label: "給与", value: "月給22万円〜" },
+    { label: "給与", value: "月給20万円〜" },
     { label: "勤務地", value: "新潟県央地区" },
     { label: "経験", value: "未経験歓迎" },
     { label: "勤務時間", value: "7:30〜17:30" },
@@ -23,13 +23,13 @@ export const RECRUITMENT = {
     { label: "勤務地", value: COMPANY.area },
     {
       label: "勤務時間",
-      value: "7:30〜17:30（実働8時間・休憩1時間）",
-      mobileLines: ["7:30〜17:30", "（実働8時間・休憩1時間）"],
+      value: "7:30〜17:30（実働8時間・休憩2時間）",
+      mobileLines: ["7:30〜17:30", "（実働8時間・休憩2時間）"],
     },
     {
       label: "給与",
-      value: "月給220,000円〜（経験・能力を考慮）",
-      mobileLines: ["月給220,000円〜", "（経験・能力を考慮）"],
+      value: "月給200,000円〜（経験・能力を考慮）",
+      mobileLines: ["月給200,000円〜", "（経験・能力を考慮）"],
     },
     { label: "昇給", value: "年1回（実績・資格取得を評価）" },
     {

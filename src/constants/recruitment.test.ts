@@ -19,7 +19,7 @@ describe("RECRUITMENT定数", () => {
   });
 
   it("確定した給与と勤務時間を表示する", () => {
-    expect(RECRUITMENT.summary).toContainEqual({ label: "給与", value: "月給22万円〜" });
+    expect(RECRUITMENT.summary).toContainEqual({ label: "給与", value: "月給20万円〜" });
     expect(RECRUITMENT.summary).toContainEqual({ label: "勤務時間", value: "7:30〜17:30" });
   });
 
