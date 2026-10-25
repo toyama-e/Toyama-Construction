@@ -23,26 +23,16 @@ export default function DailySchedule() {
                 </div>
                 <div className="pb-4">
                   <span className="text-xs font-bold text-bronze">{s.time}</span>
-                  <p className="mt-0.5 text-sm text-black">
-                    {s.time === "12:00" ? (
-                      <>
-                        <span className="md:hidden">
-                          {s.task.split("（")[0]}
-                          <span className="block whitespace-nowrap text-[13px]">
-                            {`（${s.task.split("（")[1]}`}
-                          </span>
-                        </span>
-                        <span className="hidden md:inline">{s.task}</span>
-                      </>
-                    ) : (
-                      s.task
-                    )}
-                  </p>
+                  <p className="mt-0.5 text-sm text-black">{s.task}</p>
+                  {"note" in s && (
+                    <p className="mt-1 text-[13px] leading-relaxed text-sub">{s.note}</p>
+                  )}
                 </div>
               </li>
             ))}
           </ol>
-          <p className="mt-2 border-t border-navy/10 pt-4 text-xs text-sub">
+          <p className="text-[13px] leading-relaxed text-sub">{RECRUITMENT.breakNote}</p>
+          <p className="mt-4 border-t border-navy/10 pt-4 text-xs text-sub">
             {RECRUITMENT.overtime}
             <br className="md:hidden" />
             仕事終わりの時間をしっかり確保できます。
