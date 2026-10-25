@@ -1,8 +1,8 @@
 import { RECRUITMENT, type RecruitmentSpec } from "@/constants/recruitment";
 
 export default function JobSpec() {
-  const primarySpecs = RECRUITMENT.specs.slice(0, 4);
-  const secondarySpecs = RECRUITMENT.specs.slice(4);
+  const primarySpecs = RECRUITMENT.specs.slice(0, 5);
+  const secondarySpecs = RECRUITMENT.specs.slice(5);
 
   const renderRows = (specs: RecruitmentSpec[], startIndex = 0) =>
     specs.map((s, i) => (
