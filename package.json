@@ -4,14 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/generate-security-headers.mjs",
     "start": "next start",
     "test": "vitest",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test:security-headers": "node --test scripts/security-headers.node-test.mjs",
+    "check:security-headers": "node scripts/check-security-headers.mjs"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
